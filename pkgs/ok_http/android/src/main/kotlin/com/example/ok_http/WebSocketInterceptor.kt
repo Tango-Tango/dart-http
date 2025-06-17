@@ -22,11 +22,19 @@ class WebSocketInterceptor {
                 val request = chain.request()
                 val response = chain.proceed(request)
 
-                response.newBuilder()
-                    // Removing this header to ensure that OkHttp does not fail due to unexpected values.
+                // Grab the original extensions header
+                val originalHeader = response.header("sec-websocket-extensions")
+
+                // Removing this header to ensure that OkHttp does not fail due to unexpected values
+                val builder = response.newBuilder()
                     .removeHeader("sec-websocket-extensions")
-                    // Adding the header to ensure successful parsing of the response.
-                    .addHeader("sec-websocket-extensions", "permessage-deflate").build()
+
+                // Only re-add if the original response contained "permessage-deflate"
+                if (originalHeader?.contains("permessage-deflate") == true) {
+                    builder.addHeader("sec-websocket-extensions", "permessage-deflate")
+                }
+
+                builder.build()
             })
         }
     }
