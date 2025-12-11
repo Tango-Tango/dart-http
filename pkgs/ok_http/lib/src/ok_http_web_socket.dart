@@ -47,7 +47,7 @@ import 'jni/bindings.dart' as bindings;
 /// > can be used to adapt a [OkHttpWebSocket] into a
 /// > [`WebSocketChannel`](https://pub.dev/documentation/web_socket_channel/latest/web_socket_channel/WebSocketChannel-class.html).
 class OkHttpWebSocket implements WebSocket {
-  late bindings.OkHttpClient _client;
+  bindings.OkHttpClient? _client;
   late final bindings.WebSocket _webSocket;
   final _events = StreamController<WebSocketEvent>();
   String? _protocol;
@@ -57,12 +57,7 @@ class OkHttpWebSocket implements WebSocket {
   /// Used by [connect] to create a new WebSocket connection, which requires a
   /// [bindings.OkHttpClient] instance (see [_connect]), and cannot be accessed
   /// statically.
-  OkHttpWebSocket._() {
-    // Add the WebSocketInterceptor to prevent response parsing errors.
-    _client = bindings.WebSocketInterceptor.Companion
-        .addWSInterceptor(bindings.OkHttpClient_Builder())
-        .build();
-  }
+  OkHttpWebSocket._() {}
 
   /// Create a new WebSocket connection using `OkHttp`'s
   /// [WebSocket](https://square.github.io/okhttp/5.x/okhttp/okhttp3/-web-socket/index.html)
@@ -74,10 +69,11 @@ class OkHttpWebSocket implements WebSocket {
   /// the peer is able to select. See
   /// [RFC-6455 1.9](https://datatracker.ietf.org/doc/html/rfc6455#section-1.9).
   static Future<WebSocket> connect(Uri url,
-          {Iterable<dynamic>? protocols}) async =>
-      OkHttpWebSocket._()._connect(url, protocols);
+          {Iterable<dynamic>? protocols, int pingInterval = 15}) async =>
+      OkHttpWebSocket._()._connect(url, protocols, pingInterval);
 
-  Future<WebSocket> _connect(Uri url, Iterable<dynamic>? protocols) async {
+  Future<WebSocket> _connect(
+      Uri url, Iterable<dynamic>? protocols, int pingInterval) async {
     if (!url.isScheme('ws') && !url.isScheme('wss')) {
       throw ArgumentError.value(
           url, 'url', 'only ws: and wss: schemes are supported');
@@ -92,7 +88,13 @@ class OkHttpWebSocket implements WebSocket {
 
     var openCompleter = Completer<WebSocket>();
 
-    _client.newWebSocket(
+    // Add the WebSocketInterceptor to prevent response parsing errors.
+    _client ??= bindings.WebSocketInterceptor.Companion
+        .addWSInterceptor(bindings.OkHttpClient_Builder()
+            .pingInterval(pingInterval, bindings.TimeUnit.SECONDS))
+        .build();
+
+    _client?.newWebSocket(
         requestBuilder.build(),
         bindings.WebSocketListenerProxy(
             bindings.WebSocketListenerProxy_WebSocketListener.implement(
@@ -216,13 +218,13 @@ class OkHttpWebSocket implements WebSocket {
   ///
   /// https://square.github.io/okhttp/5.x/okhttp/okhttp3/-ok-http-client/index.html#:~:text=Shutdown
   void _okHttpClientClose() {
-    _client.dispatcher().executorService().shutdown();
-    _client.connectionPool().evictAll();
-    var cache = _client.cache();
-    if (!cache.isNull) {
+    _client?.dispatcher().executorService().shutdown();
+    _client?.connectionPool().evictAll();
+    var cache = _client?.cache();
+    if (cache != null && !cache.isNull) {
       cache.close();
     }
-    _client.release();
+    _client?.release();
   }
 }
 
