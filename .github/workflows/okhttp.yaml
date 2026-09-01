@@ -1,4 +1,6 @@
 name: package:ok_http CI
+permissions:
+  contents: read
 
 on:
   push:
@@ -28,12 +30,14 @@ jobs:
       run:
         working-directory: pkgs/ok_http
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
-      - uses: actions/setup-java@f2beeb24e141e01a676f977032f5a29d81c9e27e
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
         with:
           distribution: 'zulu'
           java-version: '17'
-      - uses: subosito/flutter-action@fd55f4c5af5b953cc57a2be44cb082c8f6635e8e
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
         with:
           channel: 'stable'
       - id: install
@@ -51,7 +55,7 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
       - name: Run tests
-        uses: reactivecircus/android-emulator-runner@b530d96654c385303d652368551fb075bc2f0b6b
+        uses: reactivecircus/android-emulator-runner@e89f39f1abbbd05b1113a29cf4db69e7540cae5a
         if: always() && steps.install.outcome == 'success'
         with:
           # api-level/minSdkVersion should be help in sync in:

@@ -28,7 +28,8 @@ android {
         namespace 'io.flutter.plugins.cronet_http'
     }
 
-    compileSdkVersion 34
+    // package:jni requires compileSdkVersion 35
+    compileSdkVersion 35
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
@@ -64,8 +65,8 @@ android {
 
 dependencies {
     if (dartDefines.cronetHttpNoPlay == 'true') {
-        implementation 'org.chromium.net:cronet-embedded:141.7340.3'
+        implementation 'org.chromium.net:cronet-embedded:143.7445.0'
     } else {
-        implementation "com.google.android.gms:play-services-cronet:18.1.0"
+        implementation "com.google.android.gms:play-services-cronet:18.1.1"
     }
 }
