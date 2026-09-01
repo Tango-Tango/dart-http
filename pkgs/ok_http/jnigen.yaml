@@ -1,4 +1,10 @@
 # Regenerate the JNI Bindings using: dart run jnigen --config jnigen.yaml
+#
+# IMPORTANT: bindings.dart includes receiver lifetime guards matching
+# dart-lang/native@efe70cfcb6c818a3b6e79d2369375d287b2e4e5c (PR #3350),
+# adapted to this package's JNI 0.14-compatible output. Unpatched jnigen 0.14
+# removes the guards and re-exposes calls to dart-lang/sdk#63348. The guard
+# check in tool/ must pass after regeneration.
 
 summarizer:
   backend: asm

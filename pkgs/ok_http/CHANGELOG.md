@@ -4,6 +4,7 @@
 - `OkHttpClient` now receives an `OkHttpClientConfiguration` to configure the client on a per-call basis.
 - `OkHttpClient` supports setting four types of timeouts: [`connectTimeout`](https://square.github.io/okhttp/5.x/okhttp/okhttp3/-ok-http-client/-builder/connect-timeout.html), [`readTimeout`](https://square.github.io/okhttp/5.x/okhttp/okhttp3/-ok-http-client/-builder/read-timeout.html), [`writeTimeout`](https://square.github.io/okhttp/5.x/okhttp/okhttp3/-ok-http-client/-builder/write-timeout.html), and [`callTimeout`](https://square.github.io/okhttp/5.x/okhttp/okhttp3/-ok-http-client/-builder/call-timeout.html), using the `OkHttpClientConfiguration`.
 - Retain compatibility with `jni` and `jnigen` 0.14.
+- Retain generated JNI receivers and class references across native calls to prevent premature finalization crashes on Android.
 - `OKHttpClient` supports client certificates.
 - Support `package:web_socket` 1.0.0.
 - Set `minSdk=24`.
