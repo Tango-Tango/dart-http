@@ -36,6 +36,47 @@ copy_soak() {
   cp "$SOAK_SRC" "$dest"
 }
 
+# Keep OkHttp classes in the soak APK. JNI looks them up by name; R8 would
+# otherwise strip them because Dart has no Java call sites.
+prepare_example() {
+  local example="$1/pkgs/ok_http/example"
+  local gradle="$example/android/app/build.gradle"
+  local rules="$example/android/app/proguard-rules.pro"
+  cat >"$rules" <<'EOF'
+-keep class okhttp3.** { *; }
+-keep class okio.** { *; }
+-keep class com.example.ok_http.** { *; }
+EOF
+  python3 - "$gradle" <<'PY'
+from pathlib import Path
+import sys
+p = Path(sys.argv[1])
+s = p.read_text()
+if 'minifyEnabled' not in s and 'isMinifyEnabled' not in s:
+    s = s.replace(
+        'signingConfig = signingConfigs.debug',
+        'signingConfig = signingConfigs.debug\n'
+        '            minifyEnabled false\n'
+        '            shrinkResources false\n'
+        '            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"',
+        1,
+    )
+    s = s.replace(
+        'signingConfig signingConfigs.debug',
+        'signingConfig signingConfigs.debug\n'
+        '            minifyEnabled false\n'
+        '            shrinkResources false\n'
+        '            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"',
+        1,
+    )
+else:
+    s = s.replace('minifyEnabled true', 'minifyEnabled false')
+    s = s.replace('isMinifyEnabled = true', 'isMinifyEnabled = false')
+    s = s.replace('shrinkResources true', 'shrinkResources false')
+p.write_text(s)
+PY
+}
+
 build_one() {
   local label="$1" sha="$2" worktree="$3"
   mkdir -p "$worktree"
@@ -43,6 +84,7 @@ build_one() {
     git -C "$ROOT" worktree add --detach "$worktree" "$sha"
   fi
   copy_soak "$worktree"
+  prepare_example "$worktree"
   (
     cd "$worktree/pkgs/ok_http/example"
     flutter pub get
@@ -58,6 +100,12 @@ build_one() {
   mkdir -p "$dest"
   cp "$apk" "$dest/app-release.apk"
   printf '%s\n' "$sha" >"$dest/sha.txt"
+  if ! unzip -l "$apk" | awk '{print $4}' | grep -E '^classes[0-9]*\.dex$' | while read -r dex; do
+       unzip -p "$apk" "$dex"
+     done | strings | grep -q 'OkHttpClient$Builder'; then
+    log "ERROR: OkHttpClient\$Builder missing from $label APK (R8 stripped JNI classes)"
+    exit 1
+  fi
   unzip -l "$apk" | awk '/lib\/.*\/(libapp|libdartjni)\.so$/ {print $4}' \
     >"$dest/native-libs.txt"
   if command -v llvm-readelf >/dev/null; then

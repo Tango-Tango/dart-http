@@ -12,6 +12,10 @@ validation.
 | old | `74e326d6fec11b579020b19bff844a728951fa5b` |
 | guarded | `ce1f7251873a2f50c2c7f995d42ee904e6bff93b` |
 
+The runner disables R8 shrinking and keeps `okhttp3.**`. JNI loads those
+classes by name; a normal release shrink would throw
+`ClassNotFoundException: okhttp3/OkHttpClient$Builder`.
+
 ## Build both APKs
 
 ```sh
