@@ -59,6 +59,7 @@ build_one() {
   prepare_example "$worktree"
   (
     cd "$worktree/pkgs/ok_http/example"
+    flutter clean
     flutter pub get
     flutter build apk --release \
       --target lib/soak_main.dart \
@@ -72,10 +73,16 @@ build_one() {
   mkdir -p "$dest"
   cp "$apk" "$dest/app-release.apk"
   printf '%s\n' "$sha" >"$dest/sha.txt"
-  local dex_tmp="$dest/classes.dex"
-  unzip -p "$apk" classes.dex >"$dex_tmp"
-  if ! strings "$dex_tmp" | grep -F -q 'OkHttpClient'; then
-    log "ERROR: OkHttpClient missing from $label APK classes.dex"
+  local found=0
+  while read -r dex; do
+    if unzip -p "$apk" "$dex" | strings | grep -F -q 'OkHttpClient'; then
+      found=1
+      break
+    fi
+  done < <(unzip -Z1 "$apk" | grep -E '^classes[0-9]*\.dex$')
+  if [[ "$found" -ne 1 ]]; then
+    log "ERROR: OkHttpClient missing from $label APK dex"
+    unzip -Z1 "$apk" | grep -E 'classes|okhttp' || true
     exit 1
   fi
   unzip -l "$apk" | awk '/lib\/.*\/(libapp|libdartjni)\.so$/ {print $4}' \
