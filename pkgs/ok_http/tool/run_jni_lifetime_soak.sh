@@ -48,6 +48,20 @@ prepare_example() {
 -keep class okio.** { *; }
 -keepattributes InnerClasses,EnclosingMethod,Signature
 EOF
+  local manifest="$app/src/main/AndroidManifest.xml"
+  if [[ -f "$manifest" ]] && ! grep -q 'android.permission.INTERNET' "$manifest"; then
+    python3 - "$manifest" <<'PY'
+from pathlib import Path
+import sys
+p = Path(sys.argv[1])
+s = p.read_text()
+needle = '<manifest xmlns:android="http://schemas.android.com/apk/res/android">'
+insert = needle + '\n    <uses-permission android:name="android.permission.INTERNET"/>'
+if needle not in s:
+    raise SystemExit(f'cannot patch INTERNET permission in {p}')
+p.write_text(s.replace(needle, insert, 1))
+PY
+  fi
   python3 - "$app/build.gradle" <<'PY'
 from pathlib import Path
 import sys
