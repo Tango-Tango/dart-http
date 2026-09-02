@@ -39,14 +39,46 @@ copy_soak() {
 # Same R8 keeps Shine uses. Flutter forces minify on release APKs; JNI
 # loads these classes by name, so they must not be stripped.
 prepare_example() {
-  local rules="$1/pkgs/ok_http/example/android/app/proguard-rules.pro"
-  mkdir -p "$(dirname "$rules")"
-  cat >"$rules" <<'EOF'
+  local example="$1/pkgs/ok_http/example"
+  local app="$example/android/app"
+  mkdir -p "$app"
+  cat >"$app/proguard-rules.pro" <<'EOF'
 -keep class com.example.ok_http.** { *; }
 -keep class okhttp3.** { *; }
 -keep class okio.** { *; }
 -keepattributes InnerClasses,EnclosingMethod,Signature
 EOF
+  python3 - "$app/build.gradle" <<'PY'
+from pathlib import Path
+import sys
+p = Path(sys.argv[1])
+s = p.read_text()
+if 'proguard-rules.pro' in s:
+    raise SystemExit(0)
+needle = 'signingConfig = signingConfigs.debug'
+insert = (
+    'signingConfig = signingConfigs.debug\n'
+    '            minifyEnabled true\n'
+    '            shrinkResources false\n'
+    '            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"'
+)
+if needle not in s:
+    raise SystemExit(f'cannot patch {p}')
+p.write_text(s.replace(needle, insert, 1))
+PY
+}
+
+apk_has_okhttp() {
+  python3 - "$1" <<'PY'
+import sys, zipfile
+with zipfile.ZipFile(sys.argv[1]) as z:
+    for name in z.namelist():
+        if name.endswith('.dex'):
+            data = z.read(name)
+            if b'OkHttpClient' in data:
+                raise SystemExit(0)
+raise SystemExit(1)
+PY
 }
 
 build_one() {
@@ -56,11 +88,14 @@ build_one() {
     git -C "$ROOT" worktree add --detach "$worktree" "$sha"
   fi
   copy_soak "$worktree"
-  prepare_example "$worktree"
   (
     cd "$worktree/pkgs/ok_http/example"
     flutter clean
     flutter pub get
+  )
+  prepare_example "$worktree"
+  (
+    cd "$worktree/pkgs/ok_http/example"
     flutter build apk --release \
       --target lib/soak_main.dart \
       --android-skip-build-dependency-validation \
@@ -73,16 +108,16 @@ build_one() {
   mkdir -p "$dest"
   cp "$apk" "$dest/app-release.apk"
   printf '%s\n' "$sha" >"$dest/sha.txt"
-  local found=0
-  while read -r dex; do
-    if unzip -p "$apk" "$dex" | strings | grep -F -q 'OkHttpClient'; then
-      found=1
-      break
-    fi
-  done < <(unzip -Z1 "$apk" | grep -E '^classes[0-9]*\.dex$')
-  if [[ "$found" -ne 1 ]]; then
+  local mapping="$worktree/pkgs/ok_http/example/build/app/outputs/mapping/release/mapping.txt"
+  if [[ -f "$mapping" ]]; then
+    cp "$mapping" "$dest/mapping.txt"
+  fi
+  if ! apk_has_okhttp "$apk"; then
     log "ERROR: OkHttpClient missing from $label APK dex"
     unzip -Z1 "$apk" | grep -E 'classes|okhttp' || true
+    if [[ -f "$dest/mapping.txt" ]]; then
+      grep -E 'okhttp3|OkHttpClient' "$dest/mapping.txt" | head || true
+    fi
     exit 1
   fi
   unzip -l "$apk" | awk '/lib\/.*\/(libapp|libdartjni)\.so$/ {print $4}' \
