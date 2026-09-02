@@ -100,10 +100,11 @@ build_one() {
   mkdir -p "$dest"
   cp "$apk" "$dest/app-release.apk"
   printf '%s\n' "$sha" >"$dest/sha.txt"
-  if ! unzip -l "$apk" | awk '{print $4}' | grep -E '^classes[0-9]*\.dex$' | while read -r dex; do
+  if ! unzip -l "$apk" | awk '{print $NF}' | grep -E 'classes[0-9]*\.dex$' | while read -r dex; do
        unzip -p "$apk" "$dex"
-     done | strings | grep -q 'OkHttpClient$Builder'; then
-    log "ERROR: OkHttpClient\$Builder missing from $label APK (R8 stripped JNI classes)"
+     done | strings | grep -F -q 'okhttp3/OkHttpClient$Builder'; then
+    log "ERROR: okhttp3/OkHttpClient\$Builder missing from $label APK"
+    unzip -l "$apk" | awk '{print $NF}' | grep -E 'classes|okhttp|kotlin' || true
     exit 1
   fi
   unzip -l "$apk" | awk '/lib\/.*\/(libapp|libdartjni)\.so$/ {print $4}' \
