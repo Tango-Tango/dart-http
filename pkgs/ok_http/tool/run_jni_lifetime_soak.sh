@@ -36,25 +36,17 @@ copy_soak() {
   cp "$SOAK_SRC" "$dest"
 }
 
-# Keep OkHttp classes in the soak APK. JNI looks them up by name; R8 would
-# otherwise strip them because Dart has no Java call sites.
+# Same R8 keeps Shine uses. Flutter forces minify on release APKs; JNI
+# loads these classes by name, so they must not be stripped.
 prepare_example() {
-  local example="$1/pkgs/ok_http/example"
-  local props="$example/android/gradle.properties"
-  local rules="$example/android/app/proguard-rules.pro"
-  mkdir -p "$example/android/app"
+  local rules="$1/pkgs/ok_http/example/android/app/proguard-rules.pro"
+  mkdir -p "$(dirname "$rules")"
   cat >"$rules" <<'EOF'
+-keep class com.example.ok_http.** { *; }
 -keep class okhttp3.** { *; }
 -keep class okio.** { *; }
--keep class com.example.ok_http.** { *; }
+-keepattributes InnerClasses,EnclosingMethod,Signature
 EOF
-  # Flutter's Gradle plugin defaults shrink=true and then forces minify on
-  # release builds, which strips JNI-named OkHttp classes.
-  if [[ -f "$props" ]] && grep -q '^shrink=' "$props"; then
-    sed -i 's/^shrink=.*/shrink=false/' "$props"
-  else
-    printf '\nshrink=false\n' >>"$props"
-  fi
 }
 
 build_one() {
