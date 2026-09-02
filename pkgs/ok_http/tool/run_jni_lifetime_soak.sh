@@ -40,41 +40,21 @@ copy_soak() {
 # otherwise strip them because Dart has no Java call sites.
 prepare_example() {
   local example="$1/pkgs/ok_http/example"
-  local gradle="$example/android/app/build.gradle"
+  local props="$example/android/gradle.properties"
   local rules="$example/android/app/proguard-rules.pro"
+  mkdir -p "$example/android/app"
   cat >"$rules" <<'EOF'
 -keep class okhttp3.** { *; }
 -keep class okio.** { *; }
 -keep class com.example.ok_http.** { *; }
 EOF
-  python3 - "$gradle" <<'PY'
-from pathlib import Path
-import sys
-p = Path(sys.argv[1])
-s = p.read_text()
-if 'minifyEnabled' not in s and 'isMinifyEnabled' not in s:
-    s = s.replace(
-        'signingConfig = signingConfigs.debug',
-        'signingConfig = signingConfigs.debug\n'
-        '            minifyEnabled false\n'
-        '            shrinkResources false\n'
-        '            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"',
-        1,
-    )
-    s = s.replace(
-        'signingConfig signingConfigs.debug',
-        'signingConfig signingConfigs.debug\n'
-        '            minifyEnabled false\n'
-        '            shrinkResources false\n'
-        '            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"',
-        1,
-    )
-else:
-    s = s.replace('minifyEnabled true', 'minifyEnabled false')
-    s = s.replace('isMinifyEnabled = true', 'isMinifyEnabled = false')
-    s = s.replace('shrinkResources true', 'shrinkResources false')
-p.write_text(s)
-PY
+  # Flutter's Gradle plugin defaults shrink=true and then forces minify on
+  # release builds, which strips JNI-named OkHttp classes.
+  if [[ -f "$props" ]] && grep -q '^shrink=' "$props"; then
+    sed -i 's/^shrink=.*/shrink=false/' "$props"
+  else
+    printf '\nshrink=false\n' >>"$props"
+  fi
 }
 
 build_one() {
@@ -100,11 +80,10 @@ build_one() {
   mkdir -p "$dest"
   cp "$apk" "$dest/app-release.apk"
   printf '%s\n' "$sha" >"$dest/sha.txt"
-  if ! unzip -l "$apk" | awk '{print $NF}' | grep -E 'classes[0-9]*\.dex$' | while read -r dex; do
-       unzip -p "$apk" "$dex"
-     done | strings | grep -F -q 'okhttp3/OkHttpClient$Builder'; then
-    log "ERROR: okhttp3/OkHttpClient\$Builder missing from $label APK"
-    unzip -l "$apk" | awk '{print $NF}' | grep -E 'classes|okhttp|kotlin' || true
+  local dex_tmp="$dest/classes.dex"
+  unzip -p "$apk" classes.dex >"$dex_tmp"
+  if ! strings "$dex_tmp" | grep -F -q 'OkHttpClient'; then
+    log "ERROR: OkHttpClient missing from $label APK classes.dex"
     exit 1
   fi
   unzip -l "$apk" | awk '/lib\/.*\/(libapp|libdartjni)\.so$/ {print $4}' \
