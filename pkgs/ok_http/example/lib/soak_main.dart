@@ -4,7 +4,6 @@
 
 import 'dart:async';
 import 'dart:io';
-import 'dart:isolate';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -39,10 +38,9 @@ class SoakPage extends StatefulWidget {
 }
 
 class _SoakPageState extends State<SoakPage> {
-  final _startedAt = DateTime.now();
+  DateTime _startedAt = DateTime.now();
   Timer? _uiTimer;
   OkHttpClient? _client;
-  Isolate? _pressure;
   var _running = false;
   var _ok = 0;
   var _fail = 0;
@@ -60,9 +58,11 @@ class _SoakPageState extends State<SoakPage> {
         setState(() {});
       }
     });
-    if (Platform.isAndroid) {
-      unawaited(start());
-    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (Platform.isAndroid) {
+        unawaited(start());
+      }
+    });
   }
 
   @override
@@ -73,36 +73,41 @@ class _SoakPageState extends State<SoakPage> {
   }
 
   Future<void> start() async {
-    if (_running) {
+    if (_running || _client != null) {
       return;
     }
-    _client = OkHttpClient(
-      configuration: const OkHttpClientConfiguration(
-        connectTimeout: Duration(seconds: 60),
-        readTimeout: Duration(seconds: 60),
-        writeTimeout: Duration(seconds: 60),
-      ),
-    );
-    _pressure = await Isolate.spawn(_allocationPressure, null);
-    _running = true;
-    _log('start url=$_url workers=$_workers');
-    for (var i = 0; i < _workers; i++) {
-      unawaited(_worker(i));
+    _log('starting url=$_url workers=$_workers');
+    try {
+      final client = OkHttpClient(
+        configuration: const OkHttpClientConfiguration(
+          connectTimeout: Duration(seconds: 60),
+          readTimeout: Duration(seconds: 60),
+          writeTimeout: Duration(seconds: 60),
+        ),
+      );
+      _client = client;
+      _startedAt = DateTime.now();
+      _running = true;
+      _log('running');
+      for (var i = 0; i < _workers; i++) {
+        unawaited(_worker(i, client));
+      }
+    } catch (error, stack) {
+      _lastError = error.toString();
+      _log('start failed: $error\n$stack');
     }
   }
 
   Future<void> stop() async {
     _running = false;
-    _pressure?.kill(priority: Isolate.immediate);
-    _pressure = null;
     _client?.close();
     _client = null;
   }
 
-  Future<void> _worker(int id) async {
+  Future<void> _worker(int id, OkHttpClient client) async {
     while (_running) {
       try {
-        final response = await _client!.get(Uri.parse(_url));
+        final response = await client.get(Uri.parse(_url));
         await response.bodyBytes;
         _ok++;
         _lastStatus = response.statusCode;
@@ -153,15 +158,5 @@ class _SoakPageState extends State<SoakPage> {
         ),
       ),
     );
-  }
-}
-
-void _allocationPressure(_) {
-  final chunks = <List<int>>[];
-  while (true) {
-    chunks.add(List<int>.filled(64 * 1024, 1));
-    if (chunks.length > 64) {
-      chunks.removeRange(0, 32);
-    }
   }
 }
