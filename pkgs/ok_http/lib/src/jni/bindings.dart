@@ -73,9 +73,9 @@ class Request$Builder extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory Request$Builder() {
-    final _$$classRef = _class.reference;
     return Request$Builder.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_new$1 = _class.constructorId(
@@ -98,9 +98,8 @@ class Request$Builder extends jni$_.JObject {
   factory Request$Builder.new$1(
     Request request,
   ) {
-    final _$$classRef = _class.reference;
     final _$request = request.reference;
-    return Request$Builder.fromReference(_new$1(_$$classRef.pointer,
+    return Request$Builder.fromReference(_new$1(_class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr, _$request.pointer)
         .reference);
   }
@@ -126,10 +125,9 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder url(
     jni$_.JObject httpUrl,
   ) {
-    final _$$selfRef = reference;
     final _$httpUrl = httpUrl.reference;
-    return _url(_$$selfRef.pointer, _id_url as jni$_.JMethodIDPtr,
-            _$httpUrl.pointer)
+    return _url(
+            reference.pointer, _id_url as jni$_.JMethodIDPtr, _$httpUrl.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
 
@@ -154,9 +152,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder url$1(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _url$1(_$$selfRef.pointer, _id_url$1 as jni$_.JMethodIDPtr,
+    return _url$1(reference.pointer, _id_url$1 as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -182,10 +179,9 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder url$2(
     jni$_.JObject uRL,
   ) {
-    final _$$selfRef = reference;
     final _$uRL = uRL.reference;
     return _url$2(
-            _$$selfRef.pointer, _id_url$2 as jni$_.JMethodIDPtr, _$uRL.pointer)
+            reference.pointer, _id_url$2 as jni$_.JMethodIDPtr, _$uRL.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
 
@@ -217,10 +213,9 @@ class Request$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1.reference;
-    return _header(_$$selfRef.pointer, _id_header as jni$_.JMethodIDPtr,
+    return _header(reference.pointer, _id_header as jni$_.JMethodIDPtr,
             _$string.pointer, _$string1.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -253,10 +248,9 @@ class Request$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1.reference;
-    return _addHeader(_$$selfRef.pointer, _id_addHeader as jni$_.JMethodIDPtr,
+    return _addHeader(reference.pointer, _id_addHeader as jni$_.JMethodIDPtr,
             _$string.pointer, _$string1.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -282,9 +276,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder removeHeader(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _removeHeader(_$$selfRef.pointer,
+    return _removeHeader(reference.pointer,
             _id_removeHeader as jni$_.JMethodIDPtr, _$string.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -310,9 +303,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder headers(
     Headers headers,
   ) {
-    final _$$selfRef = reference;
     final _$headers = headers.reference;
-    return _headers(_$$selfRef.pointer, _id_headers as jni$_.JMethodIDPtr,
+    return _headers(reference.pointer, _id_headers as jni$_.JMethodIDPtr,
             _$headers.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -338,9 +330,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder cacheControl(
     jni$_.JObject cacheControl,
   ) {
-    final _$$selfRef = reference;
     final _$cacheControl = cacheControl.reference;
-    return _cacheControl(_$$selfRef.pointer,
+    return _cacheControl(reference.pointer,
             _id_cacheControl as jni$_.JMethodIDPtr, _$cacheControl.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -365,8 +356,7 @@ class Request$Builder extends jni$_.JObject {
   /// from: `public okhttp3.Request$Builder get()`
   /// The returned object must be released after use, by calling the [release] method.
   Request$Builder get() {
-    final _$$selfRef = reference;
-    return _get(_$$selfRef.pointer, _id_get as jni$_.JMethodIDPtr)
+    return _get(reference.pointer, _id_get as jni$_.JMethodIDPtr)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
 
@@ -390,8 +380,7 @@ class Request$Builder extends jni$_.JObject {
   /// from: `public okhttp3.Request$Builder head()`
   /// The returned object must be released after use, by calling the [release] method.
   Request$Builder head() {
-    final _$$selfRef = reference;
-    return _head(_$$selfRef.pointer, _id_head as jni$_.JMethodIDPtr)
+    return _head(reference.pointer, _id_head as jni$_.JMethodIDPtr)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
 
@@ -416,9 +405,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder post(
     RequestBody requestBody,
   ) {
-    final _$$selfRef = reference;
     final _$requestBody = requestBody.reference;
-    return _post(_$$selfRef.pointer, _id_post as jni$_.JMethodIDPtr,
+    return _post(reference.pointer, _id_post as jni$_.JMethodIDPtr,
             _$requestBody.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -444,9 +432,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder delete(
     RequestBody? requestBody,
   ) {
-    final _$$selfRef = reference;
     final _$requestBody = requestBody?.reference ?? jni$_.jNullReference;
-    return _delete(_$$selfRef.pointer, _id_delete as jni$_.JMethodIDPtr,
+    return _delete(reference.pointer, _id_delete as jni$_.JMethodIDPtr,
             _$requestBody.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -472,9 +459,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder put(
     RequestBody requestBody,
   ) {
-    final _$$selfRef = reference;
     final _$requestBody = requestBody.reference;
-    return _put(_$$selfRef.pointer, _id_put as jni$_.JMethodIDPtr,
+    return _put(reference.pointer, _id_put as jni$_.JMethodIDPtr,
             _$requestBody.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -500,9 +486,8 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder patch(
     RequestBody requestBody,
   ) {
-    final _$$selfRef = reference;
     final _$requestBody = requestBody.reference;
-    return _patch(_$$selfRef.pointer, _id_patch as jni$_.JMethodIDPtr,
+    return _patch(reference.pointer, _id_patch as jni$_.JMethodIDPtr,
             _$requestBody.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -535,10 +520,9 @@ class Request$Builder extends jni$_.JObject {
     jni$_.JString string,
     RequestBody? requestBody,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$requestBody = requestBody?.reference ?? jni$_.jNullReference;
-    return _method(_$$selfRef.pointer, _id_method as jni$_.JMethodIDPtr,
+    return _method(reference.pointer, _id_method as jni$_.JMethodIDPtr,
             _$string.pointer, _$requestBody.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -564,10 +548,9 @@ class Request$Builder extends jni$_.JObject {
   Request$Builder tag(
     jni$_.JObject? object,
   ) {
-    final _$$selfRef = reference;
     final _$object = object?.reference ?? jni$_.jNullReference;
     return _tag(
-            _$$selfRef.pointer, _id_tag as jni$_.JMethodIDPtr, _$object.pointer)
+            reference.pointer, _id_tag as jni$_.JMethodIDPtr, _$object.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
 
@@ -600,10 +583,9 @@ class Request$Builder extends jni$_.JObject {
     $T? object, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$class$ = class$.reference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    return _tag$1(_$$selfRef.pointer, _id_tag$1 as jni$_.JMethodIDPtr,
+    return _tag$1(reference.pointer, _id_tag$1 as jni$_.JMethodIDPtr,
             _$class$.pointer, _$object.pointer)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
@@ -628,8 +610,7 @@ class Request$Builder extends jni$_.JObject {
   /// from: `public okhttp3.Request build()`
   /// The returned object must be released after use, by calling the [release] method.
   Request build() {
-    final _$$selfRef = reference;
-    return _build(_$$selfRef.pointer, _id_build as jni$_.JMethodIDPtr)
+    return _build(reference.pointer, _id_build as jni$_.JMethodIDPtr)
         .object<Request>(const $Request$Type());
   }
 
@@ -653,8 +634,7 @@ class Request$Builder extends jni$_.JObject {
   /// from: `public final okhttp3.Request$Builder delete()`
   /// The returned object must be released after use, by calling the [release] method.
   Request$Builder delete$1() {
-    final _$$selfRef = reference;
-    return _delete$1(_$$selfRef.pointer, _id_delete$1 as jni$_.JMethodIDPtr)
+    return _delete$1(reference.pointer, _id_delete$1 as jni$_.JMethodIDPtr)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
 }
@@ -787,14 +767,13 @@ class Request extends jni$_.JObject {
     RequestBody? requestBody,
     jni$_.JMap<jni$_.JObject, jni$_.JObject> map,
   ) {
-    final _$$classRef = _class.reference;
     final _$httpUrl = httpUrl.reference;
     final _$string = string.reference;
     final _$headers = headers.reference;
     final _$requestBody = requestBody?.reference ?? jni$_.jNullReference;
     final _$map = map.reference;
     return Request.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$httpUrl.pointer,
             _$string.pointer,
@@ -824,8 +803,7 @@ class Request extends jni$_.JObject {
   /// from: `public final okhttp3.HttpUrl url()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject url() {
-    final _$$selfRef = reference;
-    return _url(_$$selfRef.pointer, _id_url as jni$_.JMethodIDPtr)
+    return _url(reference.pointer, _id_url as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -849,8 +827,7 @@ class Request extends jni$_.JObject {
   /// from: `public final java.lang.String method()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString method() {
-    final _$$selfRef = reference;
-    return _method(_$$selfRef.pointer, _id_method as jni$_.JMethodIDPtr)
+    return _method(reference.pointer, _id_method as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -874,8 +851,7 @@ class Request extends jni$_.JObject {
   /// from: `public final okhttp3.Headers headers()`
   /// The returned object must be released after use, by calling the [release] method.
   Headers headers() {
-    final _$$selfRef = reference;
-    return _headers(_$$selfRef.pointer, _id_headers as jni$_.JMethodIDPtr)
+    return _headers(reference.pointer, _id_headers as jni$_.JMethodIDPtr)
         .object<Headers>(const $Headers$Type());
   }
 
@@ -899,8 +875,7 @@ class Request extends jni$_.JObject {
   /// from: `public final okhttp3.RequestBody body()`
   /// The returned object must be released after use, by calling the [release] method.
   RequestBody? body() {
-    final _$$selfRef = reference;
-    return _body(_$$selfRef.pointer, _id_body as jni$_.JMethodIDPtr)
+    return _body(reference.pointer, _id_body as jni$_.JMethodIDPtr)
         .object<RequestBody?>(const $RequestBody$NullableType());
   }
 
@@ -923,8 +898,7 @@ class Request extends jni$_.JObject {
 
   /// from: `public final boolean isHttps()`
   bool isHttps() {
-    final _$$selfRef = reference;
-    return _isHttps(_$$selfRef.pointer, _id_isHttps as jni$_.JMethodIDPtr)
+    return _isHttps(reference.pointer, _id_isHttps as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -949,9 +923,8 @@ class Request extends jni$_.JObject {
   jni$_.JString? header(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _header(_$$selfRef.pointer, _id_header as jni$_.JMethodIDPtr,
+    return _header(reference.pointer, _id_header as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -977,9 +950,8 @@ class Request extends jni$_.JObject {
   jni$_.JList<jni$_.JString> headers$1(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _headers$1(_$$selfRef.pointer, _id_headers$1 as jni$_.JMethodIDPtr,
+    return _headers$1(reference.pointer, _id_headers$1 as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<jni$_.JList<jni$_.JString>>(
             const jni$_.JListType<jni$_.JString>(jni$_.JStringType()));
@@ -1005,8 +977,7 @@ class Request extends jni$_.JObject {
   /// from: `public final java.lang.Object tag()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? tag() {
-    final _$$selfRef = reference;
-    return _tag(_$$selfRef.pointer, _id_tag as jni$_.JMethodIDPtr)
+    return _tag(reference.pointer, _id_tag as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -1032,9 +1003,8 @@ class Request extends jni$_.JObject {
     jni$_.JObject class$, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$class$ = class$.reference;
-    return _tag$1(_$$selfRef.pointer, _id_tag$1 as jni$_.JMethodIDPtr,
+    return _tag$1(reference.pointer, _id_tag$1 as jni$_.JMethodIDPtr,
             _$class$.pointer)
         .object<$T?>(T.nullableType);
   }
@@ -1059,8 +1029,7 @@ class Request extends jni$_.JObject {
   /// from: `public final okhttp3.Request$Builder newBuilder()`
   /// The returned object must be released after use, by calling the [release] method.
   Request$Builder newBuilder() {
-    final _$$selfRef = reference;
-    return _newBuilder(_$$selfRef.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
+    return _newBuilder(reference.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
         .object<Request$Builder>(const $Request$Builder$Type());
   }
 
@@ -1084,9 +1053,8 @@ class Request extends jni$_.JObject {
   /// from: `public final okhttp3.CacheControl cacheControl()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject cacheControl() {
-    final _$$selfRef = reference;
     return _cacheControl(
-            _$$selfRef.pointer, _id_cacheControl as jni$_.JMethodIDPtr)
+            reference.pointer, _id_cacheControl as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -1110,8 +1078,7 @@ class Request extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 }
@@ -1232,10 +1199,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject? mediaType,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create(_$$selfRef.pointer, _id_create as jni$_.JMethodIDPtr,
+    return _create(reference.pointer, _id_create as jni$_.JMethodIDPtr,
             _$string.pointer, _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1268,10 +1234,9 @@ class RequestBody$Companion extends jni$_.JObject {
     ByteString byteString,
     jni$_.JObject? mediaType,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$1(_$$selfRef.pointer, _id_create$1 as jni$_.JMethodIDPtr,
+    return _create$1(reference.pointer, _id_create$1 as jni$_.JMethodIDPtr,
             _$byteString.pointer, _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1310,10 +1275,9 @@ class RequestBody$Companion extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$2(_$$selfRef.pointer, _id_create$2 as jni$_.JMethodIDPtr,
+    return _create$2(reference.pointer, _id_create$2 as jni$_.JMethodIDPtr,
             _$bs.pointer, _$mediaType.pointer, i, i1)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1346,10 +1310,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JObject file,
     jni$_.JObject? mediaType,
   ) {
-    final _$$selfRef = reference;
     final _$file = file.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$3(_$$selfRef.pointer, _id_create$3 as jni$_.JMethodIDPtr,
+    return _create$3(reference.pointer, _id_create$3 as jni$_.JMethodIDPtr,
             _$file.pointer, _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1382,10 +1345,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$string = string.reference;
-    return _create$4(_$$selfRef.pointer, _id_create$4 as jni$_.JMethodIDPtr,
+    return _create$4(reference.pointer, _id_create$4 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$string.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1418,10 +1380,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$byteString = byteString.reference;
-    return _create$5(_$$selfRef.pointer, _id_create$5 as jni$_.JMethodIDPtr,
+    return _create$5(reference.pointer, _id_create$5 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$byteString.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1460,10 +1421,9 @@ class RequestBody$Companion extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$6(_$$selfRef.pointer, _id_create$6 as jni$_.JMethodIDPtr,
+    return _create$6(reference.pointer, _id_create$6 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$bs.pointer, i, i1)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1496,10 +1456,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JObject file,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$file = file.reference;
-    return _create$7(_$$selfRef.pointer, _id_create$7 as jni$_.JMethodIDPtr,
+    return _create$7(reference.pointer, _id_create$7 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$file.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1535,10 +1494,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$8(_$$selfRef.pointer, _id_create$8 as jni$_.JMethodIDPtr,
+    return _create$8(reference.pointer, _id_create$8 as jni$_.JMethodIDPtr,
             _$bs.pointer, _$mediaType.pointer, i)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1571,10 +1529,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JByteArray bs,
     jni$_.JObject? mediaType,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$9(_$$selfRef.pointer, _id_create$9 as jni$_.JMethodIDPtr,
+    return _create$9(reference.pointer, _id_create$9 as jni$_.JMethodIDPtr,
             _$bs.pointer, _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1600,9 +1557,8 @@ class RequestBody$Companion extends jni$_.JObject {
   RequestBody create$10(
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _create$10(_$$selfRef.pointer, _id_create$10 as jni$_.JMethodIDPtr,
+    return _create$10(reference.pointer, _id_create$10 as jni$_.JMethodIDPtr,
             _$bs.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1638,10 +1594,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JByteArray bs,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$11(_$$selfRef.pointer, _id_create$11 as jni$_.JMethodIDPtr,
+    return _create$11(reference.pointer, _id_create$11 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$bs.pointer, i)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1674,10 +1629,9 @@ class RequestBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$12(_$$selfRef.pointer, _id_create$12 as jni$_.JMethodIDPtr,
+    return _create$12(reference.pointer, _id_create$12 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$bs.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -1702,10 +1656,9 @@ class RequestBody$Companion extends jni$_.JObject {
   factory RequestBody$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
-    return RequestBody$Companion.fromReference(_new$(_$$classRef.pointer,
+    return RequestBody$Companion.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$defaultConstructorMarker.pointer)
         .reference);
   }
@@ -1835,9 +1788,8 @@ class RequestBody extends jni$_.JObject {
   /// from: `public abstract okhttp3.MediaType contentType()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? contentType() {
-    final _$$selfRef = reference;
     return _contentType(
-            _$$selfRef.pointer, _id_contentType as jni$_.JMethodIDPtr)
+            reference.pointer, _id_contentType as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -1860,9 +1812,8 @@ class RequestBody extends jni$_.JObject {
 
   /// from: `public long contentLength()`
   int contentLength() {
-    final _$$selfRef = reference;
     return _contentLength(
-            _$$selfRef.pointer, _id_contentLength as jni$_.JMethodIDPtr)
+            reference.pointer, _id_contentLength as jni$_.JMethodIDPtr)
         .long;
   }
 
@@ -1886,9 +1837,8 @@ class RequestBody extends jni$_.JObject {
   void writeTo(
     jni$_.JObject bufferedSink,
   ) {
-    final _$$selfRef = reference;
     final _$bufferedSink = bufferedSink.reference;
-    _writeTo(_$$selfRef.pointer, _id_writeTo as jni$_.JMethodIDPtr,
+    _writeTo(reference.pointer, _id_writeTo as jni$_.JMethodIDPtr,
             _$bufferedSink.pointer)
         .check();
   }
@@ -1912,8 +1862,7 @@ class RequestBody extends jni$_.JObject {
 
   /// from: `public boolean isDuplex()`
   bool isDuplex() {
-    final _$$selfRef = reference;
-    return _isDuplex(_$$selfRef.pointer, _id_isDuplex as jni$_.JMethodIDPtr)
+    return _isDuplex(reference.pointer, _id_isDuplex as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -1936,8 +1885,7 @@ class RequestBody extends jni$_.JObject {
 
   /// from: `public boolean isOneShot()`
   bool isOneShot() {
-    final _$$selfRef = reference;
-    return _isOneShot(_$$selfRef.pointer, _id_isOneShot as jni$_.JMethodIDPtr)
+    return _isOneShot(reference.pointer, _id_isOneShot as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -1969,10 +1917,9 @@ class RequestBody extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject? mediaType,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create(_$$classRef.pointer, _id_create as jni$_.JMethodIDPtr,
+    return _create(_class.reference.pointer, _id_create as jni$_.JMethodIDPtr,
             _$string.pointer, _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
@@ -2005,11 +1952,13 @@ class RequestBody extends jni$_.JObject {
     ByteString byteString,
     jni$_.JObject? mediaType,
   ) {
-    final _$$classRef = _class.reference;
     final _$byteString = byteString.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$1(_$$classRef.pointer, _id_create$1 as jni$_.JMethodIDPtr,
-            _$byteString.pointer, _$mediaType.pointer)
+    return _create$1(
+            _class.reference.pointer,
+            _id_create$1 as jni$_.JMethodIDPtr,
+            _$byteString.pointer,
+            _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2047,11 +1996,15 @@ class RequestBody extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$2(_$$classRef.pointer, _id_create$2 as jni$_.JMethodIDPtr,
-            _$bs.pointer, _$mediaType.pointer, i, i1)
+    return _create$2(
+            _class.reference.pointer,
+            _id_create$2 as jni$_.JMethodIDPtr,
+            _$bs.pointer,
+            _$mediaType.pointer,
+            i,
+            i1)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2083,11 +2036,13 @@ class RequestBody extends jni$_.JObject {
     jni$_.JObject file,
     jni$_.JObject? mediaType,
   ) {
-    final _$$classRef = _class.reference;
     final _$file = file.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$3(_$$classRef.pointer, _id_create$3 as jni$_.JMethodIDPtr,
-            _$file.pointer, _$mediaType.pointer)
+    return _create$3(
+            _class.reference.pointer,
+            _id_create$3 as jni$_.JMethodIDPtr,
+            _$file.pointer,
+            _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2119,11 +2074,13 @@ class RequestBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JString string,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$string = string.reference;
-    return _create$4(_$$classRef.pointer, _id_create$4 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$string.pointer)
+    return _create$4(
+            _class.reference.pointer,
+            _id_create$4 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$string.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2155,11 +2112,13 @@ class RequestBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     ByteString byteString,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$byteString = byteString.reference;
-    return _create$5(_$$classRef.pointer, _id_create$5 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$byteString.pointer)
+    return _create$5(
+            _class.reference.pointer,
+            _id_create$5 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$byteString.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2197,11 +2156,15 @@ class RequestBody extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$6(_$$classRef.pointer, _id_create$6 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$bs.pointer, i, i1)
+    return _create$6(
+            _class.reference.pointer,
+            _id_create$6 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$bs.pointer,
+            i,
+            i1)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2233,11 +2196,13 @@ class RequestBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JObject file,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$file = file.reference;
-    return _create$7(_$$classRef.pointer, _id_create$7 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$file.pointer)
+    return _create$7(
+            _class.reference.pointer,
+            _id_create$7 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$file.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2272,11 +2237,14 @@ class RequestBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$8(_$$classRef.pointer, _id_create$8 as jni$_.JMethodIDPtr,
-            _$bs.pointer, _$mediaType.pointer, i)
+    return _create$8(
+            _class.reference.pointer,
+            _id_create$8 as jni$_.JMethodIDPtr,
+            _$bs.pointer,
+            _$mediaType.pointer,
+            i)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2308,11 +2276,13 @@ class RequestBody extends jni$_.JObject {
     jni$_.JByteArray bs,
     jni$_.JObject? mediaType,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$9(_$$classRef.pointer, _id_create$9 as jni$_.JMethodIDPtr,
-            _$bs.pointer, _$mediaType.pointer)
+    return _create$9(
+            _class.reference.pointer,
+            _id_create$9 as jni$_.JMethodIDPtr,
+            _$bs.pointer,
+            _$mediaType.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2337,10 +2307,9 @@ class RequestBody extends jni$_.JObject {
   static RequestBody create$10(
     jni$_.JByteArray bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
-    return _create$10(_$$classRef.pointer, _id_create$10 as jni$_.JMethodIDPtr,
-            _$bs.pointer)
+    return _create$10(_class.reference.pointer,
+            _id_create$10 as jni$_.JMethodIDPtr, _$bs.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2375,11 +2344,14 @@ class RequestBody extends jni$_.JObject {
     jni$_.JByteArray bs,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$11(_$$classRef.pointer, _id_create$11 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$bs.pointer, i)
+    return _create$11(
+            _class.reference.pointer,
+            _id_create$11 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$bs.pointer,
+            i)
         .object<RequestBody>(const $RequestBody$Type());
   }
 
@@ -2411,11 +2383,13 @@ class RequestBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JByteArray bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$12(_$$classRef.pointer, _id_create$12 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$bs.pointer)
+    return _create$12(
+            _class.reference.pointer,
+            _id_create$12 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$bs.pointer)
         .object<RequestBody>(const $RequestBody$Type());
   }
 }
@@ -2530,9 +2504,9 @@ class Response$Builder extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory Response$Builder() {
-    final _$$classRef = _class.reference;
     return Response$Builder.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_new$1 = _class.constructorId(
@@ -2555,9 +2529,8 @@ class Response$Builder extends jni$_.JObject {
   factory Response$Builder.new$1(
     Response response,
   ) {
-    final _$$classRef = _class.reference;
     final _$response = response.reference;
-    return Response$Builder.fromReference(_new$1(_$$classRef.pointer,
+    return Response$Builder.fromReference(_new$1(_class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr, _$response.pointer)
         .reference);
   }
@@ -2583,9 +2556,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder request(
     Request request,
   ) {
-    final _$$selfRef = reference;
     final _$request = request.reference;
-    return _request(_$$selfRef.pointer, _id_request as jni$_.JMethodIDPtr,
+    return _request(reference.pointer, _id_request as jni$_.JMethodIDPtr,
             _$request.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2611,9 +2583,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder protocol(
     jni$_.JObject protocol,
   ) {
-    final _$$selfRef = reference;
     final _$protocol = protocol.reference;
-    return _protocol(_$$selfRef.pointer, _id_protocol as jni$_.JMethodIDPtr,
+    return _protocol(reference.pointer, _id_protocol as jni$_.JMethodIDPtr,
             _$protocol.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2638,8 +2609,7 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder code(
     int i,
   ) {
-    final _$$selfRef = reference;
-    return _code(_$$selfRef.pointer, _id_code as jni$_.JMethodIDPtr, i)
+    return _code(reference.pointer, _id_code as jni$_.JMethodIDPtr, i)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
 
@@ -2664,9 +2634,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder message(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _message(_$$selfRef.pointer, _id_message as jni$_.JMethodIDPtr,
+    return _message(reference.pointer, _id_message as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2692,9 +2661,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder handshake(
     jni$_.JObject? handshake,
   ) {
-    final _$$selfRef = reference;
     final _$handshake = handshake?.reference ?? jni$_.jNullReference;
-    return _handshake(_$$selfRef.pointer, _id_handshake as jni$_.JMethodIDPtr,
+    return _handshake(reference.pointer, _id_handshake as jni$_.JMethodIDPtr,
             _$handshake.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2727,10 +2695,9 @@ class Response$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1.reference;
-    return _header(_$$selfRef.pointer, _id_header as jni$_.JMethodIDPtr,
+    return _header(reference.pointer, _id_header as jni$_.JMethodIDPtr,
             _$string.pointer, _$string1.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2763,10 +2730,9 @@ class Response$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1.reference;
-    return _addHeader(_$$selfRef.pointer, _id_addHeader as jni$_.JMethodIDPtr,
+    return _addHeader(reference.pointer, _id_addHeader as jni$_.JMethodIDPtr,
             _$string.pointer, _$string1.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2792,9 +2758,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder removeHeader(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _removeHeader(_$$selfRef.pointer,
+    return _removeHeader(reference.pointer,
             _id_removeHeader as jni$_.JMethodIDPtr, _$string.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2820,9 +2785,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder headers(
     Headers headers,
   ) {
-    final _$$selfRef = reference;
     final _$headers = headers.reference;
-    return _headers(_$$selfRef.pointer, _id_headers as jni$_.JMethodIDPtr,
+    return _headers(reference.pointer, _id_headers as jni$_.JMethodIDPtr,
             _$headers.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2848,9 +2812,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder body(
     ResponseBody? responseBody,
   ) {
-    final _$$selfRef = reference;
     final _$responseBody = responseBody?.reference ?? jni$_.jNullReference;
-    return _body(_$$selfRef.pointer, _id_body as jni$_.JMethodIDPtr,
+    return _body(reference.pointer, _id_body as jni$_.JMethodIDPtr,
             _$responseBody.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2876,9 +2839,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder networkResponse(
     Response? response,
   ) {
-    final _$$selfRef = reference;
     final _$response = response?.reference ?? jni$_.jNullReference;
-    return _networkResponse(_$$selfRef.pointer,
+    return _networkResponse(reference.pointer,
             _id_networkResponse as jni$_.JMethodIDPtr, _$response.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2904,9 +2866,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder cacheResponse(
     Response? response,
   ) {
-    final _$$selfRef = reference;
     final _$response = response?.reference ?? jni$_.jNullReference;
-    return _cacheResponse(_$$selfRef.pointer,
+    return _cacheResponse(reference.pointer,
             _id_cacheResponse as jni$_.JMethodIDPtr, _$response.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2932,9 +2893,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder priorResponse(
     Response? response,
   ) {
-    final _$$selfRef = reference;
     final _$response = response?.reference ?? jni$_.jNullReference;
-    return _priorResponse(_$$selfRef.pointer,
+    return _priorResponse(reference.pointer,
             _id_priorResponse as jni$_.JMethodIDPtr, _$response.pointer)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -2959,9 +2919,8 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder sentRequestAtMillis(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _sentRequestAtMillis(_$$selfRef.pointer,
-            _id_sentRequestAtMillis as jni$_.JMethodIDPtr, j)
+    return _sentRequestAtMillis(
+            reference.pointer, _id_sentRequestAtMillis as jni$_.JMethodIDPtr, j)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
 
@@ -2985,8 +2944,7 @@ class Response$Builder extends jni$_.JObject {
   Response$Builder receivedResponseAtMillis(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _receivedResponseAtMillis(_$$selfRef.pointer,
+    return _receivedResponseAtMillis(reference.pointer,
             _id_receivedResponseAtMillis as jni$_.JMethodIDPtr, j)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
@@ -3011,8 +2969,7 @@ class Response$Builder extends jni$_.JObject {
   /// from: `public okhttp3.Response build()`
   /// The returned object must be released after use, by calling the [release] method.
   Response build() {
-    final _$$selfRef = reference;
-    return _build(_$$selfRef.pointer, _id_build as jni$_.JMethodIDPtr)
+    return _build(reference.pointer, _id_build as jni$_.JMethodIDPtr)
         .object<Response>(const $Response$Type());
   }
 }
@@ -3170,7 +3127,6 @@ class Response extends jni$_.JObject {
     int j1,
     jni$_.JObject? exchange,
   ) {
-    final _$$classRef = _class.reference;
     final _$request = request.reference;
     final _$protocol = protocol.reference;
     final _$string = string.reference;
@@ -3182,7 +3138,7 @@ class Response extends jni$_.JObject {
     final _$response2 = response2?.reference ?? jni$_.jNullReference;
     final _$exchange = exchange?.reference ?? jni$_.jNullReference;
     return Response.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$request.pointer,
             _$protocol.pointer,
@@ -3220,8 +3176,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Request request()`
   /// The returned object must be released after use, by calling the [release] method.
   Request request() {
-    final _$$selfRef = reference;
-    return _request(_$$selfRef.pointer, _id_request as jni$_.JMethodIDPtr)
+    return _request(reference.pointer, _id_request as jni$_.JMethodIDPtr)
         .object<Request>(const $Request$Type());
   }
 
@@ -3245,8 +3200,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Protocol protocol()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject protocol() {
-    final _$$selfRef = reference;
-    return _protocol(_$$selfRef.pointer, _id_protocol as jni$_.JMethodIDPtr)
+    return _protocol(reference.pointer, _id_protocol as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -3270,8 +3224,7 @@ class Response extends jni$_.JObject {
   /// from: `public final java.lang.String message()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString message() {
-    final _$$selfRef = reference;
-    return _message(_$$selfRef.pointer, _id_message as jni$_.JMethodIDPtr)
+    return _message(reference.pointer, _id_message as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -3294,8 +3247,7 @@ class Response extends jni$_.JObject {
 
   /// from: `public final int code()`
   int code() {
-    final _$$selfRef = reference;
-    return _code(_$$selfRef.pointer, _id_code as jni$_.JMethodIDPtr).integer;
+    return _code(reference.pointer, _id_code as jni$_.JMethodIDPtr).integer;
   }
 
   static final _id_handshake = _class.instanceMethodId(
@@ -3318,8 +3270,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Handshake handshake()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? handshake() {
-    final _$$selfRef = reference;
-    return _handshake(_$$selfRef.pointer, _id_handshake as jni$_.JMethodIDPtr)
+    return _handshake(reference.pointer, _id_handshake as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -3343,8 +3294,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Headers headers()`
   /// The returned object must be released after use, by calling the [release] method.
   Headers headers() {
-    final _$$selfRef = reference;
-    return _headers(_$$selfRef.pointer, _id_headers as jni$_.JMethodIDPtr)
+    return _headers(reference.pointer, _id_headers as jni$_.JMethodIDPtr)
         .object<Headers>(const $Headers$Type());
   }
 
@@ -3368,8 +3318,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.ResponseBody body()`
   /// The returned object must be released after use, by calling the [release] method.
   ResponseBody? body() {
-    final _$$selfRef = reference;
-    return _body(_$$selfRef.pointer, _id_body as jni$_.JMethodIDPtr)
+    return _body(reference.pointer, _id_body as jni$_.JMethodIDPtr)
         .object<ResponseBody?>(const $ResponseBody$NullableType());
   }
 
@@ -3393,9 +3342,8 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Response networkResponse()`
   /// The returned object must be released after use, by calling the [release] method.
   Response? networkResponse() {
-    final _$$selfRef = reference;
     return _networkResponse(
-            _$$selfRef.pointer, _id_networkResponse as jni$_.JMethodIDPtr)
+            reference.pointer, _id_networkResponse as jni$_.JMethodIDPtr)
         .object<Response?>(const $Response$NullableType());
   }
 
@@ -3419,9 +3367,8 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Response cacheResponse()`
   /// The returned object must be released after use, by calling the [release] method.
   Response? cacheResponse() {
-    final _$$selfRef = reference;
     return _cacheResponse(
-            _$$selfRef.pointer, _id_cacheResponse as jni$_.JMethodIDPtr)
+            reference.pointer, _id_cacheResponse as jni$_.JMethodIDPtr)
         .object<Response?>(const $Response$NullableType());
   }
 
@@ -3445,9 +3392,8 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Response priorResponse()`
   /// The returned object must be released after use, by calling the [release] method.
   Response? priorResponse() {
-    final _$$selfRef = reference;
     return _priorResponse(
-            _$$selfRef.pointer, _id_priorResponse as jni$_.JMethodIDPtr)
+            reference.pointer, _id_priorResponse as jni$_.JMethodIDPtr)
         .object<Response?>(const $Response$NullableType());
   }
 
@@ -3470,9 +3416,8 @@ class Response extends jni$_.JObject {
 
   /// from: `public final long sentRequestAtMillis()`
   int sentRequestAtMillis() {
-    final _$$selfRef = reference;
     return _sentRequestAtMillis(
-            _$$selfRef.pointer, _id_sentRequestAtMillis as jni$_.JMethodIDPtr)
+            reference.pointer, _id_sentRequestAtMillis as jni$_.JMethodIDPtr)
         .long;
   }
 
@@ -3495,8 +3440,7 @@ class Response extends jni$_.JObject {
 
   /// from: `public final long receivedResponseAtMillis()`
   int receivedResponseAtMillis() {
-    final _$$selfRef = reference;
-    return _receivedResponseAtMillis(_$$selfRef.pointer,
+    return _receivedResponseAtMillis(reference.pointer,
             _id_receivedResponseAtMillis as jni$_.JMethodIDPtr)
         .long;
   }
@@ -3521,8 +3465,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.internal.connection.Exchange exchange()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? exchange() {
-    final _$$selfRef = reference;
-    return _exchange(_$$selfRef.pointer, _id_exchange as jni$_.JMethodIDPtr)
+    return _exchange(reference.pointer, _id_exchange as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -3545,9 +3488,8 @@ class Response extends jni$_.JObject {
 
   /// from: `public final boolean isSuccessful()`
   bool isSuccessful() {
-    final _$$selfRef = reference;
     return _isSuccessful(
-            _$$selfRef.pointer, _id_isSuccessful as jni$_.JMethodIDPtr)
+            reference.pointer, _id_isSuccessful as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -3572,9 +3514,8 @@ class Response extends jni$_.JObject {
   jni$_.JList<jni$_.JString> headers$1(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _headers$1(_$$selfRef.pointer, _id_headers$1 as jni$_.JMethodIDPtr,
+    return _headers$1(reference.pointer, _id_headers$1 as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<jni$_.JList<jni$_.JString>>(
             const jni$_.JListType<jni$_.JString>(jni$_.JStringType()));
@@ -3608,10 +3549,9 @@ class Response extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString? string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
-    return _header(_$$selfRef.pointer, _id_header as jni$_.JMethodIDPtr,
+    return _header(reference.pointer, _id_header as jni$_.JMethodIDPtr,
             _$string.pointer, _$string1.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -3636,8 +3576,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Headers trailers()`
   /// The returned object must be released after use, by calling the [release] method.
   Headers trailers() {
-    final _$$selfRef = reference;
-    return _trailers(_$$selfRef.pointer, _id_trailers as jni$_.JMethodIDPtr)
+    return _trailers(reference.pointer, _id_trailers as jni$_.JMethodIDPtr)
         .object<Headers>(const $Headers$Type());
   }
 
@@ -3661,8 +3600,7 @@ class Response extends jni$_.JObject {
   ResponseBody peekBody(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _peekBody(_$$selfRef.pointer, _id_peekBody as jni$_.JMethodIDPtr, j)
+    return _peekBody(reference.pointer, _id_peekBody as jni$_.JMethodIDPtr, j)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 
@@ -3686,8 +3624,7 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.Response$Builder newBuilder()`
   /// The returned object must be released after use, by calling the [release] method.
   Response$Builder newBuilder() {
-    final _$$selfRef = reference;
-    return _newBuilder(_$$selfRef.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
+    return _newBuilder(reference.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
         .object<Response$Builder>(const $Response$Builder$Type());
   }
 
@@ -3710,8 +3647,7 @@ class Response extends jni$_.JObject {
 
   /// from: `public final boolean isRedirect()`
   bool isRedirect() {
-    final _$$selfRef = reference;
-    return _isRedirect(_$$selfRef.pointer, _id_isRedirect as jni$_.JMethodIDPtr)
+    return _isRedirect(reference.pointer, _id_isRedirect as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -3735,8 +3671,7 @@ class Response extends jni$_.JObject {
   /// from: `public final java.util.List challenges()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject> challenges() {
-    final _$$selfRef = reference;
-    return _challenges(_$$selfRef.pointer, _id_challenges as jni$_.JMethodIDPtr)
+    return _challenges(reference.pointer, _id_challenges as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject>>(
             const jni$_.JListType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -3761,9 +3696,8 @@ class Response extends jni$_.JObject {
   /// from: `public final okhttp3.CacheControl cacheControl()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject cacheControl() {
-    final _$$selfRef = reference;
     return _cacheControl(
-            _$$selfRef.pointer, _id_cacheControl as jni$_.JMethodIDPtr)
+            reference.pointer, _id_cacheControl as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -3786,8 +3720,7 @@ class Response extends jni$_.JObject {
 
   /// from: `public void close()`
   void close() {
-    final _$$selfRef = reference;
-    _close(_$$selfRef.pointer, _id_close as jni$_.JMethodIDPtr).check();
+    _close(reference.pointer, _id_close as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_toString$1 = _class.instanceMethodId(
@@ -3810,8 +3743,7 @@ class Response extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -3836,9 +3768,8 @@ class Response extends jni$_.JObject {
   jni$_.JString? header$1(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _header$1(_$$selfRef.pointer, _id_header$1 as jni$_.JMethodIDPtr,
+    return _header$1(reference.pointer, _id_header$1 as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -3960,11 +3891,10 @@ class ResponseBody$BomAwareReader extends jni$_.JObject {
     jni$_.JObject bufferedSource,
     jni$_.JObject charset,
   ) {
-    final _$$classRef = _class.reference;
     final _$bufferedSource = bufferedSource.reference;
     final _$charset = charset.reference;
     return ResponseBody$BomAwareReader.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$bufferedSource.pointer,
             _$charset.pointer)
@@ -3997,9 +3927,8 @@ class ResponseBody$BomAwareReader extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$cs = cs.reference;
-    return _read(_$$selfRef.pointer, _id_read as jni$_.JMethodIDPtr,
+    return _read(reference.pointer, _id_read as jni$_.JMethodIDPtr,
             _$cs.pointer, i, i1)
         .integer;
   }
@@ -4023,8 +3952,7 @@ class ResponseBody$BomAwareReader extends jni$_.JObject {
 
   /// from: `public void close()`
   void close() {
-    final _$$selfRef = reference;
-    _close(_$$selfRef.pointer, _id_close as jni$_.JMethodIDPtr).check();
+    _close(reference.pointer, _id_close as jni$_.JMethodIDPtr).check();
   }
 }
 
@@ -4150,10 +4078,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject? mediaType,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create(_$$selfRef.pointer, _id_create as jni$_.JMethodIDPtr,
+    return _create(reference.pointer, _id_create as jni$_.JMethodIDPtr,
             _$string.pointer, _$mediaType.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4186,10 +4113,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     jni$_.JByteArray bs,
     jni$_.JObject? mediaType,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$1(_$$selfRef.pointer, _id_create$1 as jni$_.JMethodIDPtr,
+    return _create$1(reference.pointer, _id_create$1 as jni$_.JMethodIDPtr,
             _$bs.pointer, _$mediaType.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4222,10 +4148,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     ByteString byteString,
     jni$_.JObject? mediaType,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$2(_$$selfRef.pointer, _id_create$2 as jni$_.JMethodIDPtr,
+    return _create$2(reference.pointer, _id_create$2 as jni$_.JMethodIDPtr,
             _$byteString.pointer, _$mediaType.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4261,10 +4186,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     int j,
   ) {
-    final _$$selfRef = reference;
     final _$bufferedSource = bufferedSource.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$3(_$$selfRef.pointer, _id_create$3 as jni$_.JMethodIDPtr,
+    return _create$3(reference.pointer, _id_create$3 as jni$_.JMethodIDPtr,
             _$bufferedSource.pointer, _$mediaType.pointer, j)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4297,10 +4221,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$string = string.reference;
-    return _create$4(_$$selfRef.pointer, _id_create$4 as jni$_.JMethodIDPtr,
+    return _create$4(reference.pointer, _id_create$4 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$string.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4333,10 +4256,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$5(_$$selfRef.pointer, _id_create$5 as jni$_.JMethodIDPtr,
+    return _create$5(reference.pointer, _id_create$5 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$bs.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4369,10 +4291,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     jni$_.JObject? mediaType,
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$byteString = byteString.reference;
-    return _create$6(_$$selfRef.pointer, _id_create$6 as jni$_.JMethodIDPtr,
+    return _create$6(reference.pointer, _id_create$6 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, _$byteString.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4408,10 +4329,9 @@ class ResponseBody$Companion extends jni$_.JObject {
     int j,
     jni$_.JObject bufferedSource,
   ) {
-    final _$$selfRef = reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bufferedSource = bufferedSource.reference;
-    return _create$7(_$$selfRef.pointer, _id_create$7 as jni$_.JMethodIDPtr,
+    return _create$7(reference.pointer, _id_create$7 as jni$_.JMethodIDPtr,
             _$mediaType.pointer, j, _$bufferedSource.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4436,10 +4356,9 @@ class ResponseBody$Companion extends jni$_.JObject {
   factory ResponseBody$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
-    return ResponseBody$Companion.fromReference(_new$(_$$classRef.pointer,
+    return ResponseBody$Companion.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$defaultConstructorMarker.pointer)
         .reference);
   }
@@ -4569,9 +4488,8 @@ class ResponseBody extends jni$_.JObject {
   /// from: `public abstract okhttp3.MediaType contentType()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? contentType() {
-    final _$$selfRef = reference;
     return _contentType(
-            _$$selfRef.pointer, _id_contentType as jni$_.JMethodIDPtr)
+            reference.pointer, _id_contentType as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -4594,9 +4512,8 @@ class ResponseBody extends jni$_.JObject {
 
   /// from: `public abstract long contentLength()`
   int contentLength() {
-    final _$$selfRef = reference;
     return _contentLength(
-            _$$selfRef.pointer, _id_contentLength as jni$_.JMethodIDPtr)
+            reference.pointer, _id_contentLength as jni$_.JMethodIDPtr)
         .long;
   }
 
@@ -4620,8 +4537,7 @@ class ResponseBody extends jni$_.JObject {
   /// from: `public final java.io.InputStream byteStream()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject byteStream() {
-    final _$$selfRef = reference;
-    return _byteStream(_$$selfRef.pointer, _id_byteStream as jni$_.JMethodIDPtr)
+    return _byteStream(reference.pointer, _id_byteStream as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -4645,8 +4561,7 @@ class ResponseBody extends jni$_.JObject {
   /// from: `public abstract okio.BufferedSource source()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject source() {
-    final _$$selfRef = reference;
-    return _source(_$$selfRef.pointer, _id_source as jni$_.JMethodIDPtr)
+    return _source(reference.pointer, _id_source as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -4670,8 +4585,7 @@ class ResponseBody extends jni$_.JObject {
   /// from: `public final byte[] bytes()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray bytes() {
-    final _$$selfRef = reference;
-    return _bytes(_$$selfRef.pointer, _id_bytes as jni$_.JMethodIDPtr)
+    return _bytes(reference.pointer, _id_bytes as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray>(const jni$_.JByteArrayType());
   }
 
@@ -4695,8 +4609,7 @@ class ResponseBody extends jni$_.JObject {
   /// from: `public final okio.ByteString byteString()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString byteString() {
-    final _$$selfRef = reference;
-    return _byteString(_$$selfRef.pointer, _id_byteString as jni$_.JMethodIDPtr)
+    return _byteString(reference.pointer, _id_byteString as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -4720,8 +4633,7 @@ class ResponseBody extends jni$_.JObject {
   /// from: `public final java.io.Reader charStream()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject charStream() {
-    final _$$selfRef = reference;
-    return _charStream(_$$selfRef.pointer, _id_charStream as jni$_.JMethodIDPtr)
+    return _charStream(reference.pointer, _id_charStream as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -4745,8 +4657,7 @@ class ResponseBody extends jni$_.JObject {
   /// from: `public final java.lang.String string()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString string() {
-    final _$$selfRef = reference;
-    return _string(_$$selfRef.pointer, _id_string as jni$_.JMethodIDPtr)
+    return _string(reference.pointer, _id_string as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -4769,8 +4680,7 @@ class ResponseBody extends jni$_.JObject {
 
   /// from: `public void close()`
   void close() {
-    final _$$selfRef = reference;
-    _close(_$$selfRef.pointer, _id_close as jni$_.JMethodIDPtr).check();
+    _close(reference.pointer, _id_close as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_create = _class.staticMethodId(
@@ -4801,10 +4711,9 @@ class ResponseBody extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject? mediaType,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create(_$$classRef.pointer, _id_create as jni$_.JMethodIDPtr,
+    return _create(_class.reference.pointer, _id_create as jni$_.JMethodIDPtr,
             _$string.pointer, _$mediaType.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
@@ -4837,11 +4746,13 @@ class ResponseBody extends jni$_.JObject {
     jni$_.JByteArray bs,
     jni$_.JObject? mediaType,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$1(_$$classRef.pointer, _id_create$1 as jni$_.JMethodIDPtr,
-            _$bs.pointer, _$mediaType.pointer)
+    return _create$1(
+            _class.reference.pointer,
+            _id_create$1 as jni$_.JMethodIDPtr,
+            _$bs.pointer,
+            _$mediaType.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 
@@ -4873,11 +4784,13 @@ class ResponseBody extends jni$_.JObject {
     ByteString byteString,
     jni$_.JObject? mediaType,
   ) {
-    final _$$classRef = _class.reference;
     final _$byteString = byteString.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$2(_$$classRef.pointer, _id_create$2 as jni$_.JMethodIDPtr,
-            _$byteString.pointer, _$mediaType.pointer)
+    return _create$2(
+            _class.reference.pointer,
+            _id_create$2 as jni$_.JMethodIDPtr,
+            _$byteString.pointer,
+            _$mediaType.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 
@@ -4912,11 +4825,14 @@ class ResponseBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     int j,
   ) {
-    final _$$classRef = _class.reference;
     final _$bufferedSource = bufferedSource.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
-    return _create$3(_$$classRef.pointer, _id_create$3 as jni$_.JMethodIDPtr,
-            _$bufferedSource.pointer, _$mediaType.pointer, j)
+    return _create$3(
+            _class.reference.pointer,
+            _id_create$3 as jni$_.JMethodIDPtr,
+            _$bufferedSource.pointer,
+            _$mediaType.pointer,
+            j)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 
@@ -4948,11 +4864,13 @@ class ResponseBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JString string,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$string = string.reference;
-    return _create$4(_$$classRef.pointer, _id_create$4 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$string.pointer)
+    return _create$4(
+            _class.reference.pointer,
+            _id_create$4 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$string.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 
@@ -4984,11 +4902,13 @@ class ResponseBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     jni$_.JByteArray bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bs = bs.reference;
-    return _create$5(_$$classRef.pointer, _id_create$5 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$bs.pointer)
+    return _create$5(
+            _class.reference.pointer,
+            _id_create$5 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$bs.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 
@@ -5020,11 +4940,13 @@ class ResponseBody extends jni$_.JObject {
     jni$_.JObject? mediaType,
     ByteString byteString,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$byteString = byteString.reference;
-    return _create$6(_$$classRef.pointer, _id_create$6 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, _$byteString.pointer)
+    return _create$6(
+            _class.reference.pointer,
+            _id_create$6 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            _$byteString.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 
@@ -5059,11 +4981,14 @@ class ResponseBody extends jni$_.JObject {
     int j,
     jni$_.JObject bufferedSource,
   ) {
-    final _$$classRef = _class.reference;
     final _$mediaType = mediaType?.reference ?? jni$_.jNullReference;
     final _$bufferedSource = bufferedSource.reference;
-    return _create$7(_$$classRef.pointer, _id_create$7 as jni$_.JMethodIDPtr,
-            _$mediaType.pointer, j, _$bufferedSource.pointer)
+    return _create$7(
+            _class.reference.pointer,
+            _id_create$7 as jni$_.JMethodIDPtr,
+            _$mediaType.pointer,
+            j,
+            _$bufferedSource.pointer)
         .object<ResponseBody>(const $ResponseBody$Type());
   }
 }
@@ -5178,9 +5103,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory OkHttpClient$Builder() {
-    final _$$classRef = _class.reference;
     return OkHttpClient$Builder.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_new$1 = _class.constructorId(
@@ -5203,9 +5128,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   factory OkHttpClient$Builder.new$1(
     OkHttpClient okHttpClient,
   ) {
-    final _$$classRef = _class.reference;
     final _$okHttpClient = okHttpClient.reference;
-    return OkHttpClient$Builder.fromReference(_new$1(_$$classRef.pointer,
+    return OkHttpClient$Builder.fromReference(_new$1(_class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr, _$okHttpClient.pointer)
         .reference);
   }
@@ -5231,9 +5155,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder dispatcher(
     Dispatcher dispatcher,
   ) {
-    final _$$selfRef = reference;
     final _$dispatcher = dispatcher.reference;
-    return _dispatcher(_$$selfRef.pointer, _id_dispatcher as jni$_.JMethodIDPtr,
+    return _dispatcher(reference.pointer, _id_dispatcher as jni$_.JMethodIDPtr,
             _$dispatcher.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5259,9 +5182,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder connectionPool(
     ConnectionPool connectionPool,
   ) {
-    final _$$selfRef = reference;
     final _$connectionPool = connectionPool.reference;
-    return _connectionPool(_$$selfRef.pointer,
+    return _connectionPool(reference.pointer,
             _id_connectionPool as jni$_.JMethodIDPtr, _$connectionPool.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5286,9 +5208,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   /// from: `public final java.util.List interceptors()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject> interceptors() {
-    final _$$selfRef = reference;
     return _interceptors(
-            _$$selfRef.pointer, _id_interceptors as jni$_.JMethodIDPtr)
+            reference.pointer, _id_interceptors as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject>>(
             const jni$_.JListType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -5314,9 +5235,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder addInterceptor(
     jni$_.JObject interceptor,
   ) {
-    final _$$selfRef = reference;
     final _$interceptor = interceptor.reference;
-    return _addInterceptor(_$$selfRef.pointer,
+    return _addInterceptor(reference.pointer,
             _id_addInterceptor as jni$_.JMethodIDPtr, _$interceptor.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5341,9 +5261,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   /// from: `public final java.util.List networkInterceptors()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject> networkInterceptors() {
-    final _$$selfRef = reference;
     return _networkInterceptors(
-            _$$selfRef.pointer, _id_networkInterceptors as jni$_.JMethodIDPtr)
+            reference.pointer, _id_networkInterceptors as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject>>(
             const jni$_.JListType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -5369,10 +5288,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder addNetworkInterceptor(
     jni$_.JObject interceptor,
   ) {
-    final _$$selfRef = reference;
     final _$interceptor = interceptor.reference;
     return _addNetworkInterceptor(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_addNetworkInterceptor as jni$_.JMethodIDPtr,
             _$interceptor.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
@@ -5399,9 +5317,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder eventListener(
     jni$_.JObject eventListener,
   ) {
-    final _$$selfRef = reference;
     final _$eventListener = eventListener.reference;
-    return _eventListener(_$$selfRef.pointer,
+    return _eventListener(reference.pointer,
             _id_eventListener as jni$_.JMethodIDPtr, _$eventListener.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5427,9 +5344,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder eventListenerFactory(
     jni$_.JObject factory,
   ) {
-    final _$$selfRef = reference;
     final _$factory = factory.reference;
-    return _eventListenerFactory(_$$selfRef.pointer,
+    return _eventListenerFactory(reference.pointer,
             _id_eventListenerFactory as jni$_.JMethodIDPtr, _$factory.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5454,8 +5370,7 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder retryOnConnectionFailure(
     bool z,
   ) {
-    final _$$selfRef = reference;
-    return _retryOnConnectionFailure(_$$selfRef.pointer,
+    return _retryOnConnectionFailure(reference.pointer,
             _id_retryOnConnectionFailure as jni$_.JMethodIDPtr, z ? 1 : 0)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5481,9 +5396,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder authenticator(
     jni$_.JObject authenticator,
   ) {
-    final _$$selfRef = reference;
     final _$authenticator = authenticator.reference;
-    return _authenticator(_$$selfRef.pointer,
+    return _authenticator(reference.pointer,
             _id_authenticator as jni$_.JMethodIDPtr, _$authenticator.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5508,8 +5422,7 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder followRedirects(
     bool z,
   ) {
-    final _$$selfRef = reference;
-    return _followRedirects(_$$selfRef.pointer,
+    return _followRedirects(reference.pointer,
             _id_followRedirects as jni$_.JMethodIDPtr, z ? 1 : 0)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5534,8 +5447,7 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder followSslRedirects(
     bool z,
   ) {
-    final _$$selfRef = reference;
-    return _followSslRedirects(_$$selfRef.pointer,
+    return _followSslRedirects(reference.pointer,
             _id_followSslRedirects as jni$_.JMethodIDPtr, z ? 1 : 0)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5561,9 +5473,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder cookieJar(
     jni$_.JObject cookieJar,
   ) {
-    final _$$selfRef = reference;
     final _$cookieJar = cookieJar.reference;
-    return _cookieJar(_$$selfRef.pointer, _id_cookieJar as jni$_.JMethodIDPtr,
+    return _cookieJar(reference.pointer, _id_cookieJar as jni$_.JMethodIDPtr,
             _$cookieJar.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5589,10 +5500,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder cache(
     Cache? cache,
   ) {
-    final _$$selfRef = reference;
     final _$cache = cache?.reference ?? jni$_.jNullReference;
-    return _cache(_$$selfRef.pointer, _id_cache as jni$_.JMethodIDPtr,
-            _$cache.pointer)
+    return _cache(
+            reference.pointer, _id_cache as jni$_.JMethodIDPtr, _$cache.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
 
@@ -5617,10 +5527,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder dns(
     jni$_.JObject dns,
   ) {
-    final _$$selfRef = reference;
     final _$dns = dns.reference;
-    return _dns(
-            _$$selfRef.pointer, _id_dns as jni$_.JMethodIDPtr, _$dns.pointer)
+    return _dns(reference.pointer, _id_dns as jni$_.JMethodIDPtr, _$dns.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
 
@@ -5645,10 +5553,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder proxy(
     jni$_.JObject? proxy,
   ) {
-    final _$$selfRef = reference;
     final _$proxy = proxy?.reference ?? jni$_.jNullReference;
-    return _proxy(_$$selfRef.pointer, _id_proxy as jni$_.JMethodIDPtr,
-            _$proxy.pointer)
+    return _proxy(
+            reference.pointer, _id_proxy as jni$_.JMethodIDPtr, _$proxy.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
 
@@ -5673,9 +5580,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder proxySelector(
     jni$_.JObject proxySelector,
   ) {
-    final _$$selfRef = reference;
     final _$proxySelector = proxySelector.reference;
-    return _proxySelector(_$$selfRef.pointer,
+    return _proxySelector(reference.pointer,
             _id_proxySelector as jni$_.JMethodIDPtr, _$proxySelector.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5701,10 +5607,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder proxyAuthenticator(
     jni$_.JObject authenticator,
   ) {
-    final _$$selfRef = reference;
     final _$authenticator = authenticator.reference;
     return _proxyAuthenticator(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_proxyAuthenticator as jni$_.JMethodIDPtr,
             _$authenticator.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
@@ -5731,9 +5636,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder socketFactory(
     SocketFactory socketFactory,
   ) {
-    final _$$selfRef = reference;
     final _$socketFactory = socketFactory.reference;
-    return _socketFactory(_$$selfRef.pointer,
+    return _socketFactory(reference.pointer,
             _id_socketFactory as jni$_.JMethodIDPtr, _$socketFactory.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5759,10 +5663,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder sslSocketFactory(
     SSLSocketFactory sSLSocketFactory,
   ) {
-    final _$$selfRef = reference;
     final _$sSLSocketFactory = sSLSocketFactory.reference;
     return _sslSocketFactory(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_sslSocketFactory as jni$_.JMethodIDPtr,
             _$sSLSocketFactory.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
@@ -5796,11 +5699,10 @@ class OkHttpClient$Builder extends jni$_.JObject {
     SSLSocketFactory sSLSocketFactory,
     X509TrustManager x509TrustManager,
   ) {
-    final _$$selfRef = reference;
     final _$sSLSocketFactory = sSLSocketFactory.reference;
     final _$x509TrustManager = x509TrustManager.reference;
     return _sslSocketFactory$1(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_sslSocketFactory$1 as jni$_.JMethodIDPtr,
             _$sSLSocketFactory.pointer,
             _$x509TrustManager.pointer)
@@ -5828,9 +5730,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder connectionSpecs(
     jni$_.JList<jni$_.JObject> list,
   ) {
-    final _$$selfRef = reference;
     final _$list = list.reference;
-    return _connectionSpecs(_$$selfRef.pointer,
+    return _connectionSpecs(reference.pointer,
             _id_connectionSpecs as jni$_.JMethodIDPtr, _$list.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5856,9 +5757,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder protocols(
     jni$_.JList<jni$_.JObject> list,
   ) {
-    final _$$selfRef = reference;
     final _$list = list.reference;
-    return _protocols(_$$selfRef.pointer, _id_protocols as jni$_.JMethodIDPtr,
+    return _protocols(reference.pointer, _id_protocols as jni$_.JMethodIDPtr,
             _$list.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5884,10 +5784,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder hostnameVerifier(
     HostnameVerifier hostnameVerifier,
   ) {
-    final _$$selfRef = reference;
     final _$hostnameVerifier = hostnameVerifier.reference;
     return _hostnameVerifier(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_hostnameVerifier as jni$_.JMethodIDPtr,
             _$hostnameVerifier.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
@@ -5914,10 +5813,9 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder certificatePinner(
     jni$_.JObject certificatePinner,
   ) {
-    final _$$selfRef = reference;
     final _$certificatePinner = certificatePinner.reference;
     return _certificatePinner(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_certificatePinner as jni$_.JMethodIDPtr,
             _$certificatePinner.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
@@ -5946,9 +5844,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
     int j,
     TimeUnit timeUnit,
   ) {
-    final _$$selfRef = reference;
     final _$timeUnit = timeUnit.reference;
-    return _callTimeout(_$$selfRef.pointer,
+    return _callTimeout(reference.pointer,
             _id_callTimeout as jni$_.JMethodIDPtr, j, _$timeUnit.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -5974,9 +5871,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder callTimeout$1(
     jni$_.JObject duration,
   ) {
-    final _$$selfRef = reference;
     final _$duration = duration.reference;
-    return _callTimeout$1(_$$selfRef.pointer,
+    return _callTimeout$1(reference.pointer,
             _id_callTimeout$1 as jni$_.JMethodIDPtr, _$duration.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6004,9 +5900,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
     int j,
     TimeUnit timeUnit,
   ) {
-    final _$$selfRef = reference;
     final _$timeUnit = timeUnit.reference;
-    return _connectTimeout(_$$selfRef.pointer,
+    return _connectTimeout(reference.pointer,
             _id_connectTimeout as jni$_.JMethodIDPtr, j, _$timeUnit.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6032,9 +5927,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder connectTimeout$1(
     jni$_.JObject duration,
   ) {
-    final _$$selfRef = reference;
     final _$duration = duration.reference;
-    return _connectTimeout$1(_$$selfRef.pointer,
+    return _connectTimeout$1(reference.pointer,
             _id_connectTimeout$1 as jni$_.JMethodIDPtr, _$duration.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6062,9 +5956,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
     int j,
     TimeUnit timeUnit,
   ) {
-    final _$$selfRef = reference;
     final _$timeUnit = timeUnit.reference;
-    return _readTimeout(_$$selfRef.pointer,
+    return _readTimeout(reference.pointer,
             _id_readTimeout as jni$_.JMethodIDPtr, j, _$timeUnit.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6090,9 +5983,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder readTimeout$1(
     jni$_.JObject duration,
   ) {
-    final _$$selfRef = reference;
     final _$duration = duration.reference;
-    return _readTimeout$1(_$$selfRef.pointer,
+    return _readTimeout$1(reference.pointer,
             _id_readTimeout$1 as jni$_.JMethodIDPtr, _$duration.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6120,9 +6012,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
     int j,
     TimeUnit timeUnit,
   ) {
-    final _$$selfRef = reference;
     final _$timeUnit = timeUnit.reference;
-    return _writeTimeout(_$$selfRef.pointer,
+    return _writeTimeout(reference.pointer,
             _id_writeTimeout as jni$_.JMethodIDPtr, j, _$timeUnit.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6148,9 +6039,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder writeTimeout$1(
     jni$_.JObject duration,
   ) {
-    final _$$selfRef = reference;
     final _$duration = duration.reference;
-    return _writeTimeout$1(_$$selfRef.pointer,
+    return _writeTimeout$1(reference.pointer,
             _id_writeTimeout$1 as jni$_.JMethodIDPtr, _$duration.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6178,9 +6068,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
     int j,
     TimeUnit timeUnit,
   ) {
-    final _$$selfRef = reference;
     final _$timeUnit = timeUnit.reference;
-    return _pingInterval(_$$selfRef.pointer,
+    return _pingInterval(reference.pointer,
             _id_pingInterval as jni$_.JMethodIDPtr, j, _$timeUnit.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6206,9 +6095,8 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder pingInterval$1(
     jni$_.JObject duration,
   ) {
-    final _$$selfRef = reference;
     final _$duration = duration.reference;
-    return _pingInterval$1(_$$selfRef.pointer,
+    return _pingInterval$1(reference.pointer,
             _id_pingInterval$1 as jni$_.JMethodIDPtr, _$duration.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6233,8 +6121,7 @@ class OkHttpClient$Builder extends jni$_.JObject {
   OkHttpClient$Builder minWebSocketMessageToCompress(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _minWebSocketMessageToCompress(_$$selfRef.pointer,
+    return _minWebSocketMessageToCompress(reference.pointer,
             _id_minWebSocketMessageToCompress as jni$_.JMethodIDPtr, j)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -6259,8 +6146,7 @@ class OkHttpClient$Builder extends jni$_.JObject {
   /// from: `public final okhttp3.OkHttpClient build()`
   /// The returned object must be released after use, by calling the [release] method.
   OkHttpClient build() {
-    final _$$selfRef = reference;
-    return _build(_$$selfRef.pointer, _id_build as jni$_.JMethodIDPtr)
+    return _build(reference.pointer, _id_build as jni$_.JMethodIDPtr)
         .object<OkHttpClient>(const $OkHttpClient$Type());
   }
 }
@@ -6379,10 +6265,9 @@ class OkHttpClient$Companion extends jni$_.JObject {
   factory OkHttpClient$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
-    return OkHttpClient$Companion.fromReference(_new$(_$$classRef.pointer,
+    return OkHttpClient$Companion.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$defaultConstructorMarker.pointer)
         .reference);
   }
@@ -6512,9 +6397,8 @@ class OkHttpClient extends jni$_.JObject {
   factory OkHttpClient(
     OkHttpClient$Builder builder,
   ) {
-    final _$$classRef = _class.reference;
     final _$builder = builder.reference;
-    return OkHttpClient.fromReference(_new$(_$$classRef.pointer,
+    return OkHttpClient.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$builder.pointer)
         .reference);
   }
@@ -6539,8 +6423,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.Dispatcher dispatcher()`
   /// The returned object must be released after use, by calling the [release] method.
   Dispatcher dispatcher() {
-    final _$$selfRef = reference;
-    return _dispatcher(_$$selfRef.pointer, _id_dispatcher as jni$_.JMethodIDPtr)
+    return _dispatcher(reference.pointer, _id_dispatcher as jni$_.JMethodIDPtr)
         .object<Dispatcher>(const $Dispatcher$Type());
   }
 
@@ -6564,9 +6447,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.ConnectionPool connectionPool()`
   /// The returned object must be released after use, by calling the [release] method.
   ConnectionPool connectionPool() {
-    final _$$selfRef = reference;
     return _connectionPool(
-            _$$selfRef.pointer, _id_connectionPool as jni$_.JMethodIDPtr)
+            reference.pointer, _id_connectionPool as jni$_.JMethodIDPtr)
         .object<ConnectionPool>(const $ConnectionPool$Type());
   }
 
@@ -6590,9 +6472,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final java.util.List interceptors()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject> interceptors() {
-    final _$$selfRef = reference;
     return _interceptors(
-            _$$selfRef.pointer, _id_interceptors as jni$_.JMethodIDPtr)
+            reference.pointer, _id_interceptors as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject>>(
             const jni$_.JListType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -6617,9 +6498,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final java.util.List networkInterceptors()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject> networkInterceptors() {
-    final _$$selfRef = reference;
     return _networkInterceptors(
-            _$$selfRef.pointer, _id_networkInterceptors as jni$_.JMethodIDPtr)
+            reference.pointer, _id_networkInterceptors as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject>>(
             const jni$_.JListType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -6644,9 +6524,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.EventListener$Factory eventListenerFactory()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject eventListenerFactory() {
-    final _$$selfRef = reference;
     return _eventListenerFactory(
-            _$$selfRef.pointer, _id_eventListenerFactory as jni$_.JMethodIDPtr)
+            reference.pointer, _id_eventListenerFactory as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -6669,8 +6548,7 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final boolean retryOnConnectionFailure()`
   bool retryOnConnectionFailure() {
-    final _$$selfRef = reference;
-    return _retryOnConnectionFailure(_$$selfRef.pointer,
+    return _retryOnConnectionFailure(reference.pointer,
             _id_retryOnConnectionFailure as jni$_.JMethodIDPtr)
         .boolean;
   }
@@ -6695,9 +6573,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.Authenticator authenticator()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject authenticator() {
-    final _$$selfRef = reference;
     return _authenticator(
-            _$$selfRef.pointer, _id_authenticator as jni$_.JMethodIDPtr)
+            reference.pointer, _id_authenticator as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -6720,9 +6597,8 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final boolean followRedirects()`
   bool followRedirects() {
-    final _$$selfRef = reference;
     return _followRedirects(
-            _$$selfRef.pointer, _id_followRedirects as jni$_.JMethodIDPtr)
+            reference.pointer, _id_followRedirects as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -6745,9 +6621,8 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final boolean followSslRedirects()`
   bool followSslRedirects() {
-    final _$$selfRef = reference;
     return _followSslRedirects(
-            _$$selfRef.pointer, _id_followSslRedirects as jni$_.JMethodIDPtr)
+            reference.pointer, _id_followSslRedirects as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -6771,8 +6646,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.CookieJar cookieJar()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject cookieJar() {
-    final _$$selfRef = reference;
-    return _cookieJar(_$$selfRef.pointer, _id_cookieJar as jni$_.JMethodIDPtr)
+    return _cookieJar(reference.pointer, _id_cookieJar as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -6796,8 +6670,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.Cache cache()`
   /// The returned object must be released after use, by calling the [release] method.
   Cache? cache() {
-    final _$$selfRef = reference;
-    return _cache(_$$selfRef.pointer, _id_cache as jni$_.JMethodIDPtr)
+    return _cache(reference.pointer, _id_cache as jni$_.JMethodIDPtr)
         .object<Cache?>(const $Cache$NullableType());
   }
 
@@ -6821,8 +6694,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.Dns dns()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject dns() {
-    final _$$selfRef = reference;
-    return _dns(_$$selfRef.pointer, _id_dns as jni$_.JMethodIDPtr)
+    return _dns(reference.pointer, _id_dns as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -6846,8 +6718,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final java.net.Proxy proxy()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? proxy() {
-    final _$$selfRef = reference;
-    return _proxy(_$$selfRef.pointer, _id_proxy as jni$_.JMethodIDPtr)
+    return _proxy(reference.pointer, _id_proxy as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -6871,9 +6742,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final java.net.ProxySelector proxySelector()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject proxySelector() {
-    final _$$selfRef = reference;
     return _proxySelector(
-            _$$selfRef.pointer, _id_proxySelector as jni$_.JMethodIDPtr)
+            reference.pointer, _id_proxySelector as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -6897,9 +6767,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.Authenticator proxyAuthenticator()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject proxyAuthenticator() {
-    final _$$selfRef = reference;
     return _proxyAuthenticator(
-            _$$selfRef.pointer, _id_proxyAuthenticator as jni$_.JMethodIDPtr)
+            reference.pointer, _id_proxyAuthenticator as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -6923,9 +6792,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final javax.net.SocketFactory socketFactory()`
   /// The returned object must be released after use, by calling the [release] method.
   SocketFactory socketFactory() {
-    final _$$selfRef = reference;
     return _socketFactory(
-            _$$selfRef.pointer, _id_socketFactory as jni$_.JMethodIDPtr)
+            reference.pointer, _id_socketFactory as jni$_.JMethodIDPtr)
         .object<SocketFactory>(const $SocketFactory$Type());
   }
 
@@ -6949,9 +6817,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLSocketFactory sslSocketFactory()`
   /// The returned object must be released after use, by calling the [release] method.
   SSLSocketFactory sslSocketFactory() {
-    final _$$selfRef = reference;
     return _sslSocketFactory(
-            _$$selfRef.pointer, _id_sslSocketFactory as jni$_.JMethodIDPtr)
+            reference.pointer, _id_sslSocketFactory as jni$_.JMethodIDPtr)
         .object<SSLSocketFactory>(const $SSLSocketFactory$Type());
   }
 
@@ -6975,9 +6842,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final javax.net.ssl.X509TrustManager x509TrustManager()`
   /// The returned object must be released after use, by calling the [release] method.
   X509TrustManager? x509TrustManager() {
-    final _$$selfRef = reference;
     return _x509TrustManager(
-            _$$selfRef.pointer, _id_x509TrustManager as jni$_.JMethodIDPtr)
+            reference.pointer, _id_x509TrustManager as jni$_.JMethodIDPtr)
         .object<X509TrustManager?>(const $X509TrustManager$NullableType());
   }
 
@@ -7001,9 +6867,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final java.util.List connectionSpecs()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject> connectionSpecs() {
-    final _$$selfRef = reference;
     return _connectionSpecs(
-            _$$selfRef.pointer, _id_connectionSpecs as jni$_.JMethodIDPtr)
+            reference.pointer, _id_connectionSpecs as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject>>(
             const jni$_.JListType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -7028,8 +6893,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final java.util.List protocols()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject> protocols() {
-    final _$$selfRef = reference;
-    return _protocols(_$$selfRef.pointer, _id_protocols as jni$_.JMethodIDPtr)
+    return _protocols(reference.pointer, _id_protocols as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject>>(
             const jni$_.JListType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -7054,9 +6918,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final javax.net.ssl.HostnameVerifier hostnameVerifier()`
   /// The returned object must be released after use, by calling the [release] method.
   HostnameVerifier hostnameVerifier() {
-    final _$$selfRef = reference;
     return _hostnameVerifier(
-            _$$selfRef.pointer, _id_hostnameVerifier as jni$_.JMethodIDPtr)
+            reference.pointer, _id_hostnameVerifier as jni$_.JMethodIDPtr)
         .object<HostnameVerifier>(const $HostnameVerifier$Type());
   }
 
@@ -7080,9 +6943,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.CertificatePinner certificatePinner()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject certificatePinner() {
-    final _$$selfRef = reference;
     return _certificatePinner(
-            _$$selfRef.pointer, _id_certificatePinner as jni$_.JMethodIDPtr)
+            reference.pointer, _id_certificatePinner as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -7106,8 +6968,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.internal.tls.CertificateChainCleaner certificateChainCleaner()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? certificateChainCleaner() {
-    final _$$selfRef = reference;
-    return _certificateChainCleaner(_$$selfRef.pointer,
+    return _certificateChainCleaner(reference.pointer,
             _id_certificateChainCleaner as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -7131,9 +6992,8 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final int callTimeoutMillis()`
   int callTimeoutMillis() {
-    final _$$selfRef = reference;
     return _callTimeoutMillis(
-            _$$selfRef.pointer, _id_callTimeoutMillis as jni$_.JMethodIDPtr)
+            reference.pointer, _id_callTimeoutMillis as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -7156,9 +7016,8 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final int connectTimeoutMillis()`
   int connectTimeoutMillis() {
-    final _$$selfRef = reference;
     return _connectTimeoutMillis(
-            _$$selfRef.pointer, _id_connectTimeoutMillis as jni$_.JMethodIDPtr)
+            reference.pointer, _id_connectTimeoutMillis as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -7181,9 +7040,8 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final int readTimeoutMillis()`
   int readTimeoutMillis() {
-    final _$$selfRef = reference;
     return _readTimeoutMillis(
-            _$$selfRef.pointer, _id_readTimeoutMillis as jni$_.JMethodIDPtr)
+            reference.pointer, _id_readTimeoutMillis as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -7206,9 +7064,8 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final int writeTimeoutMillis()`
   int writeTimeoutMillis() {
-    final _$$selfRef = reference;
     return _writeTimeoutMillis(
-            _$$selfRef.pointer, _id_writeTimeoutMillis as jni$_.JMethodIDPtr)
+            reference.pointer, _id_writeTimeoutMillis as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -7231,9 +7088,8 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final int pingIntervalMillis()`
   int pingIntervalMillis() {
-    final _$$selfRef = reference;
     return _pingIntervalMillis(
-            _$$selfRef.pointer, _id_pingIntervalMillis as jni$_.JMethodIDPtr)
+            reference.pointer, _id_pingIntervalMillis as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -7257,8 +7113,7 @@ class OkHttpClient extends jni$_.JObject {
 
   /// from: `public final long minWebSocketMessageToCompress()`
   int minWebSocketMessageToCompress() {
-    final _$$selfRef = reference;
-    return _minWebSocketMessageToCompress(_$$selfRef.pointer,
+    return _minWebSocketMessageToCompress(reference.pointer,
             _id_minWebSocketMessageToCompress as jni$_.JMethodIDPtr)
         .long;
   }
@@ -7283,9 +7138,8 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public final okhttp3.internal.connection.RouteDatabase getRouteDatabase()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject getRouteDatabase() {
-    final _$$selfRef = reference;
     return _getRouteDatabase(
-            _$$selfRef.pointer, _id_getRouteDatabase as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getRouteDatabase as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -7308,9 +7162,9 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory OkHttpClient.new$1() {
-    final _$$classRef = _class.reference;
     return OkHttpClient.fromReference(
-        _new$1(_$$classRef.pointer, _id_new$1 as jni$_.JMethodIDPtr).reference);
+        _new$1(_class.reference.pointer, _id_new$1 as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_newCall = _class.instanceMethodId(
@@ -7334,9 +7188,8 @@ class OkHttpClient extends jni$_.JObject {
   Call newCall(
     Request request,
   ) {
-    final _$$selfRef = reference;
     final _$request = request.reference;
-    return _newCall(_$$selfRef.pointer, _id_newCall as jni$_.JMethodIDPtr,
+    return _newCall(reference.pointer, _id_newCall as jni$_.JMethodIDPtr,
             _$request.pointer)
         .object<Call>(const $Call$Type());
   }
@@ -7369,11 +7222,10 @@ class OkHttpClient extends jni$_.JObject {
     Request request,
     jni$_.JObject webSocketListener,
   ) {
-    final _$$selfRef = reference;
     final _$request = request.reference;
     final _$webSocketListener = webSocketListener.reference;
     return _newWebSocket(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_newWebSocket as jni$_.JMethodIDPtr,
             _$request.pointer,
             _$webSocketListener.pointer)
@@ -7400,8 +7252,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public okhttp3.OkHttpClient$Builder newBuilder()`
   /// The returned object must be released after use, by calling the [release] method.
   OkHttpClient$Builder newBuilder() {
-    final _$$selfRef = reference;
-    return _newBuilder(_$$selfRef.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
+    return _newBuilder(reference.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
 
@@ -7425,8 +7276,7 @@ class OkHttpClient extends jni$_.JObject {
   /// from: `public java.lang.Object clone()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject clone() {
-    final _$$selfRef = reference;
-    return _clone(_$$selfRef.pointer, _id_clone as jni$_.JMethodIDPtr)
+    return _clone(reference.pointer, _id_clone as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 }
@@ -7543,9 +7393,8 @@ class Call$Factory extends jni$_.JObject {
   Call newCall(
     Request request,
   ) {
-    final _$$selfRef = reference;
     final _$request = request.reference;
-    return _newCall(_$$selfRef.pointer, _id_newCall as jni$_.JMethodIDPtr,
+    return _newCall(reference.pointer, _id_newCall as jni$_.JMethodIDPtr,
             _$request.pointer)
         .object<Call>(const $Call$Type());
   }
@@ -7763,8 +7612,7 @@ class Call extends jni$_.JObject {
   /// from: `public abstract okhttp3.Request request()`
   /// The returned object must be released after use, by calling the [release] method.
   Request request() {
-    final _$$selfRef = reference;
-    return _request(_$$selfRef.pointer, _id_request as jni$_.JMethodIDPtr)
+    return _request(reference.pointer, _id_request as jni$_.JMethodIDPtr)
         .object<Request>(const $Request$Type());
   }
 
@@ -7788,8 +7636,7 @@ class Call extends jni$_.JObject {
   /// from: `public abstract okhttp3.Response execute()`
   /// The returned object must be released after use, by calling the [release] method.
   Response execute() {
-    final _$$selfRef = reference;
-    return _execute(_$$selfRef.pointer, _id_execute as jni$_.JMethodIDPtr)
+    return _execute(reference.pointer, _id_execute as jni$_.JMethodIDPtr)
         .object<Response>(const $Response$Type());
   }
 
@@ -7813,9 +7660,8 @@ class Call extends jni$_.JObject {
   void enqueue(
     Callback callback,
   ) {
-    final _$$selfRef = reference;
     final _$callback = callback.reference;
-    _enqueue(_$$selfRef.pointer, _id_enqueue as jni$_.JMethodIDPtr,
+    _enqueue(reference.pointer, _id_enqueue as jni$_.JMethodIDPtr,
             _$callback.pointer)
         .check();
   }
@@ -7839,8 +7685,7 @@ class Call extends jni$_.JObject {
 
   /// from: `public abstract void cancel()`
   void cancel() {
-    final _$$selfRef = reference;
-    _cancel(_$$selfRef.pointer, _id_cancel as jni$_.JMethodIDPtr).check();
+    _cancel(reference.pointer, _id_cancel as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_isExecuted = _class.instanceMethodId(
@@ -7862,8 +7707,7 @@ class Call extends jni$_.JObject {
 
   /// from: `public abstract boolean isExecuted()`
   bool isExecuted() {
-    final _$$selfRef = reference;
-    return _isExecuted(_$$selfRef.pointer, _id_isExecuted as jni$_.JMethodIDPtr)
+    return _isExecuted(reference.pointer, _id_isExecuted as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -7886,8 +7730,7 @@ class Call extends jni$_.JObject {
 
   /// from: `public abstract boolean isCanceled()`
   bool isCanceled() {
-    final _$$selfRef = reference;
-    return _isCanceled(_$$selfRef.pointer, _id_isCanceled as jni$_.JMethodIDPtr)
+    return _isCanceled(reference.pointer, _id_isCanceled as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -7911,8 +7754,7 @@ class Call extends jni$_.JObject {
   /// from: `public abstract okio.Timeout timeout()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject timeout() {
-    final _$$selfRef = reference;
-    return _timeout(_$$selfRef.pointer, _id_timeout as jni$_.JMethodIDPtr)
+    return _timeout(reference.pointer, _id_timeout as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -7936,8 +7778,7 @@ class Call extends jni$_.JObject {
   /// from: `public abstract okhttp3.Call clone()`
   /// The returned object must be released after use, by calling the [release] method.
   Call clone() {
-    final _$$selfRef = reference;
-    return _clone(_$$selfRef.pointer, _id_clone as jni$_.JMethodIDPtr)
+    return _clone(reference.pointer, _id_clone as jni$_.JMethodIDPtr)
         .object<Call>(const $Call$Type());
   }
 
@@ -8264,9 +8105,9 @@ class Headers$Builder extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory Headers$Builder() {
-    final _$$classRef = _class.reference;
     return Headers$Builder.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_add = _class.instanceMethodId(
@@ -8290,10 +8131,9 @@ class Headers$Builder extends jni$_.JObject {
   Headers$Builder add(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     return _add(
-            _$$selfRef.pointer, _id_add as jni$_.JMethodIDPtr, _$string.pointer)
+            reference.pointer, _id_add as jni$_.JMethodIDPtr, _$string.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
 
@@ -8325,10 +8165,9 @@ class Headers$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1.reference;
-    return _add$1(_$$selfRef.pointer, _id_add$1 as jni$_.JMethodIDPtr,
+    return _add$1(reference.pointer, _id_add$1 as jni$_.JMethodIDPtr,
             _$string.pointer, _$string1.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8361,11 +8200,10 @@ class Headers$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1.reference;
     return _addUnsafeNonAscii(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_addUnsafeNonAscii as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$string1.pointer)
@@ -8393,9 +8231,8 @@ class Headers$Builder extends jni$_.JObject {
   Headers$Builder addAll(
     Headers headers,
   ) {
-    final _$$selfRef = reference;
     final _$headers = headers.reference;
-    return _addAll(_$$selfRef.pointer, _id_addAll as jni$_.JMethodIDPtr,
+    return _addAll(reference.pointer, _id_addAll as jni$_.JMethodIDPtr,
             _$headers.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8428,10 +8265,9 @@ class Headers$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject date,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$date = date.reference;
-    return _add$2(_$$selfRef.pointer, _id_add$2 as jni$_.JMethodIDPtr,
+    return _add$2(reference.pointer, _id_add$2 as jni$_.JMethodIDPtr,
             _$string.pointer, _$date.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8464,10 +8300,9 @@ class Headers$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject instant,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$instant = instant.reference;
-    return _add$3(_$$selfRef.pointer, _id_add$3 as jni$_.JMethodIDPtr,
+    return _add$3(reference.pointer, _id_add$3 as jni$_.JMethodIDPtr,
             _$string.pointer, _$instant.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8500,10 +8335,9 @@ class Headers$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject date,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$date = date.reference;
-    return _set(_$$selfRef.pointer, _id_set as jni$_.JMethodIDPtr,
+    return _set(reference.pointer, _id_set as jni$_.JMethodIDPtr,
             _$string.pointer, _$date.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8536,10 +8370,9 @@ class Headers$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject instant,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$instant = instant.reference;
-    return _set$1(_$$selfRef.pointer, _id_set$1 as jni$_.JMethodIDPtr,
+    return _set$1(reference.pointer, _id_set$1 as jni$_.JMethodIDPtr,
             _$string.pointer, _$instant.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8565,9 +8398,8 @@ class Headers$Builder extends jni$_.JObject {
   Headers$Builder removeAll(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _removeAll(_$$selfRef.pointer, _id_removeAll as jni$_.JMethodIDPtr,
+    return _removeAll(reference.pointer, _id_removeAll as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8600,10 +8432,9 @@ class Headers$Builder extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JString string1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$string1 = string1.reference;
-    return _set$2(_$$selfRef.pointer, _id_set$2 as jni$_.JMethodIDPtr,
+    return _set$2(reference.pointer, _id_set$2 as jni$_.JMethodIDPtr,
             _$string.pointer, _$string1.pointer)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
@@ -8629,10 +8460,9 @@ class Headers$Builder extends jni$_.JObject {
   jni$_.JString? get(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     return _get(
-            _$$selfRef.pointer, _id_get as jni$_.JMethodIDPtr, _$string.pointer)
+            reference.pointer, _id_get as jni$_.JMethodIDPtr, _$string.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -8656,8 +8486,7 @@ class Headers$Builder extends jni$_.JObject {
   /// from: `public final okhttp3.Headers build()`
   /// The returned object must be released after use, by calling the [release] method.
   Headers build() {
-    final _$$selfRef = reference;
-    return _build(_$$selfRef.pointer, _id_build as jni$_.JMethodIDPtr)
+    return _build(reference.pointer, _id_build as jni$_.JMethodIDPtr)
         .object<Headers>(const $Headers$Type());
   }
 }
@@ -8775,10 +8604,9 @@ class Headers$Companion extends jni$_.JObject {
   Headers of(
     jni$_.JArray<jni$_.JString> strings,
   ) {
-    final _$$selfRef = reference;
     final _$strings = strings.reference;
     return _of(
-            _$$selfRef.pointer, _id_of as jni$_.JMethodIDPtr, _$strings.pointer)
+            reference.pointer, _id_of as jni$_.JMethodIDPtr, _$strings.pointer)
         .object<Headers>(const $Headers$Type());
   }
 
@@ -8803,10 +8631,9 @@ class Headers$Companion extends jni$_.JObject {
   Headers of$1(
     jni$_.JMap<jni$_.JString?, jni$_.JString?> map,
   ) {
-    final _$$selfRef = reference;
     final _$map = map.reference;
     return _of$1(
-            _$$selfRef.pointer, _id_of$1 as jni$_.JMethodIDPtr, _$map.pointer)
+            reference.pointer, _id_of$1 as jni$_.JMethodIDPtr, _$map.pointer)
         .object<Headers>(const $Headers$Type());
   }
 
@@ -8830,10 +8657,9 @@ class Headers$Companion extends jni$_.JObject {
   factory Headers$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
-    return Headers$Companion.fromReference(_new$(_$$classRef.pointer,
+    return Headers$Companion.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$defaultConstructorMarker.pointer)
         .reference);
   }
@@ -8963,10 +8789,9 @@ class Headers extends jni$_.JObject {
   jni$_.JString? get(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     return _get(
-            _$$selfRef.pointer, _id_get as jni$_.JMethodIDPtr, _$string.pointer)
+            reference.pointer, _id_get as jni$_.JMethodIDPtr, _$string.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -8991,9 +8816,8 @@ class Headers extends jni$_.JObject {
   jni$_.JObject? getDate(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _getDate(_$$selfRef.pointer, _id_getDate as jni$_.JMethodIDPtr,
+    return _getDate(reference.pointer, _id_getDate as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -9019,9 +8843,8 @@ class Headers extends jni$_.JObject {
   jni$_.JObject? getInstant(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _getInstant(_$$selfRef.pointer, _id_getInstant as jni$_.JMethodIDPtr,
+    return _getInstant(reference.pointer, _id_getInstant as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -9045,8 +8868,7 @@ class Headers extends jni$_.JObject {
 
   /// from: `public final int size()`
   int size() {
-    final _$$selfRef = reference;
-    return _size(_$$selfRef.pointer, _id_size as jni$_.JMethodIDPtr).integer;
+    return _size(reference.pointer, _id_size as jni$_.JMethodIDPtr).integer;
   }
 
   static final _id_name = _class.instanceMethodId(
@@ -9069,8 +8891,7 @@ class Headers extends jni$_.JObject {
   jni$_.JString name(
     int i,
   ) {
-    final _$$selfRef = reference;
-    return _name(_$$selfRef.pointer, _id_name as jni$_.JMethodIDPtr, i)
+    return _name(reference.pointer, _id_name as jni$_.JMethodIDPtr, i)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -9094,8 +8915,7 @@ class Headers extends jni$_.JObject {
   jni$_.JString value(
     int i,
   ) {
-    final _$$selfRef = reference;
-    return _value(_$$selfRef.pointer, _id_value as jni$_.JMethodIDPtr, i)
+    return _value(reference.pointer, _id_value as jni$_.JMethodIDPtr, i)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -9119,8 +8939,7 @@ class Headers extends jni$_.JObject {
   /// from: `public final java.util.Set names()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JSet<jni$_.JString> names() {
-    final _$$selfRef = reference;
-    return _names(_$$selfRef.pointer, _id_names as jni$_.JMethodIDPtr)
+    return _names(reference.pointer, _id_names as jni$_.JMethodIDPtr)
         .object<jni$_.JSet<jni$_.JString>>(
             const jni$_.JSetType<jni$_.JString>(jni$_.JStringType()));
   }
@@ -9146,9 +8965,8 @@ class Headers extends jni$_.JObject {
   jni$_.JList<jni$_.JString> values(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _values(_$$selfRef.pointer, _id_values as jni$_.JMethodIDPtr,
+    return _values(reference.pointer, _id_values as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<jni$_.JList<jni$_.JString>>(
             const jni$_.JListType<jni$_.JString>(jni$_.JStringType()));
@@ -9173,8 +8991,7 @@ class Headers extends jni$_.JObject {
 
   /// from: `public final long byteCount()`
   int byteCount() {
-    final _$$selfRef = reference;
-    return _byteCount(_$$selfRef.pointer, _id_byteCount as jni$_.JMethodIDPtr)
+    return _byteCount(reference.pointer, _id_byteCount as jni$_.JMethodIDPtr)
         .long;
   }
 
@@ -9198,8 +9015,7 @@ class Headers extends jni$_.JObject {
   /// from: `public java.util.Iterator iterator()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JIterator<jni$_.JObject> iterator() {
-    final _$$selfRef = reference;
-    return _iterator(_$$selfRef.pointer, _id_iterator as jni$_.JMethodIDPtr)
+    return _iterator(reference.pointer, _id_iterator as jni$_.JMethodIDPtr)
         .object<jni$_.JIterator<jni$_.JObject>>(
             const jni$_.JIteratorType<jni$_.JObject>(jni$_.JObjectType()));
   }
@@ -9224,8 +9040,7 @@ class Headers extends jni$_.JObject {
   /// from: `public final okhttp3.Headers$Builder newBuilder()`
   /// The returned object must be released after use, by calling the [release] method.
   Headers$Builder newBuilder() {
-    final _$$selfRef = reference;
-    return _newBuilder(_$$selfRef.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
+    return _newBuilder(reference.pointer, _id_newBuilder as jni$_.JMethodIDPtr)
         .object<Headers$Builder>(const $Headers$Builder$Type());
   }
 
@@ -9249,9 +9064,8 @@ class Headers extends jni$_.JObject {
   bool equals(
     jni$_.JObject? object,
   ) {
-    final _$$selfRef = reference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    return _equals(_$$selfRef.pointer, _id_equals as jni$_.JMethodIDPtr,
+    return _equals(reference.pointer, _id_equals as jni$_.JMethodIDPtr,
             _$object.pointer)
         .boolean;
   }
@@ -9275,8 +9089,7 @@ class Headers extends jni$_.JObject {
 
   /// from: `public int hashCode()`
   int hashCode$1() {
-    final _$$selfRef = reference;
-    return _hashCode$1(_$$selfRef.pointer, _id_hashCode$1 as jni$_.JMethodIDPtr)
+    return _hashCode$1(reference.pointer, _id_hashCode$1 as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -9300,8 +9113,7 @@ class Headers extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -9325,8 +9137,7 @@ class Headers extends jni$_.JObject {
   /// from: `public final java.util.Map toMultimap()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JMap<jni$_.JString, jni$_.JList<jni$_.JString>> toMultimap() {
-    final _$$selfRef = reference;
-    return _toMultimap(_$$selfRef.pointer, _id_toMultimap as jni$_.JMethodIDPtr)
+    return _toMultimap(reference.pointer, _id_toMultimap as jni$_.JMethodIDPtr)
         .object<jni$_.JMap<jni$_.JString, jni$_.JList<jni$_.JString>>>(
             const jni$_.JMapType<jni$_.JString, jni$_.JList<jni$_.JString>>(
                 jni$_.JStringType(),
@@ -9354,9 +9165,8 @@ class Headers extends jni$_.JObject {
   static Headers of(
     jni$_.JArray<jni$_.JString?> strings,
   ) {
-    final _$$classRef = _class.reference;
     final _$strings = strings.reference;
-    return _of(_$$classRef.pointer, _id_of as jni$_.JMethodIDPtr,
+    return _of(_class.reference.pointer, _id_of as jni$_.JMethodIDPtr,
             _$strings.pointer)
         .object<Headers>(const $Headers$Type());
   }
@@ -9382,10 +9192,9 @@ class Headers extends jni$_.JObject {
   static Headers of$1(
     jni$_.JMap<jni$_.JString?, jni$_.JString?> map,
   ) {
-    final _$$classRef = _class.reference;
     final _$map = map.reference;
-    return _of$1(
-            _$$classRef.pointer, _id_of$1 as jni$_.JMethodIDPtr, _$map.pointer)
+    return _of$1(_class.reference.pointer, _id_of$1 as jni$_.JMethodIDPtr,
+            _$map.pointer)
         .object<Headers>(const $Headers$Type());
   }
 
@@ -9416,12 +9225,11 @@ class Headers extends jni$_.JObject {
     jni$_.JArray<jni$_.JString?>? strings,
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$strings = strings?.reference ?? jni$_.jNullReference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
     return Headers.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$strings.pointer,
             _$defaultConstructorMarker.pointer)
@@ -9544,10 +9352,9 @@ class Callback extends jni$_.JObject {
     Call call,
     jni$_.JObject iOException,
   ) {
-    final _$$selfRef = reference;
     final _$call = call.reference;
     final _$iOException = iOException.reference;
-    _onFailure(_$$selfRef.pointer, _id_onFailure as jni$_.JMethodIDPtr,
+    _onFailure(reference.pointer, _id_onFailure as jni$_.JMethodIDPtr,
             _$call.pointer, _$iOException.pointer)
         .check();
   }
@@ -9579,10 +9386,9 @@ class Callback extends jni$_.JObject {
     Call call,
     Response response,
   ) {
-    final _$$selfRef = reference;
     final _$call = call.reference;
     final _$response = response.reference;
-    _onResponse(_$$selfRef.pointer, _id_onResponse as jni$_.JMethodIDPtr,
+    _onResponse(reference.pointer, _id_onResponse as jni$_.JMethodIDPtr,
             _$call.pointer, _$response.pointer)
         .check();
   }
@@ -9823,9 +9629,8 @@ class ConnectionPool extends jni$_.JObject {
   factory ConnectionPool(
     jni$_.JObject realConnectionPool,
   ) {
-    final _$$classRef = _class.reference;
     final _$realConnectionPool = realConnectionPool.reference;
-    return ConnectionPool.fromReference(_new$(_$$classRef.pointer,
+    return ConnectionPool.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$realConnectionPool.pointer)
         .reference);
   }
@@ -9856,9 +9661,8 @@ class ConnectionPool extends jni$_.JObject {
     int j,
     TimeUnit timeUnit,
   ) {
-    final _$$classRef = _class.reference;
     final _$timeUnit = timeUnit.reference;
-    return ConnectionPool.fromReference(_new$1(_$$classRef.pointer,
+    return ConnectionPool.fromReference(_new$1(_class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr, i, j, _$timeUnit.pointer)
         .reference);
   }
@@ -9882,9 +9686,9 @@ class ConnectionPool extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory ConnectionPool.new$2() {
-    final _$$classRef = _class.reference;
     return ConnectionPool.fromReference(
-        _new$2(_$$classRef.pointer, _id_new$2 as jni$_.JMethodIDPtr).reference);
+        _new$2(_class.reference.pointer, _id_new$2 as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_idleConnectionCount = _class.instanceMethodId(
@@ -9906,9 +9710,8 @@ class ConnectionPool extends jni$_.JObject {
 
   /// from: `public final int idleConnectionCount()`
   int idleConnectionCount() {
-    final _$$selfRef = reference;
     return _idleConnectionCount(
-            _$$selfRef.pointer, _id_idleConnectionCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_idleConnectionCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -9931,9 +9734,8 @@ class ConnectionPool extends jni$_.JObject {
 
   /// from: `public final int connectionCount()`
   int connectionCount() {
-    final _$$selfRef = reference;
     return _connectionCount(
-            _$$selfRef.pointer, _id_connectionCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_connectionCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -9956,8 +9758,7 @@ class ConnectionPool extends jni$_.JObject {
 
   /// from: `public final void evictAll()`
   void evictAll() {
-    final _$$selfRef = reference;
-    _evictAll(_$$selfRef.pointer, _id_evictAll as jni$_.JMethodIDPtr).check();
+    _evictAll(reference.pointer, _id_evictAll as jni$_.JMethodIDPtr).check();
   }
 }
 
@@ -10072,9 +9873,9 @@ class Dispatcher extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory Dispatcher() {
-    final _$$classRef = _class.reference;
     return Dispatcher.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_getMaxRequests = _class.instanceMethodId(
@@ -10096,9 +9897,8 @@ class Dispatcher extends jni$_.JObject {
 
   /// from: `public final int getMaxRequests()`
   int getMaxRequests() {
-    final _$$selfRef = reference;
     return _getMaxRequests(
-            _$$selfRef.pointer, _id_getMaxRequests as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getMaxRequests as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -10121,9 +9921,8 @@ class Dispatcher extends jni$_.JObject {
   void setMaxRequests(
     int i,
   ) {
-    final _$$selfRef = reference;
     _setMaxRequests(
-            _$$selfRef.pointer, _id_setMaxRequests as jni$_.JMethodIDPtr, i)
+            reference.pointer, _id_setMaxRequests as jni$_.JMethodIDPtr, i)
         .check();
   }
 
@@ -10146,9 +9945,8 @@ class Dispatcher extends jni$_.JObject {
 
   /// from: `public final int getMaxRequestsPerHost()`
   int getMaxRequestsPerHost() {
-    final _$$selfRef = reference;
     return _getMaxRequestsPerHost(
-            _$$selfRef.pointer, _id_getMaxRequestsPerHost as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getMaxRequestsPerHost as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -10171,8 +9969,7 @@ class Dispatcher extends jni$_.JObject {
   void setMaxRequestsPerHost(
     int i,
   ) {
-    final _$$selfRef = reference;
-    _setMaxRequestsPerHost(_$$selfRef.pointer,
+    _setMaxRequestsPerHost(reference.pointer,
             _id_setMaxRequestsPerHost as jni$_.JMethodIDPtr, i)
         .check();
   }
@@ -10197,9 +9994,8 @@ class Dispatcher extends jni$_.JObject {
   /// from: `public final java.lang.Runnable getIdleCallback()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getIdleCallback() {
-    final _$$selfRef = reference;
     return _getIdleCallback(
-            _$$selfRef.pointer, _id_getIdleCallback as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getIdleCallback as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -10223,9 +10019,8 @@ class Dispatcher extends jni$_.JObject {
   void setIdleCallback(
     jni$_.JObject? runnable,
   ) {
-    final _$$selfRef = reference;
     final _$runnable = runnable?.reference ?? jni$_.jNullReference;
-    _setIdleCallback(_$$selfRef.pointer,
+    _setIdleCallback(reference.pointer,
             _id_setIdleCallback as jni$_.JMethodIDPtr, _$runnable.pointer)
         .check();
   }
@@ -10250,9 +10045,8 @@ class Dispatcher extends jni$_.JObject {
   /// from: `public final java.util.concurrent.ExecutorService executorService()`
   /// The returned object must be released after use, by calling the [release] method.
   ExecutorService executorService() {
-    final _$$selfRef = reference;
     return _executorService(
-            _$$selfRef.pointer, _id_executorService as jni$_.JMethodIDPtr)
+            reference.pointer, _id_executorService as jni$_.JMethodIDPtr)
         .object<ExecutorService>(const $ExecutorService$Type());
   }
 
@@ -10276,9 +10070,8 @@ class Dispatcher extends jni$_.JObject {
   factory Dispatcher.new$1(
     ExecutorService executorService,
   ) {
-    final _$$classRef = _class.reference;
     final _$executorService = executorService.reference;
-    return Dispatcher.fromReference(_new$1(_$$classRef.pointer,
+    return Dispatcher.fromReference(_new$1(_class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr, _$executorService.pointer)
         .reference);
   }
@@ -10302,8 +10095,7 @@ class Dispatcher extends jni$_.JObject {
 
   /// from: `public final void cancelAll()`
   void cancelAll() {
-    final _$$selfRef = reference;
-    _cancelAll(_$$selfRef.pointer, _id_cancelAll as jni$_.JMethodIDPtr).check();
+    _cancelAll(reference.pointer, _id_cancelAll as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_queuedCalls = _class.instanceMethodId(
@@ -10326,9 +10118,8 @@ class Dispatcher extends jni$_.JObject {
   /// from: `public final java.util.List queuedCalls()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<Call> queuedCalls() {
-    final _$$selfRef = reference;
     return _queuedCalls(
-            _$$selfRef.pointer, _id_queuedCalls as jni$_.JMethodIDPtr)
+            reference.pointer, _id_queuedCalls as jni$_.JMethodIDPtr)
         .object<jni$_.JList<Call>>(const jni$_.JListType<Call>($Call$Type()));
   }
 
@@ -10352,9 +10143,8 @@ class Dispatcher extends jni$_.JObject {
   /// from: `public final java.util.List runningCalls()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<Call> runningCalls() {
-    final _$$selfRef = reference;
     return _runningCalls(
-            _$$selfRef.pointer, _id_runningCalls as jni$_.JMethodIDPtr)
+            reference.pointer, _id_runningCalls as jni$_.JMethodIDPtr)
         .object<jni$_.JList<Call>>(const jni$_.JListType<Call>($Call$Type()));
   }
 
@@ -10377,9 +10167,8 @@ class Dispatcher extends jni$_.JObject {
 
   /// from: `public final int queuedCallsCount()`
   int queuedCallsCount() {
-    final _$$selfRef = reference;
     return _queuedCallsCount(
-            _$$selfRef.pointer, _id_queuedCallsCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_queuedCallsCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -10402,9 +10191,8 @@ class Dispatcher extends jni$_.JObject {
 
   /// from: `public final int runningCallsCount()`
   int runningCallsCount() {
-    final _$$selfRef = reference;
     return _runningCallsCount(
-            _$$selfRef.pointer, _id_runningCallsCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_runningCallsCount as jni$_.JMethodIDPtr)
         .integer;
   }
 }
@@ -10519,8 +10307,7 @@ class ExecutorService extends jni$_.JObject {
 
   /// from: `public abstract void shutdown()`
   void shutdown() {
-    final _$$selfRef = reference;
-    _shutdown(_$$selfRef.pointer, _id_shutdown as jni$_.JMethodIDPtr).check();
+    _shutdown(reference.pointer, _id_shutdown as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_shutdownNow = _class.instanceMethodId(
@@ -10543,9 +10330,8 @@ class ExecutorService extends jni$_.JObject {
   /// from: `public abstract java.util.List shutdownNow()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JObject?>? shutdownNow() {
-    final _$$selfRef = reference;
     return _shutdownNow(
-            _$$selfRef.pointer, _id_shutdownNow as jni$_.JMethodIDPtr)
+            reference.pointer, _id_shutdownNow as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JObject?>?>(
             const jni$_.JListNullableType<jni$_.JObject?>(
                 jni$_.JObjectNullableType()));
@@ -10570,8 +10356,7 @@ class ExecutorService extends jni$_.JObject {
 
   /// from: `public abstract boolean isShutdown()`
   bool isShutdown() {
-    final _$$selfRef = reference;
-    return _isShutdown(_$$selfRef.pointer, _id_isShutdown as jni$_.JMethodIDPtr)
+    return _isShutdown(reference.pointer, _id_isShutdown as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -10594,9 +10379,8 @@ class ExecutorService extends jni$_.JObject {
 
   /// from: `public abstract boolean isTerminated()`
   bool isTerminated() {
-    final _$$selfRef = reference;
     return _isTerminated(
-            _$$selfRef.pointer, _id_isTerminated as jni$_.JMethodIDPtr)
+            reference.pointer, _id_isTerminated as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -10622,9 +10406,8 @@ class ExecutorService extends jni$_.JObject {
     int j,
     TimeUnit? timeUnit,
   ) {
-    final _$$selfRef = reference;
     final _$timeUnit = timeUnit?.reference ?? jni$_.jNullReference;
-    return _awaitTermination(_$$selfRef.pointer,
+    return _awaitTermination(reference.pointer,
             _id_awaitTermination as jni$_.JMethodIDPtr, j, _$timeUnit.pointer)
         .boolean;
   }
@@ -10651,9 +10434,8 @@ class ExecutorService extends jni$_.JObject {
     jni$_.JObject? callable, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$callable = callable?.reference ?? jni$_.jNullReference;
-    return _submit(_$$selfRef.pointer, _id_submit as jni$_.JMethodIDPtr,
+    return _submit(reference.pointer, _id_submit as jni$_.JMethodIDPtr,
             _$callable.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -10687,10 +10469,9 @@ class ExecutorService extends jni$_.JObject {
     $T? object, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$runnable = runnable?.reference ?? jni$_.jNullReference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    return _submit$1(_$$selfRef.pointer, _id_submit$1 as jni$_.JMethodIDPtr,
+    return _submit$1(reference.pointer, _id_submit$1 as jni$_.JMethodIDPtr,
             _$runnable.pointer, _$object.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -10716,9 +10497,8 @@ class ExecutorService extends jni$_.JObject {
   jni$_.JObject? submit$2(
     jni$_.JObject? runnable,
   ) {
-    final _$$selfRef = reference;
     final _$runnable = runnable?.reference ?? jni$_.jNullReference;
-    return _submit$2(_$$selfRef.pointer, _id_submit$2 as jni$_.JMethodIDPtr,
+    return _submit$2(reference.pointer, _id_submit$2 as jni$_.JMethodIDPtr,
             _$runnable.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -10745,9 +10525,8 @@ class ExecutorService extends jni$_.JObject {
     jni$_.JObject? collection, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$collection = collection?.reference ?? jni$_.jNullReference;
-    return _invokeAll(_$$selfRef.pointer, _id_invokeAll as jni$_.JMethodIDPtr,
+    return _invokeAll(reference.pointer, _id_invokeAll as jni$_.JMethodIDPtr,
             _$collection.pointer)
         .object<jni$_.JList<jni$_.JObject?>?>(
             const jni$_.JListNullableType<jni$_.JObject?>(
@@ -10786,11 +10565,10 @@ class ExecutorService extends jni$_.JObject {
     TimeUnit? timeUnit, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$collection = collection?.reference ?? jni$_.jNullReference;
     final _$timeUnit = timeUnit?.reference ?? jni$_.jNullReference;
     return _invokeAll$1(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_invokeAll$1 as jni$_.JMethodIDPtr,
             _$collection.pointer,
             j,
@@ -10822,9 +10600,8 @@ class ExecutorService extends jni$_.JObject {
     jni$_.JObject? collection, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$collection = collection?.reference ?? jni$_.jNullReference;
-    return _invokeAny(_$$selfRef.pointer, _id_invokeAny as jni$_.JMethodIDPtr,
+    return _invokeAny(reference.pointer, _id_invokeAny as jni$_.JMethodIDPtr,
             _$collection.pointer)
         .object<$T?>(T.nullableType);
   }
@@ -10861,11 +10638,10 @@ class ExecutorService extends jni$_.JObject {
     TimeUnit? timeUnit, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$selfRef = reference;
     final _$collection = collection?.reference ?? jni$_.jNullReference;
     final _$timeUnit = timeUnit?.reference ?? jni$_.jNullReference;
     return _invokeAny$1(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_invokeAny$1 as jni$_.JMethodIDPtr,
             _$collection.pointer,
             j,
@@ -11317,10 +11093,9 @@ class Cache$Companion extends jni$_.JObject {
   jni$_.JString key(
     jni$_.JObject httpUrl,
   ) {
-    final _$$selfRef = reference;
     final _$httpUrl = httpUrl.reference;
-    return _key(_$$selfRef.pointer, _id_key as jni$_.JMethodIDPtr,
-            _$httpUrl.pointer)
+    return _key(
+            reference.pointer, _id_key as jni$_.JMethodIDPtr, _$httpUrl.pointer)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -11354,12 +11129,11 @@ class Cache$Companion extends jni$_.JObject {
     Headers headers,
     Request request,
   ) {
-    final _$$selfRef = reference;
     final _$response = response.reference;
     final _$headers = headers.reference;
     final _$request = request.reference;
     return _varyMatches(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_varyMatches as jni$_.JMethodIDPtr,
             _$response.pointer,
             _$headers.pointer,
@@ -11387,9 +11161,8 @@ class Cache$Companion extends jni$_.JObject {
   bool hasVaryAll(
     Response response,
   ) {
-    final _$$selfRef = reference;
     final _$response = response.reference;
-    return _hasVaryAll(_$$selfRef.pointer, _id_hasVaryAll as jni$_.JMethodIDPtr,
+    return _hasVaryAll(reference.pointer, _id_hasVaryAll as jni$_.JMethodIDPtr,
             _$response.pointer)
         .boolean;
   }
@@ -11415,9 +11188,8 @@ class Cache$Companion extends jni$_.JObject {
   Headers varyHeaders(
     Response response,
   ) {
-    final _$$selfRef = reference;
     final _$response = response.reference;
-    return _varyHeaders(_$$selfRef.pointer,
+    return _varyHeaders(reference.pointer,
             _id_varyHeaders as jni$_.JMethodIDPtr, _$response.pointer)
         .object<Headers>(const $Headers$Type());
   }
@@ -11442,10 +11214,9 @@ class Cache$Companion extends jni$_.JObject {
   factory Cache$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
-    return Cache$Companion.fromReference(_new$(_$$classRef.pointer,
+    return Cache$Companion.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$defaultConstructorMarker.pointer)
         .reference);
   }
@@ -11563,10 +11334,9 @@ class JObject$Companion extends jni$_.JObject {
   factory JObject$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
-    return JObject$Companion.fromReference(_new$(_$$classRef.pointer,
+    return JObject$Companion.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$defaultConstructorMarker.pointer)
         .reference);
   }
@@ -11705,11 +11475,10 @@ class Cache extends jni$_.JObject {
     int j,
     jni$_.JObject fileSystem,
   ) {
-    final _$$classRef = _class.reference;
     final _$file = file.reference;
     final _$fileSystem = fileSystem.reference;
     return Cache.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$file.pointer,
             j,
@@ -11736,8 +11505,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final boolean isClosed()`
   bool isClosed() {
-    final _$$selfRef = reference;
-    return _isClosed(_$$selfRef.pointer, _id_isClosed as jni$_.JMethodIDPtr)
+    return _isClosed(reference.pointer, _id_isClosed as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -11763,9 +11531,8 @@ class Cache extends jni$_.JObject {
     jni$_.JObject file,
     int j,
   ) {
-    final _$$classRef = _class.reference;
     final _$file = file.reference;
-    return Cache.fromReference(_new$1(_$$classRef.pointer,
+    return Cache.fromReference(_new$1(_class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr, _$file.pointer, j)
         .reference);
   }
@@ -11789,8 +11556,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final void initialize()`
   void initialize() {
-    final _$$selfRef = reference;
-    _initialize(_$$selfRef.pointer, _id_initialize as jni$_.JMethodIDPtr)
+    _initialize(reference.pointer, _id_initialize as jni$_.JMethodIDPtr)
         .check();
   }
 
@@ -11813,8 +11579,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final void delete()`
   void delete() {
-    final _$$selfRef = reference;
-    _delete(_$$selfRef.pointer, _id_delete as jni$_.JMethodIDPtr).check();
+    _delete(reference.pointer, _id_delete as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_evictAll = _class.instanceMethodId(
@@ -11836,8 +11601,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final void evictAll()`
   void evictAll() {
-    final _$$selfRef = reference;
-    _evictAll(_$$selfRef.pointer, _id_evictAll as jni$_.JMethodIDPtr).check();
+    _evictAll(reference.pointer, _id_evictAll as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_urls = _class.instanceMethodId(
@@ -11860,8 +11624,7 @@ class Cache extends jni$_.JObject {
   /// from: `public final java.util.Iterator urls()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JIterator<jni$_.JString> urls() {
-    final _$$selfRef = reference;
-    return _urls(_$$selfRef.pointer, _id_urls as jni$_.JMethodIDPtr)
+    return _urls(reference.pointer, _id_urls as jni$_.JMethodIDPtr)
         .object<jni$_.JIterator<jni$_.JString>>(
             const jni$_.JIteratorType<jni$_.JString>(jni$_.JStringType()));
   }
@@ -11885,9 +11648,8 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final int writeAbortCount()`
   int writeAbortCount() {
-    final _$$selfRef = reference;
     return _writeAbortCount(
-            _$$selfRef.pointer, _id_writeAbortCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_writeAbortCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -11910,9 +11672,8 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final int writeSuccessCount()`
   int writeSuccessCount() {
-    final _$$selfRef = reference;
     return _writeSuccessCount(
-            _$$selfRef.pointer, _id_writeSuccessCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_writeSuccessCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -11935,8 +11696,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final long size()`
   int size() {
-    final _$$selfRef = reference;
-    return _size(_$$selfRef.pointer, _id_size as jni$_.JMethodIDPtr).long;
+    return _size(reference.pointer, _id_size as jni$_.JMethodIDPtr).long;
   }
 
   static final _id_maxSize = _class.instanceMethodId(
@@ -11958,8 +11718,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final long maxSize()`
   int maxSize() {
-    final _$$selfRef = reference;
-    return _maxSize(_$$selfRef.pointer, _id_maxSize as jni$_.JMethodIDPtr).long;
+    return _maxSize(reference.pointer, _id_maxSize as jni$_.JMethodIDPtr).long;
   }
 
   static final _id_flush = _class.instanceMethodId(
@@ -11981,8 +11740,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public void flush()`
   void flush() {
-    final _$$selfRef = reference;
-    _flush(_$$selfRef.pointer, _id_flush as jni$_.JMethodIDPtr).check();
+    _flush(reference.pointer, _id_flush as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_close = _class.instanceMethodId(
@@ -12004,8 +11762,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public void close()`
   void close() {
-    final _$$selfRef = reference;
-    _close(_$$selfRef.pointer, _id_close as jni$_.JMethodIDPtr).check();
+    _close(reference.pointer, _id_close as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_directory = _class.instanceMethodId(
@@ -12028,8 +11785,7 @@ class Cache extends jni$_.JObject {
   /// from: `public final java.io.File directory()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject directory() {
-    final _$$selfRef = reference;
-    return _directory(_$$selfRef.pointer, _id_directory as jni$_.JMethodIDPtr)
+    return _directory(reference.pointer, _id_directory as jni$_.JMethodIDPtr)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
 
@@ -12052,9 +11808,8 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final int networkCount()`
   int networkCount() {
-    final _$$selfRef = reference;
     return _networkCount(
-            _$$selfRef.pointer, _id_networkCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_networkCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -12077,8 +11832,7 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final int hitCount()`
   int hitCount() {
-    final _$$selfRef = reference;
-    return _hitCount(_$$selfRef.pointer, _id_hitCount as jni$_.JMethodIDPtr)
+    return _hitCount(reference.pointer, _id_hitCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -12101,9 +11855,8 @@ class Cache extends jni$_.JObject {
 
   /// from: `public final int requestCount()`
   int requestCount() {
-    final _$$selfRef = reference;
     return _requestCount(
-            _$$selfRef.pointer, _id_requestCount as jni$_.JMethodIDPtr)
+            reference.pointer, _id_requestCount as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -12128,9 +11881,8 @@ class Cache extends jni$_.JObject {
   static jni$_.JString key(
     jni$_.JObject httpUrl,
   ) {
-    final _$$classRef = _class.reference;
     final _$httpUrl = httpUrl.reference;
-    return _key(_$$classRef.pointer, _id_key as jni$_.JMethodIDPtr,
+    return _key(_class.reference.pointer, _id_key as jni$_.JMethodIDPtr,
             _$httpUrl.pointer)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
@@ -12252,11 +12004,10 @@ class RedirectReceivedCallback extends jni$_.JObject {
     Response response,
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$response = response.reference;
     final _$string = string.reference;
     _onRedirectReceived(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_onRedirectReceived as jni$_.JMethodIDPtr,
             _$response.pointer,
             _$string.pointer)
@@ -12501,11 +12252,10 @@ class RedirectInterceptor$Companion extends jni$_.JObject {
     bool z,
     RedirectReceivedCallback redirectReceivedCallback,
   ) {
-    final _$$selfRef = reference;
     final _$builder = builder.reference;
     final _$redirectReceivedCallback = redirectReceivedCallback.reference;
     return _addRedirectInterceptor(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_addRedirectInterceptor as jni$_.JMethodIDPtr,
             _$builder.pointer,
             i,
@@ -12534,11 +12284,10 @@ class RedirectInterceptor$Companion extends jni$_.JObject {
   factory RedirectInterceptor$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
     return RedirectInterceptor$Companion.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$defaultConstructorMarker.pointer)
         .reference);
@@ -12671,9 +12420,9 @@ class RedirectInterceptor extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory RedirectInterceptor() {
-    final _$$classRef = _class.reference;
     return RedirectInterceptor.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 }
 
@@ -12791,9 +12540,9 @@ class AsyncInputStreamReader extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory AsyncInputStreamReader() {
-    final _$$classRef = _class.reference;
     return AsyncInputStreamReader.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_readAsync = _class.instanceMethodId(
@@ -12824,10 +12573,9 @@ class AsyncInputStreamReader extends jni$_.JObject {
     jni$_.JObject inputStream,
     DataCallback dataCallback,
   ) {
-    final _$$selfRef = reference;
     final _$inputStream = inputStream.reference;
     final _$dataCallback = dataCallback.reference;
-    return _readAsync(_$$selfRef.pointer, _id_readAsync as jni$_.JMethodIDPtr,
+    return _readAsync(reference.pointer, _id_readAsync as jni$_.JMethodIDPtr,
             _$inputStream.pointer, _$dataCallback.pointer)
         .object<jni$_.JObject>(const jni$_.JObjectType());
   }
@@ -12851,8 +12599,7 @@ class AsyncInputStreamReader extends jni$_.JObject {
 
   /// from: `public final void shutdown()`
   void shutdown() {
-    final _$$selfRef = reference;
-    _shutdown(_$$selfRef.pointer, _id_shutdown as jni$_.JMethodIDPtr).check();
+    _shutdown(reference.pointer, _id_shutdown as jni$_.JMethodIDPtr).check();
   }
 }
 
@@ -12971,9 +12718,8 @@ class DataCallback extends jni$_.JObject {
   void onDataRead(
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    _onDataRead(_$$selfRef.pointer, _id_onDataRead as jni$_.JMethodIDPtr,
+    _onDataRead(reference.pointer, _id_onDataRead as jni$_.JMethodIDPtr,
             _$bs.pointer)
         .check();
   }
@@ -12997,8 +12743,7 @@ class DataCallback extends jni$_.JObject {
 
   /// from: `public abstract void onFinished()`
   void onFinished() {
-    final _$$selfRef = reference;
-    _onFinished(_$$selfRef.pointer, _id_onFinished as jni$_.JMethodIDPtr)
+    _onFinished(reference.pointer, _id_onFinished as jni$_.JMethodIDPtr)
         .check();
   }
 
@@ -13022,9 +12767,8 @@ class DataCallback extends jni$_.JObject {
   void onError(
     jni$_.JObject iOException,
   ) {
-    final _$$selfRef = reference;
     final _$iOException = iOException.reference;
-    _onError(_$$selfRef.pointer, _id_onError as jni$_.JMethodIDPtr,
+    _onError(reference.pointer, _id_onError as jni$_.JMethodIDPtr,
             _$iOException.pointer)
         .check();
   }
@@ -13290,11 +13034,10 @@ class WebSocket$Factory extends jni$_.JObject {
     Request request,
     jni$_.JObject webSocketListener,
   ) {
-    final _$$selfRef = reference;
     final _$request = request.reference;
     final _$webSocketListener = webSocketListener.reference;
     return _newWebSocket(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_newWebSocket as jni$_.JMethodIDPtr,
             _$request.pointer,
             _$webSocketListener.pointer)
@@ -13523,8 +13266,7 @@ class WebSocket extends jni$_.JObject {
   /// from: `public abstract okhttp3.Request request()`
   /// The returned object must be released after use, by calling the [release] method.
   Request request() {
-    final _$$selfRef = reference;
-    return _request(_$$selfRef.pointer, _id_request as jni$_.JMethodIDPtr)
+    return _request(reference.pointer, _id_request as jni$_.JMethodIDPtr)
         .object<Request>(const $Request$Type());
   }
 
@@ -13547,8 +13289,7 @@ class WebSocket extends jni$_.JObject {
 
   /// from: `public abstract long queueSize()`
   int queueSize() {
-    final _$$selfRef = reference;
-    return _queueSize(_$$selfRef.pointer, _id_queueSize as jni$_.JMethodIDPtr)
+    return _queueSize(reference.pointer, _id_queueSize as jni$_.JMethodIDPtr)
         .long;
   }
 
@@ -13572,10 +13313,9 @@ class WebSocket extends jni$_.JObject {
   bool send(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _send(_$$selfRef.pointer, _id_send as jni$_.JMethodIDPtr,
-            _$string.pointer)
+    return _send(
+            reference.pointer, _id_send as jni$_.JMethodIDPtr, _$string.pointer)
         .boolean;
   }
 
@@ -13599,9 +13339,8 @@ class WebSocket extends jni$_.JObject {
   bool send$1(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _send$1(_$$selfRef.pointer, _id_send$1 as jni$_.JMethodIDPtr,
+    return _send$1(reference.pointer, _id_send$1 as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .boolean;
   }
@@ -13628,9 +13367,8 @@ class WebSocket extends jni$_.JObject {
     int i,
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _close(_$$selfRef.pointer, _id_close as jni$_.JMethodIDPtr, i,
+    return _close(reference.pointer, _id_close as jni$_.JMethodIDPtr, i,
             _$string.pointer)
         .boolean;
   }
@@ -13654,8 +13392,7 @@ class WebSocket extends jni$_.JObject {
 
   /// from: `public abstract void cancel()`
   void cancel() {
-    final _$$selfRef = reference;
-    _cancel(_$$selfRef.pointer, _id_cancel as jni$_.JMethodIDPtr).check();
+    _cancel(reference.pointer, _id_cancel as jni$_.JMethodIDPtr).check();
   }
 
   /// Maps a specific port to the implemented interface.
@@ -13957,10 +13694,9 @@ class WebSocketListenerProxy$WebSocketListener extends jni$_.JObject {
     WebSocket webSocket,
     Response response,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$response = response.reference;
-    _onOpen(_$$selfRef.pointer, _id_onOpen as jni$_.JMethodIDPtr,
+    _onOpen(reference.pointer, _id_onOpen as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$response.pointer)
         .check();
   }
@@ -13992,10 +13728,9 @@ class WebSocketListenerProxy$WebSocketListener extends jni$_.JObject {
     WebSocket webSocket,
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$string = string.reference;
-    _onMessage(_$$selfRef.pointer, _id_onMessage as jni$_.JMethodIDPtr,
+    _onMessage(reference.pointer, _id_onMessage as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$string.pointer)
         .check();
   }
@@ -14027,10 +13762,9 @@ class WebSocketListenerProxy$WebSocketListener extends jni$_.JObject {
     WebSocket webSocket,
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$byteString = byteString.reference;
-    _onMessage$1(_$$selfRef.pointer, _id_onMessage$1 as jni$_.JMethodIDPtr,
+    _onMessage$1(reference.pointer, _id_onMessage$1 as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$byteString.pointer)
         .check();
   }
@@ -14065,10 +13799,9 @@ class WebSocketListenerProxy$WebSocketListener extends jni$_.JObject {
     int i,
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$string = string.reference;
-    _onClosing(_$$selfRef.pointer, _id_onClosing as jni$_.JMethodIDPtr,
+    _onClosing(reference.pointer, _id_onClosing as jni$_.JMethodIDPtr,
             _$webSocket.pointer, i, _$string.pointer)
         .check();
   }
@@ -14103,11 +13836,10 @@ class WebSocketListenerProxy$WebSocketListener extends jni$_.JObject {
     jni$_.JObject throwable,
     Response? response,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$throwable = throwable.reference;
     final _$response = response?.reference ?? jni$_.jNullReference;
-    _onFailure(_$$selfRef.pointer, _id_onFailure as jni$_.JMethodIDPtr,
+    _onFailure(reference.pointer, _id_onFailure as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$throwable.pointer, _$response.pointer)
         .check();
   }
@@ -14449,9 +14181,8 @@ class WebSocketListenerProxy extends jni$_.JObject {
   factory WebSocketListenerProxy(
     WebSocketListenerProxy$WebSocketListener webSocketListener,
   ) {
-    final _$$classRef = _class.reference;
     final _$webSocketListener = webSocketListener.reference;
-    return WebSocketListenerProxy.fromReference(_new$(_$$classRef.pointer,
+    return WebSocketListenerProxy.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$webSocketListener.pointer)
         .reference);
   }
@@ -14483,10 +14214,9 @@ class WebSocketListenerProxy extends jni$_.JObject {
     WebSocket webSocket,
     Response response,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$response = response.reference;
-    _onOpen(_$$selfRef.pointer, _id_onOpen as jni$_.JMethodIDPtr,
+    _onOpen(reference.pointer, _id_onOpen as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$response.pointer)
         .check();
   }
@@ -14518,10 +14248,9 @@ class WebSocketListenerProxy extends jni$_.JObject {
     WebSocket webSocket,
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$string = string.reference;
-    _onMessage(_$$selfRef.pointer, _id_onMessage as jni$_.JMethodIDPtr,
+    _onMessage(reference.pointer, _id_onMessage as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$string.pointer)
         .check();
   }
@@ -14553,10 +14282,9 @@ class WebSocketListenerProxy extends jni$_.JObject {
     WebSocket webSocket,
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$byteString = byteString.reference;
-    _onMessage$1(_$$selfRef.pointer, _id_onMessage$1 as jni$_.JMethodIDPtr,
+    _onMessage$1(reference.pointer, _id_onMessage$1 as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$byteString.pointer)
         .check();
   }
@@ -14591,10 +14319,9 @@ class WebSocketListenerProxy extends jni$_.JObject {
     int i,
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$string = string.reference;
-    _onClosing(_$$selfRef.pointer, _id_onClosing as jni$_.JMethodIDPtr,
+    _onClosing(reference.pointer, _id_onClosing as jni$_.JMethodIDPtr,
             _$webSocket.pointer, i, _$string.pointer)
         .check();
   }
@@ -14629,11 +14356,10 @@ class WebSocketListenerProxy extends jni$_.JObject {
     jni$_.JObject throwable,
     Response? response,
   ) {
-    final _$$selfRef = reference;
     final _$webSocket = webSocket.reference;
     final _$throwable = throwable.reference;
     final _$response = response?.reference ?? jni$_.jNullReference;
-    _onFailure(_$$selfRef.pointer, _id_onFailure as jni$_.JMethodIDPtr,
+    _onFailure(reference.pointer, _id_onFailure as jni$_.JMethodIDPtr,
             _$webSocket.pointer, _$throwable.pointer, _$response.pointer)
         .check();
   }
@@ -14765,12 +14491,11 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
     PrivateKey privateKey,
     jni$_.JString string,
   ) {
-    final _$$classRef = _class.reference;
     final _$x509Certificates = x509Certificates.reference;
     final _$privateKey = privateKey.reference;
     final _$string = string.reference;
     return FixedResponseX509ExtendedKeyManager.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$x509Certificates.pointer,
             _$privateKey.pointer,
@@ -14806,11 +14531,10 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
     jni$_.JString string,
     jni$_.JArray<jni$_.JObject>? principals,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     return _getClientAliases(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_getClientAliases as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer)
@@ -14849,12 +14573,11 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
     jni$_.JArray<jni$_.JObject>? principals,
     jni$_.JObject? socket,
   ) {
-    final _$$selfRef = reference;
     final _$strings = strings.reference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$socket = socket?.reference ?? jni$_.jNullReference;
     return _chooseClientAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseClientAlias as jni$_.JMethodIDPtr,
             _$strings.pointer,
             _$principals.pointer,
@@ -14890,11 +14613,10 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
     jni$_.JString string,
     jni$_.JArray<jni$_.JObject>? principals,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     return _getServerAliases(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_getServerAliases as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer)
@@ -14933,12 +14655,11 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
     jni$_.JArray<jni$_.JObject>? principals,
     jni$_.JObject? socket,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$socket = socket?.reference ?? jni$_.jNullReference;
     return _chooseServerAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseServerAlias as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer,
@@ -14967,9 +14688,8 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
   jni$_.JArray<X509Certificate> getCertificateChain(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _getCertificateChain(_$$selfRef.pointer,
+    return _getCertificateChain(reference.pointer,
             _id_getCertificateChain as jni$_.JMethodIDPtr, _$string.pointer)
         .object<jni$_.JArray<X509Certificate>>(
             const jni$_.JArrayType<X509Certificate>($X509Certificate$Type()));
@@ -14996,9 +14716,8 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
   PrivateKey getPrivateKey(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _getPrivateKey(_$$selfRef.pointer,
+    return _getPrivateKey(reference.pointer,
             _id_getPrivateKey as jni$_.JMethodIDPtr, _$string.pointer)
         .object<PrivateKey>(const $PrivateKey$Type());
   }
@@ -15034,12 +14753,11 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
     jni$_.JArray<jni$_.JObject?>? principals,
     jni$_.JObject? sSLEngine,
   ) {
-    final _$$selfRef = reference;
     final _$strings = strings?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$sSLEngine = sSLEngine?.reference ?? jni$_.jNullReference;
     return _chooseEngineClientAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseEngineClientAlias as jni$_.JMethodIDPtr,
             _$strings.pointer,
             _$principals.pointer,
@@ -15078,12 +14796,11 @@ class FixedResponseX509ExtendedKeyManager extends X509ExtendedKeyManager {
     jni$_.JArray<jni$_.JObject?>? principals,
     jni$_.JObject? sSLEngine,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$sSLEngine = sSLEngine?.reference ?? jni$_.jNullReference;
     return _chooseEngineServerAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseEngineServerAlias as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer,
@@ -15213,9 +14930,8 @@ class ByteString$Companion extends jni$_.JObject {
   ByteString of(
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _of(_$$selfRef.pointer, _id_of as jni$_.JMethodIDPtr, _$bs.pointer)
+    return _of(reference.pointer, _id_of as jni$_.JMethodIDPtr, _$bs.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -15246,9 +14962,8 @@ class ByteString$Companion extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _of$1(_$$selfRef.pointer, _id_of$1 as jni$_.JMethodIDPtr,
+    return _of$1(reference.pointer, _id_of$1 as jni$_.JMethodIDPtr,
             _$bs.pointer, i, i1)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15274,9 +14989,8 @@ class ByteString$Companion extends jni$_.JObject {
   ByteString of$2(
     jni$_.JByteBuffer byteBuffer,
   ) {
-    final _$$selfRef = reference;
     final _$byteBuffer = byteBuffer.reference;
-    return _of$2(_$$selfRef.pointer, _id_of$2 as jni$_.JMethodIDPtr,
+    return _of$2(reference.pointer, _id_of$2 as jni$_.JMethodIDPtr,
             _$byteBuffer.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15302,9 +15016,8 @@ class ByteString$Companion extends jni$_.JObject {
   ByteString encodeUtf8(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _encodeUtf8(_$$selfRef.pointer, _id_encodeUtf8 as jni$_.JMethodIDPtr,
+    return _encodeUtf8(reference.pointer, _id_encodeUtf8 as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15337,11 +15050,10 @@ class ByteString$Companion extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject charset,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
     final _$charset = charset.reference;
     return _encodeString(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_encodeString as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$charset.pointer)
@@ -15369,9 +15081,8 @@ class ByteString$Companion extends jni$_.JObject {
   ByteString? decodeBase64(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _decodeBase64(_$$selfRef.pointer,
+    return _decodeBase64(reference.pointer,
             _id_decodeBase64 as jni$_.JMethodIDPtr, _$string.pointer)
         .object<ByteString?>(const $ByteString$NullableType());
   }
@@ -15397,9 +15108,8 @@ class ByteString$Companion extends jni$_.JObject {
   ByteString decodeHex(
     jni$_.JString string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string.reference;
-    return _decodeHex(_$$selfRef.pointer, _id_decodeHex as jni$_.JMethodIDPtr,
+    return _decodeHex(reference.pointer, _id_decodeHex as jni$_.JMethodIDPtr,
             _$string.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15427,9 +15137,8 @@ class ByteString$Companion extends jni$_.JObject {
     jni$_.JObject inputStream,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$inputStream = inputStream.reference;
-    return _read(_$$selfRef.pointer, _id_read as jni$_.JMethodIDPtr,
+    return _read(reference.pointer, _id_read as jni$_.JMethodIDPtr,
             _$inputStream.pointer, i)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15454,10 +15163,9 @@ class ByteString$Companion extends jni$_.JObject {
   factory ByteString$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
-    return ByteString$Companion.fromReference(_new$(_$$classRef.pointer,
+    return ByteString$Companion.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$defaultConstructorMarker.pointer)
         .reference);
   }
@@ -15597,11 +15305,10 @@ class ByteString extends jni$_.JObject {
   factory ByteString(
     jni$_.JByteArray bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
-    return ByteString.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr, _$bs.pointer)
-            .reference);
+    return ByteString.fromReference(_new$(_class.reference.pointer,
+            _id_new$ as jni$_.JMethodIDPtr, _$bs.pointer)
+        .reference);
   }
 
   static final _id_utf8 = _class.instanceMethodId(
@@ -15624,8 +15331,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public java.lang.String utf8()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString utf8() {
-    final _$$selfRef = reference;
-    return _utf8(_$$selfRef.pointer, _id_utf8 as jni$_.JMethodIDPtr)
+    return _utf8(reference.pointer, _id_utf8 as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -15650,9 +15356,8 @@ class ByteString extends jni$_.JObject {
   jni$_.JString string(
     jni$_.JObject charset,
   ) {
-    final _$$selfRef = reference;
     final _$charset = charset.reference;
-    return _string(_$$selfRef.pointer, _id_string as jni$_.JMethodIDPtr,
+    return _string(reference.pointer, _id_string as jni$_.JMethodIDPtr,
             _$charset.pointer)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
@@ -15677,8 +15382,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public java.lang.String base64()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString base64() {
-    final _$$selfRef = reference;
-    return _base64(_$$selfRef.pointer, _id_base64 as jni$_.JMethodIDPtr)
+    return _base64(reference.pointer, _id_base64 as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -15702,8 +15406,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public final okio.ByteString md5()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString md5() {
-    final _$$selfRef = reference;
-    return _md5(_$$selfRef.pointer, _id_md5 as jni$_.JMethodIDPtr)
+    return _md5(reference.pointer, _id_md5 as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -15727,8 +15430,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public final okio.ByteString sha1()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString sha1() {
-    final _$$selfRef = reference;
-    return _sha1(_$$selfRef.pointer, _id_sha1 as jni$_.JMethodIDPtr)
+    return _sha1(reference.pointer, _id_sha1 as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -15752,8 +15454,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public final okio.ByteString sha256()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString sha256() {
-    final _$$selfRef = reference;
-    return _sha256(_$$selfRef.pointer, _id_sha256 as jni$_.JMethodIDPtr)
+    return _sha256(reference.pointer, _id_sha256 as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -15777,8 +15478,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public final okio.ByteString sha512()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString sha512() {
-    final _$$selfRef = reference;
-    return _sha512(_$$selfRef.pointer, _id_sha512 as jni$_.JMethodIDPtr)
+    return _sha512(reference.pointer, _id_sha512 as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -15803,9 +15503,8 @@ class ByteString extends jni$_.JObject {
   ByteString hmacSha1(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _hmacSha1(_$$selfRef.pointer, _id_hmacSha1 as jni$_.JMethodIDPtr,
+    return _hmacSha1(reference.pointer, _id_hmacSha1 as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15831,9 +15530,8 @@ class ByteString extends jni$_.JObject {
   ByteString hmacSha256(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _hmacSha256(_$$selfRef.pointer, _id_hmacSha256 as jni$_.JMethodIDPtr,
+    return _hmacSha256(reference.pointer, _id_hmacSha256 as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15859,9 +15557,8 @@ class ByteString extends jni$_.JObject {
   ByteString hmacSha512(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _hmacSha512(_$$selfRef.pointer, _id_hmacSha512 as jni$_.JMethodIDPtr,
+    return _hmacSha512(reference.pointer, _id_hmacSha512 as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -15886,8 +15583,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public java.lang.String base64Url()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString base64Url() {
-    final _$$selfRef = reference;
-    return _base64Url(_$$selfRef.pointer, _id_base64Url as jni$_.JMethodIDPtr)
+    return _base64Url(reference.pointer, _id_base64Url as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -15911,8 +15607,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public java.lang.String hex()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString hex() {
-    final _$$selfRef = reference;
-    return _hex(_$$selfRef.pointer, _id_hex as jni$_.JMethodIDPtr)
+    return _hex(reference.pointer, _id_hex as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -15936,9 +15631,8 @@ class ByteString extends jni$_.JObject {
   /// from: `public okio.ByteString toAsciiLowercase()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString toAsciiLowercase() {
-    final _$$selfRef = reference;
     return _toAsciiLowercase(
-            _$$selfRef.pointer, _id_toAsciiLowercase as jni$_.JMethodIDPtr)
+            reference.pointer, _id_toAsciiLowercase as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -15962,9 +15656,8 @@ class ByteString extends jni$_.JObject {
   /// from: `public okio.ByteString toAsciiUppercase()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString toAsciiUppercase() {
-    final _$$selfRef = reference;
     return _toAsciiUppercase(
-            _$$selfRef.pointer, _id_toAsciiUppercase as jni$_.JMethodIDPtr)
+            reference.pointer, _id_toAsciiUppercase as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -15990,9 +15683,8 @@ class ByteString extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$selfRef = reference;
     return _substring(
-            _$$selfRef.pointer, _id_substring as jni$_.JMethodIDPtr, i, i1)
+            reference.pointer, _id_substring as jni$_.JMethodIDPtr, i, i1)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -16015,8 +15707,7 @@ class ByteString extends jni$_.JObject {
   int getByte(
     int i,
   ) {
-    final _$$selfRef = reference;
-    return _getByte(_$$selfRef.pointer, _id_getByte as jni$_.JMethodIDPtr, i)
+    return _getByte(reference.pointer, _id_getByte as jni$_.JMethodIDPtr, i)
         .byte;
   }
 
@@ -16039,8 +15730,7 @@ class ByteString extends jni$_.JObject {
 
   /// from: `public final int size()`
   int size() {
-    final _$$selfRef = reference;
-    return _size(_$$selfRef.pointer, _id_size as jni$_.JMethodIDPtr).integer;
+    return _size(reference.pointer, _id_size as jni$_.JMethodIDPtr).integer;
   }
 
   static final _id_toByteArray = _class.instanceMethodId(
@@ -16063,9 +15753,8 @@ class ByteString extends jni$_.JObject {
   /// from: `public byte[] toByteArray()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray toByteArray() {
-    final _$$selfRef = reference;
     return _toByteArray(
-            _$$selfRef.pointer, _id_toByteArray as jni$_.JMethodIDPtr)
+            reference.pointer, _id_toByteArray as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray>(const jni$_.JByteArrayType());
   }
 
@@ -16089,9 +15778,8 @@ class ByteString extends jni$_.JObject {
   /// from: `public java.nio.ByteBuffer asByteBuffer()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteBuffer asByteBuffer() {
-    final _$$selfRef = reference;
     return _asByteBuffer(
-            _$$selfRef.pointer, _id_asByteBuffer as jni$_.JMethodIDPtr)
+            reference.pointer, _id_asByteBuffer as jni$_.JMethodIDPtr)
         .object<jni$_.JByteBuffer>(const jni$_.JByteBufferType());
   }
 
@@ -16115,9 +15803,8 @@ class ByteString extends jni$_.JObject {
   void write(
     jni$_.JObject outputStream,
   ) {
-    final _$$selfRef = reference;
     final _$outputStream = outputStream.reference;
-    _write(_$$selfRef.pointer, _id_write as jni$_.JMethodIDPtr,
+    _write(reference.pointer, _id_write as jni$_.JMethodIDPtr,
             _$outputStream.pointer)
         .check();
   }
@@ -16150,10 +15837,9 @@ class ByteString extends jni$_.JObject {
     int i1,
     int i2,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
     return _rangeEquals(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_rangeEquals as jni$_.JMethodIDPtr,
             i,
             _$byteString.pointer,
@@ -16190,9 +15876,8 @@ class ByteString extends jni$_.JObject {
     int i1,
     int i2,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _rangeEquals$1(_$$selfRef.pointer,
+    return _rangeEquals$1(reference.pointer,
             _id_rangeEquals$1 as jni$_.JMethodIDPtr, i, _$bs.pointer, i1, i2)
         .boolean;
   }
@@ -16225,9 +15910,8 @@ class ByteString extends jni$_.JObject {
     int i1,
     int i2,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    _copyInto(_$$selfRef.pointer, _id_copyInto as jni$_.JMethodIDPtr, i,
+    _copyInto(reference.pointer, _id_copyInto as jni$_.JMethodIDPtr, i,
             _$bs.pointer, i1, i2)
         .check();
   }
@@ -16252,9 +15936,8 @@ class ByteString extends jni$_.JObject {
   bool startsWith(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _startsWith(_$$selfRef.pointer, _id_startsWith as jni$_.JMethodIDPtr,
+    return _startsWith(reference.pointer, _id_startsWith as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .boolean;
   }
@@ -16279,9 +15962,8 @@ class ByteString extends jni$_.JObject {
   bool startsWith$1(
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _startsWith$1(_$$selfRef.pointer,
+    return _startsWith$1(reference.pointer,
             _id_startsWith$1 as jni$_.JMethodIDPtr, _$bs.pointer)
         .boolean;
   }
@@ -16306,9 +15988,8 @@ class ByteString extends jni$_.JObject {
   bool endsWith(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _endsWith(_$$selfRef.pointer, _id_endsWith as jni$_.JMethodIDPtr,
+    return _endsWith(reference.pointer, _id_endsWith as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .boolean;
   }
@@ -16333,9 +16014,8 @@ class ByteString extends jni$_.JObject {
   bool endsWith$1(
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _endsWith$1(_$$selfRef.pointer, _id_endsWith$1 as jni$_.JMethodIDPtr,
+    return _endsWith$1(reference.pointer, _id_endsWith$1 as jni$_.JMethodIDPtr,
             _$bs.pointer)
         .boolean;
   }
@@ -16362,9 +16042,8 @@ class ByteString extends jni$_.JObject {
     ByteString byteString,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _indexOf(_$$selfRef.pointer, _id_indexOf as jni$_.JMethodIDPtr,
+    return _indexOf(reference.pointer, _id_indexOf as jni$_.JMethodIDPtr,
             _$byteString.pointer, i)
         .integer;
   }
@@ -16391,9 +16070,8 @@ class ByteString extends jni$_.JObject {
     jni$_.JByteArray bs,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _indexOf$1(_$$selfRef.pointer, _id_indexOf$1 as jni$_.JMethodIDPtr,
+    return _indexOf$1(reference.pointer, _id_indexOf$1 as jni$_.JMethodIDPtr,
             _$bs.pointer, i)
         .integer;
   }
@@ -16420,9 +16098,8 @@ class ByteString extends jni$_.JObject {
     ByteString byteString,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _lastIndexOf(_$$selfRef.pointer,
+    return _lastIndexOf(reference.pointer,
             _id_lastIndexOf as jni$_.JMethodIDPtr, _$byteString.pointer, i)
         .integer;
   }
@@ -16449,9 +16126,8 @@ class ByteString extends jni$_.JObject {
     jni$_.JByteArray bs,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _lastIndexOf$1(_$$selfRef.pointer,
+    return _lastIndexOf$1(reference.pointer,
             _id_lastIndexOf$1 as jni$_.JMethodIDPtr, _$bs.pointer, i)
         .integer;
   }
@@ -16476,9 +16152,8 @@ class ByteString extends jni$_.JObject {
   bool equals(
     jni$_.JObject? object,
   ) {
-    final _$$selfRef = reference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    return _equals(_$$selfRef.pointer, _id_equals as jni$_.JMethodIDPtr,
+    return _equals(reference.pointer, _id_equals as jni$_.JMethodIDPtr,
             _$object.pointer)
         .boolean;
   }
@@ -16502,8 +16177,7 @@ class ByteString extends jni$_.JObject {
 
   /// from: `public int hashCode()`
   int hashCode$1() {
-    final _$$selfRef = reference;
-    return _hashCode$1(_$$selfRef.pointer, _id_hashCode$1 as jni$_.JMethodIDPtr)
+    return _hashCode$1(reference.pointer, _id_hashCode$1 as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -16527,9 +16201,8 @@ class ByteString extends jni$_.JObject {
   int compareTo(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _compareTo(_$$selfRef.pointer, _id_compareTo as jni$_.JMethodIDPtr,
+    return _compareTo(reference.pointer, _id_compareTo as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .integer;
   }
@@ -16554,8 +16227,7 @@ class ByteString extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString>(const jni$_.JStringType());
   }
 
@@ -16579,9 +16251,8 @@ class ByteString extends jni$_.JObject {
   ByteString substring$1(
     int i,
   ) {
-    final _$$selfRef = reference;
     return _substring$1(
-            _$$selfRef.pointer, _id_substring$1 as jni$_.JMethodIDPtr, i)
+            reference.pointer, _id_substring$1 as jni$_.JMethodIDPtr, i)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -16605,9 +16276,8 @@ class ByteString extends jni$_.JObject {
   /// from: `public final okio.ByteString substring()`
   /// The returned object must be released after use, by calling the [release] method.
   ByteString substring$2() {
-    final _$$selfRef = reference;
     return _substring$2(
-            _$$selfRef.pointer, _id_substring$2 as jni$_.JMethodIDPtr)
+            reference.pointer, _id_substring$2 as jni$_.JMethodIDPtr)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -16631,9 +16301,8 @@ class ByteString extends jni$_.JObject {
   int indexOf$2(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _indexOf$2(_$$selfRef.pointer, _id_indexOf$2 as jni$_.JMethodIDPtr,
+    return _indexOf$2(reference.pointer, _id_indexOf$2 as jni$_.JMethodIDPtr,
             _$byteString.pointer)
         .integer;
   }
@@ -16658,9 +16327,8 @@ class ByteString extends jni$_.JObject {
   int indexOf$3(
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _indexOf$3(_$$selfRef.pointer, _id_indexOf$3 as jni$_.JMethodIDPtr,
+    return _indexOf$3(reference.pointer, _id_indexOf$3 as jni$_.JMethodIDPtr,
             _$bs.pointer)
         .integer;
   }
@@ -16685,9 +16353,8 @@ class ByteString extends jni$_.JObject {
   int lastIndexOf$2(
     ByteString byteString,
   ) {
-    final _$$selfRef = reference;
     final _$byteString = byteString.reference;
-    return _lastIndexOf$2(_$$selfRef.pointer,
+    return _lastIndexOf$2(reference.pointer,
             _id_lastIndexOf$2 as jni$_.JMethodIDPtr, _$byteString.pointer)
         .integer;
   }
@@ -16712,9 +16379,8 @@ class ByteString extends jni$_.JObject {
   int lastIndexOf$3(
     jni$_.JByteArray bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs.reference;
-    return _lastIndexOf$3(_$$selfRef.pointer,
+    return _lastIndexOf$3(reference.pointer,
             _id_lastIndexOf$3 as jni$_.JMethodIDPtr, _$bs.pointer)
         .integer;
   }
@@ -16740,9 +16406,9 @@ class ByteString extends jni$_.JObject {
   static ByteString of(
     jni$_.JByteArray bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
-    return _of(_$$classRef.pointer, _id_of as jni$_.JMethodIDPtr, _$bs.pointer)
+    return _of(_class.reference.pointer, _id_of as jni$_.JMethodIDPtr,
+            _$bs.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -16773,9 +16439,8 @@ class ByteString extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs.reference;
-    return _of$1(_$$classRef.pointer, _id_of$1 as jni$_.JMethodIDPtr,
+    return _of$1(_class.reference.pointer, _id_of$1 as jni$_.JMethodIDPtr,
             _$bs.pointer, i, i1)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -16801,9 +16466,8 @@ class ByteString extends jni$_.JObject {
   static ByteString of$2(
     jni$_.JByteBuffer byteBuffer,
   ) {
-    final _$$classRef = _class.reference;
     final _$byteBuffer = byteBuffer.reference;
-    return _of$2(_$$classRef.pointer, _id_of$2 as jni$_.JMethodIDPtr,
+    return _of$2(_class.reference.pointer, _id_of$2 as jni$_.JMethodIDPtr,
             _$byteBuffer.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -16829,9 +16493,8 @@ class ByteString extends jni$_.JObject {
   static ByteString encodeUtf8(
     jni$_.JString string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string.reference;
-    return _encodeUtf8(_$$classRef.pointer,
+    return _encodeUtf8(_class.reference.pointer,
             _id_encodeUtf8 as jni$_.JMethodIDPtr, _$string.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -16864,11 +16527,10 @@ class ByteString extends jni$_.JObject {
     jni$_.JString string,
     jni$_.JObject charset,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string.reference;
     final _$charset = charset.reference;
     return _encodeString(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_encodeString as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$charset.pointer)
@@ -16896,9 +16558,8 @@ class ByteString extends jni$_.JObject {
   static ByteString? decodeBase64(
     jni$_.JString string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string.reference;
-    return _decodeBase64(_$$classRef.pointer,
+    return _decodeBase64(_class.reference.pointer,
             _id_decodeBase64 as jni$_.JMethodIDPtr, _$string.pointer)
         .object<ByteString?>(const $ByteString$NullableType());
   }
@@ -16924,10 +16585,9 @@ class ByteString extends jni$_.JObject {
   static ByteString decodeHex(
     jni$_.JString string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string.reference;
-    return _decodeHex(_$$classRef.pointer, _id_decodeHex as jni$_.JMethodIDPtr,
-            _$string.pointer)
+    return _decodeHex(_class.reference.pointer,
+            _id_decodeHex as jni$_.JMethodIDPtr, _$string.pointer)
         .object<ByteString>(const $ByteString$Type());
   }
 
@@ -16954,9 +16614,8 @@ class ByteString extends jni$_.JObject {
     jni$_.JObject inputStream,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$inputStream = inputStream.reference;
-    return _read(_$$classRef.pointer, _id_read as jni$_.JMethodIDPtr,
+    return _read(_class.reference.pointer, _id_read as jni$_.JMethodIDPtr,
             _$inputStream.pointer, i)
         .object<ByteString>(const $ByteString$Type());
   }
@@ -17074,9 +16733,8 @@ class WebSocketInterceptor$Companion extends jni$_.JObject {
   OkHttpClient$Builder addWSInterceptor(
     OkHttpClient$Builder builder,
   ) {
-    final _$$selfRef = reference;
     final _$builder = builder.reference;
-    return _addWSInterceptor(_$$selfRef.pointer,
+    return _addWSInterceptor(reference.pointer,
             _id_addWSInterceptor as jni$_.JMethodIDPtr, _$builder.pointer)
         .object<OkHttpClient$Builder>(const $OkHttpClient$Builder$Type());
   }
@@ -17101,11 +16759,10 @@ class WebSocketInterceptor$Companion extends jni$_.JObject {
   factory WebSocketInterceptor$Companion(
     jni$_.JObject? defaultConstructorMarker,
   ) {
-    final _$$classRef = _class.reference;
     final _$defaultConstructorMarker =
         defaultConstructorMarker?.reference ?? jni$_.jNullReference;
     return WebSocketInterceptor$Companion.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$defaultConstructorMarker.pointer)
         .reference);
@@ -17239,9 +16896,9 @@ class WebSocketInterceptor extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory WebSocketInterceptor() {
-    final _$$classRef = _class.reference;
     return WebSocketInterceptor.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 }
 
@@ -17427,8 +17084,7 @@ class TimeUnit extends jni$_.JObject {
   /// from: `static public java.util.concurrent.TimeUnit[] values()`
   /// The returned object must be released after use, by calling the [release] method.
   static jni$_.JArray<TimeUnit?>? values() {
-    final _$$classRef = _class.reference;
-    return _values(_$$classRef.pointer, _id_values as jni$_.JMethodIDPtr)
+    return _values(_class.reference.pointer, _id_values as jni$_.JMethodIDPtr)
         .object<jni$_.JArray<TimeUnit?>?>(
             const jni$_.JArrayNullableType<TimeUnit?>(
                 $TimeUnit$NullableType()));
@@ -17455,9 +17111,8 @@ class TimeUnit extends jni$_.JObject {
   static TimeUnit? valueOf(
     jni$_.JString? synthetic,
   ) {
-    final _$$classRef = _class.reference;
     final _$synthetic = synthetic?.reference ?? jni$_.jNullReference;
-    return _valueOf(_$$classRef.pointer, _id_valueOf as jni$_.JMethodIDPtr,
+    return _valueOf(_class.reference.pointer, _id_valueOf as jni$_.JMethodIDPtr,
             _$synthetic.pointer)
         .object<TimeUnit?>(const $TimeUnit$NullableType());
   }
@@ -17484,9 +17139,8 @@ class TimeUnit extends jni$_.JObject {
     int j,
     TimeUnit? timeUnit,
   ) {
-    final _$$selfRef = reference;
     final _$timeUnit = timeUnit?.reference ?? jni$_.jNullReference;
-    return _convert(_$$selfRef.pointer, _id_convert as jni$_.JMethodIDPtr, j,
+    return _convert(reference.pointer, _id_convert as jni$_.JMethodIDPtr, j,
             _$timeUnit.pointer)
         .long;
   }
@@ -17511,9 +17165,8 @@ class TimeUnit extends jni$_.JObject {
   int convert$1(
     jni$_.JObject? duration,
   ) {
-    final _$$selfRef = reference;
     final _$duration = duration?.reference ?? jni$_.jNullReference;
-    return _convert$1(_$$selfRef.pointer, _id_convert$1 as jni$_.JMethodIDPtr,
+    return _convert$1(reference.pointer, _id_convert$1 as jni$_.JMethodIDPtr,
             _$duration.pointer)
         .long;
   }
@@ -17537,8 +17190,7 @@ class TimeUnit extends jni$_.JObject {
   int toNanos(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _toNanos(_$$selfRef.pointer, _id_toNanos as jni$_.JMethodIDPtr, j)
+    return _toNanos(reference.pointer, _id_toNanos as jni$_.JMethodIDPtr, j)
         .long;
   }
 
@@ -17561,8 +17213,7 @@ class TimeUnit extends jni$_.JObject {
   int toMicros(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _toMicros(_$$selfRef.pointer, _id_toMicros as jni$_.JMethodIDPtr, j)
+    return _toMicros(reference.pointer, _id_toMicros as jni$_.JMethodIDPtr, j)
         .long;
   }
 
@@ -17585,8 +17236,7 @@ class TimeUnit extends jni$_.JObject {
   int toMillis(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _toMillis(_$$selfRef.pointer, _id_toMillis as jni$_.JMethodIDPtr, j)
+    return _toMillis(reference.pointer, _id_toMillis as jni$_.JMethodIDPtr, j)
         .long;
   }
 
@@ -17609,9 +17259,7 @@ class TimeUnit extends jni$_.JObject {
   int toSeconds(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _toSeconds(
-            _$$selfRef.pointer, _id_toSeconds as jni$_.JMethodIDPtr, j)
+    return _toSeconds(reference.pointer, _id_toSeconds as jni$_.JMethodIDPtr, j)
         .long;
   }
 
@@ -17634,9 +17282,7 @@ class TimeUnit extends jni$_.JObject {
   int toMinutes(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _toMinutes(
-            _$$selfRef.pointer, _id_toMinutes as jni$_.JMethodIDPtr, j)
+    return _toMinutes(reference.pointer, _id_toMinutes as jni$_.JMethodIDPtr, j)
         .long;
   }
 
@@ -17659,8 +17305,7 @@ class TimeUnit extends jni$_.JObject {
   int toHours(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _toHours(_$$selfRef.pointer, _id_toHours as jni$_.JMethodIDPtr, j)
+    return _toHours(reference.pointer, _id_toHours as jni$_.JMethodIDPtr, j)
         .long;
   }
 
@@ -17683,9 +17328,7 @@ class TimeUnit extends jni$_.JObject {
   int toDays(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _toDays(_$$selfRef.pointer, _id_toDays as jni$_.JMethodIDPtr, j)
-        .long;
+    return _toDays(reference.pointer, _id_toDays as jni$_.JMethodIDPtr, j).long;
   }
 
   static final _id_timedWait = _class.instanceMethodId(
@@ -17710,9 +17353,8 @@ class TimeUnit extends jni$_.JObject {
     jni$_.JObject? object,
     int j,
   ) {
-    final _$$selfRef = reference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    _timedWait(_$$selfRef.pointer, _id_timedWait as jni$_.JMethodIDPtr,
+    _timedWait(reference.pointer, _id_timedWait as jni$_.JMethodIDPtr,
             _$object.pointer, j)
         .check();
   }
@@ -17739,9 +17381,8 @@ class TimeUnit extends jni$_.JObject {
     jni$_.JObject? thread,
     int j,
   ) {
-    final _$$selfRef = reference;
     final _$thread = thread?.reference ?? jni$_.jNullReference;
-    _timedJoin(_$$selfRef.pointer, _id_timedJoin as jni$_.JMethodIDPtr,
+    _timedJoin(reference.pointer, _id_timedJoin as jni$_.JMethodIDPtr,
             _$thread.pointer, j)
         .check();
   }
@@ -17765,8 +17406,7 @@ class TimeUnit extends jni$_.JObject {
   void sleep(
     int j,
   ) {
-    final _$$selfRef = reference;
-    _sleep(_$$selfRef.pointer, _id_sleep as jni$_.JMethodIDPtr, j).check();
+    _sleep(reference.pointer, _id_sleep as jni$_.JMethodIDPtr, j).check();
   }
 
   static final _id_toChronoUnit = _class.instanceMethodId(
@@ -17789,9 +17429,8 @@ class TimeUnit extends jni$_.JObject {
   /// from: `public java.time.temporal.ChronoUnit toChronoUnit()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? toChronoUnit() {
-    final _$$selfRef = reference;
     return _toChronoUnit(
-            _$$selfRef.pointer, _id_toChronoUnit as jni$_.JMethodIDPtr)
+            reference.pointer, _id_toChronoUnit as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -17816,9 +17455,8 @@ class TimeUnit extends jni$_.JObject {
   static TimeUnit? of(
     jni$_.JObject? chronoUnit,
   ) {
-    final _$$classRef = _class.reference;
     final _$chronoUnit = chronoUnit?.reference ?? jni$_.jNullReference;
-    return _of(_$$classRef.pointer, _id_of as jni$_.JMethodIDPtr,
+    return _of(_class.reference.pointer, _id_of as jni$_.JMethodIDPtr,
             _$chronoUnit.pointer)
         .object<TimeUnit?>(const $TimeUnit$NullableType());
   }
@@ -17939,12 +17577,11 @@ class X509TrustManager extends jni$_.JObject {
     jni$_.JArray<X509Certificate?>? x509Certificates,
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$x509Certificates =
         x509Certificates?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     _checkClientTrusted(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_checkClientTrusted as jni$_.JMethodIDPtr,
             _$x509Certificates.pointer,
             _$string.pointer)
@@ -17978,12 +17615,11 @@ class X509TrustManager extends jni$_.JObject {
     jni$_.JArray<X509Certificate?>? x509Certificates,
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$x509Certificates =
         x509Certificates?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     _checkServerTrusted(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_checkServerTrusted as jni$_.JMethodIDPtr,
             _$x509Certificates.pointer,
             _$string.pointer)
@@ -18010,9 +17646,8 @@ class X509TrustManager extends jni$_.JObject {
   /// from: `public abstract java.security.cert.X509Certificate[] getAcceptedIssuers()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JArray<X509Certificate?>? getAcceptedIssuers() {
-    final _$$selfRef = reference;
     return _getAcceptedIssuers(
-            _$$selfRef.pointer, _id_getAcceptedIssuers as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAcceptedIssuers as jni$_.JMethodIDPtr)
         .object<jni$_.JArray<X509Certificate?>?>(
             const jni$_.JArrayNullableType<X509Certificate?>(
                 $X509Certificate$NullableType()));
@@ -18298,9 +17933,8 @@ class SocketFactory extends jni$_.JObject {
   /// from: `static public javax.net.SocketFactory getDefault()`
   /// The returned object must be released after use, by calling the [release] method.
   static SocketFactory? getDefault() {
-    final _$$classRef = _class.reference;
     return _getDefault(
-            _$$classRef.pointer, _id_getDefault as jni$_.JMethodIDPtr)
+            _class.reference.pointer, _id_getDefault as jni$_.JMethodIDPtr)
         .object<SocketFactory?>(const $SocketFactory$NullableType());
   }
 
@@ -18324,9 +17958,8 @@ class SocketFactory extends jni$_.JObject {
   /// from: `public java.net.Socket createSocket()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? createSocket() {
-    final _$$selfRef = reference;
     return _createSocket(
-            _$$selfRef.pointer, _id_createSocket as jni$_.JMethodIDPtr)
+            reference.pointer, _id_createSocket as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -18353,9 +17986,8 @@ class SocketFactory extends jni$_.JObject {
     jni$_.JString? string,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _createSocket$1(_$$selfRef.pointer,
+    return _createSocket$1(reference.pointer,
             _id_createSocket$1 as jni$_.JMethodIDPtr, _$string.pointer, i)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -18394,11 +18026,10 @@ class SocketFactory extends jni$_.JObject {
     jni$_.JObject? inetAddress,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$inetAddress = inetAddress?.reference ?? jni$_.jNullReference;
     return _createSocket$2(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_createSocket$2 as jni$_.JMethodIDPtr,
             _$string.pointer,
             i,
@@ -18430,9 +18061,8 @@ class SocketFactory extends jni$_.JObject {
     jni$_.JObject? inetAddress,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$inetAddress = inetAddress?.reference ?? jni$_.jNullReference;
-    return _createSocket$3(_$$selfRef.pointer,
+    return _createSocket$3(reference.pointer,
             _id_createSocket$3 as jni$_.JMethodIDPtr, _$inetAddress.pointer, i)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -18471,11 +18101,10 @@ class SocketFactory extends jni$_.JObject {
     jni$_.JObject? inetAddress1,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$inetAddress = inetAddress?.reference ?? jni$_.jNullReference;
     final _$inetAddress1 = inetAddress1?.reference ?? jni$_.jNullReference;
     return _createSocket$4(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_createSocket$4 as jni$_.JMethodIDPtr,
             _$inetAddress.pointer,
             i,
@@ -18596,9 +18225,8 @@ class SSLSocketFactory extends SocketFactory {
   /// from: `static public javax.net.SocketFactory getDefault()`
   /// The returned object must be released after use, by calling the [release] method.
   static SocketFactory? getDefault() {
-    final _$$classRef = _class.reference;
     return _getDefault(
-            _$$classRef.pointer, _id_getDefault as jni$_.JMethodIDPtr)
+            _class.reference.pointer, _id_getDefault as jni$_.JMethodIDPtr)
         .object<SocketFactory?>(const $SocketFactory$NullableType());
   }
 
@@ -18622,9 +18250,8 @@ class SSLSocketFactory extends SocketFactory {
   /// from: `public abstract java.lang.String[] getDefaultCipherSuites()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JArray<jni$_.JString?>? getDefaultCipherSuites() {
-    final _$$selfRef = reference;
-    return _getDefaultCipherSuites(_$$selfRef.pointer,
-            _id_getDefaultCipherSuites as jni$_.JMethodIDPtr)
+    return _getDefaultCipherSuites(
+            reference.pointer, _id_getDefaultCipherSuites as jni$_.JMethodIDPtr)
         .object<jni$_.JArray<jni$_.JString?>?>(
             const jni$_.JArrayNullableType<jni$_.JString?>(
                 jni$_.JStringNullableType()));
@@ -18650,8 +18277,7 @@ class SSLSocketFactory extends SocketFactory {
   /// from: `public abstract java.lang.String[] getSupportedCipherSuites()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JArray<jni$_.JString?>? getSupportedCipherSuites() {
-    final _$$selfRef = reference;
-    return _getSupportedCipherSuites(_$$selfRef.pointer,
+    return _getSupportedCipherSuites(reference.pointer,
             _id_getSupportedCipherSuites as jni$_.JMethodIDPtr)
         .object<jni$_.JArray<jni$_.JString?>?>(
             const jni$_.JArrayNullableType<jni$_.JString?>(
@@ -18692,11 +18318,10 @@ class SSLSocketFactory extends SocketFactory {
     int i,
     bool z,
   ) {
-    final _$$selfRef = reference;
     final _$socket = socket?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     return _createSocket$5(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_createSocket$5 as jni$_.JMethodIDPtr,
             _$socket.pointer,
             _$string.pointer,
@@ -18819,9 +18444,8 @@ class SSLContext extends jni$_.JObject {
   /// from: `static public javax.net.ssl.SSLContext getDefault()`
   /// The returned object must be released after use, by calling the [release] method.
   static SSLContext? getDefault() {
-    final _$$classRef = _class.reference;
     return _getDefault(
-            _$$classRef.pointer, _id_getDefault as jni$_.JMethodIDPtr)
+            _class.reference.pointer, _id_getDefault as jni$_.JMethodIDPtr)
         .object<SSLContext?>(const $SSLContext$NullableType());
   }
 
@@ -18845,9 +18469,8 @@ class SSLContext extends jni$_.JObject {
   static void setDefault(
     SSLContext? sSLContext,
   ) {
-    final _$$classRef = _class.reference;
     final _$sSLContext = sSLContext?.reference ?? jni$_.jNullReference;
-    _setDefault(_$$classRef.pointer, _id_setDefault as jni$_.JMethodIDPtr,
+    _setDefault(_class.reference.pointer, _id_setDefault as jni$_.JMethodIDPtr,
             _$sSLContext.pointer)
         .check();
   }
@@ -18873,9 +18496,8 @@ class SSLContext extends jni$_.JObject {
   static SSLContext? getInstance(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getInstance(_$$classRef.pointer,
+    return _getInstance(_class.reference.pointer,
             _id_getInstance as jni$_.JMethodIDPtr, _$string.pointer)
         .object<SSLContext?>(const $SSLContext$NullableType());
   }
@@ -18908,11 +18530,10 @@ class SSLContext extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     return _getInstance$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$1 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$string1.pointer)
@@ -18947,11 +18568,10 @@ class SSLContext extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? provider,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     return _getInstance$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$2 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer)
@@ -18978,9 +18598,8 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final java.lang.String getProtocol()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getProtocol() {
-    final _$$selfRef = reference;
     return _getProtocol(
-            _$$selfRef.pointer, _id_getProtocol as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getProtocol as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -19004,9 +18623,8 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final java.security.Provider getProvider()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getProvider() {
-    final _$$selfRef = reference;
     return _getProvider(
-            _$$selfRef.pointer, _id_getProvider as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getProvider as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -19040,12 +18658,11 @@ class SSLContext extends jni$_.JObject {
     jni$_.JArray<TrustManager?>? trustManagers,
     SecureRandom? secureRandom,
   ) {
-    final _$$selfRef = reference;
     final _$keyManagers = keyManagers?.reference ?? jni$_.jNullReference;
     final _$trustManagers = trustManagers?.reference ?? jni$_.jNullReference;
     final _$secureRandom = secureRandom?.reference ?? jni$_.jNullReference;
     _init(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_init as jni$_.JMethodIDPtr,
             _$keyManagers.pointer,
             _$trustManagers.pointer,
@@ -19073,9 +18690,8 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLSocketFactory getSocketFactory()`
   /// The returned object must be released after use, by calling the [release] method.
   SSLSocketFactory? getSocketFactory() {
-    final _$$selfRef = reference;
     return _getSocketFactory(
-            _$$selfRef.pointer, _id_getSocketFactory as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSocketFactory as jni$_.JMethodIDPtr)
         .object<SSLSocketFactory?>(const $SSLSocketFactory$NullableType());
   }
 
@@ -19099,9 +18715,8 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLServerSocketFactory getServerSocketFactory()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getServerSocketFactory() {
-    final _$$selfRef = reference;
-    return _getServerSocketFactory(_$$selfRef.pointer,
-            _id_getServerSocketFactory as jni$_.JMethodIDPtr)
+    return _getServerSocketFactory(
+            reference.pointer, _id_getServerSocketFactory as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -19125,9 +18740,8 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLEngine createSSLEngine()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? createSSLEngine() {
-    final _$$selfRef = reference;
     return _createSSLEngine(
-            _$$selfRef.pointer, _id_createSSLEngine as jni$_.JMethodIDPtr)
+            reference.pointer, _id_createSSLEngine as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -19154,9 +18768,8 @@ class SSLContext extends jni$_.JObject {
     jni$_.JString? string,
     int i,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _createSSLEngine$1(_$$selfRef.pointer,
+    return _createSSLEngine$1(reference.pointer,
             _id_createSSLEngine$1 as jni$_.JMethodIDPtr, _$string.pointer, i)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -19181,8 +18794,7 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLSessionContext getServerSessionContext()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getServerSessionContext() {
-    final _$$selfRef = reference;
-    return _getServerSessionContext(_$$selfRef.pointer,
+    return _getServerSessionContext(reference.pointer,
             _id_getServerSessionContext as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -19207,8 +18819,7 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLSessionContext getClientSessionContext()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getClientSessionContext() {
-    final _$$selfRef = reference;
-    return _getClientSessionContext(_$$selfRef.pointer,
+    return _getClientSessionContext(reference.pointer,
             _id_getClientSessionContext as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -19233,8 +18844,7 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLParameters getDefaultSSLParameters()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getDefaultSSLParameters() {
-    final _$$selfRef = reference;
-    return _getDefaultSSLParameters(_$$selfRef.pointer,
+    return _getDefaultSSLParameters(reference.pointer,
             _id_getDefaultSSLParameters as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -19259,8 +18869,7 @@ class SSLContext extends jni$_.JObject {
   /// from: `public final javax.net.ssl.SSLParameters getSupportedSSLParameters()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getSupportedSSLParameters() {
-    final _$$selfRef = reference;
-    return _getSupportedSSLParameters(_$$selfRef.pointer,
+    return _getSupportedSSLParameters(reference.pointer,
             _id_getSupportedSSLParameters as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -19377,9 +18986,8 @@ class TrustManagerFactory extends jni$_.JObject {
   /// from: `static public final java.lang.String getDefaultAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   static jni$_.JString? getDefaultAlgorithm() {
-    final _$$classRef = _class.reference;
-    return _getDefaultAlgorithm(
-            _$$classRef.pointer, _id_getDefaultAlgorithm as jni$_.JMethodIDPtr)
+    return _getDefaultAlgorithm(_class.reference.pointer,
+            _id_getDefaultAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -19403,9 +19011,8 @@ class TrustManagerFactory extends jni$_.JObject {
   /// from: `public final java.lang.String getAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getAlgorithm() {
-    final _$$selfRef = reference;
     return _getAlgorithm(
-            _$$selfRef.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -19430,9 +19037,8 @@ class TrustManagerFactory extends jni$_.JObject {
   static TrustManagerFactory? getInstance(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getInstance(_$$classRef.pointer,
+    return _getInstance(_class.reference.pointer,
             _id_getInstance as jni$_.JMethodIDPtr, _$string.pointer)
         .object<TrustManagerFactory?>(
             const $TrustManagerFactory$NullableType());
@@ -19466,11 +19072,10 @@ class TrustManagerFactory extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     return _getInstance$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$1 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$string1.pointer)
@@ -19506,11 +19111,10 @@ class TrustManagerFactory extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? provider,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     return _getInstance$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$2 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer)
@@ -19538,9 +19142,8 @@ class TrustManagerFactory extends jni$_.JObject {
   /// from: `public final java.security.Provider getProvider()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getProvider() {
-    final _$$selfRef = reference;
     return _getProvider(
-            _$$selfRef.pointer, _id_getProvider as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getProvider as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -19564,10 +19167,8 @@ class TrustManagerFactory extends jni$_.JObject {
   void init(
     KeyStore? keyStore,
   ) {
-    final _$$selfRef = reference;
     final _$keyStore = keyStore?.reference ?? jni$_.jNullReference;
-    _init(_$$selfRef.pointer, _id_init as jni$_.JMethodIDPtr,
-            _$keyStore.pointer)
+    _init(reference.pointer, _id_init as jni$_.JMethodIDPtr, _$keyStore.pointer)
         .check();
   }
 
@@ -19591,10 +19192,9 @@ class TrustManagerFactory extends jni$_.JObject {
   void init$1(
     jni$_.JObject? managerFactoryParameters,
   ) {
-    final _$$selfRef = reference;
     final _$managerFactoryParameters =
         managerFactoryParameters?.reference ?? jni$_.jNullReference;
-    _init$1(_$$selfRef.pointer, _id_init$1 as jni$_.JMethodIDPtr,
+    _init$1(reference.pointer, _id_init$1 as jni$_.JMethodIDPtr,
             _$managerFactoryParameters.pointer)
         .check();
   }
@@ -19619,9 +19219,8 @@ class TrustManagerFactory extends jni$_.JObject {
   /// from: `public final javax.net.ssl.TrustManager[] getTrustManagers()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JArray<TrustManager?>? getTrustManagers() {
-    final _$$selfRef = reference;
     return _getTrustManagers(
-            _$$selfRef.pointer, _id_getTrustManagers as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getTrustManagers as jni$_.JMethodIDPtr)
         .object<jni$_.JArray<TrustManager?>?>(
             const jni$_.JArrayNullableType<TrustManager?>(
                 $TrustManager$NullableType()));
@@ -19914,9 +19513,8 @@ class KeyStore$Builder extends jni$_.JObject {
   /// from: `public abstract java.security.KeyStore getKeyStore()`
   /// The returned object must be released after use, by calling the [release] method.
   KeyStore? getKeyStore() {
-    final _$$selfRef = reference;
     return _getKeyStore(
-            _$$selfRef.pointer, _id_getKeyStore as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getKeyStore as jni$_.JMethodIDPtr)
         .object<KeyStore?>(const $KeyStore$NullableType());
   }
 
@@ -19941,9 +19539,8 @@ class KeyStore$Builder extends jni$_.JObject {
   KeyStore$ProtectionParameter? getProtectionParameter(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getProtectionParameter(_$$selfRef.pointer,
+    return _getProtectionParameter(reference.pointer,
             _id_getProtectionParameter as jni$_.JMethodIDPtr, _$string.pointer)
         .object<KeyStore$ProtectionParameter?>(
             const $KeyStore$ProtectionParameter$NullableType());
@@ -19977,12 +19574,11 @@ class KeyStore$Builder extends jni$_.JObject {
     KeyStore? keyStore,
     KeyStore$ProtectionParameter? protectionParameter,
   ) {
-    final _$$classRef = _class.reference;
     final _$keyStore = keyStore?.reference ?? jni$_.jNullReference;
     final _$protectionParameter =
         protectionParameter?.reference ?? jni$_.jNullReference;
     return _newInstance(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_newInstance as jni$_.JMethodIDPtr,
             _$keyStore.pointer,
             _$protectionParameter.pointer)
@@ -20023,14 +19619,13 @@ class KeyStore$Builder extends jni$_.JObject {
     jni$_.JObject? file,
     KeyStore$ProtectionParameter? protectionParameter,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     final _$file = file?.reference ?? jni$_.jNullReference;
     final _$protectionParameter =
         protectionParameter?.reference ?? jni$_.jNullReference;
     return _newInstance$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_newInstance$1 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer,
@@ -20067,12 +19662,11 @@ class KeyStore$Builder extends jni$_.JObject {
     jni$_.JObject? file,
     KeyStore$ProtectionParameter? protectionParameter,
   ) {
-    final _$$classRef = _class.reference;
     final _$file = file?.reference ?? jni$_.jNullReference;
     final _$protectionParameter =
         protectionParameter?.reference ?? jni$_.jNullReference;
     return _newInstance$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_newInstance$2 as jni$_.JMethodIDPtr,
             _$file.pointer,
             _$protectionParameter.pointer)
@@ -20110,13 +19704,12 @@ class KeyStore$Builder extends jni$_.JObject {
     jni$_.JObject? provider,
     KeyStore$ProtectionParameter? protectionParameter,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     final _$protectionParameter =
         protectionParameter?.reference ?? jni$_.jNullReference;
     return _newInstance$3(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_newInstance$3 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer,
@@ -20240,11 +19833,10 @@ class KeyStore$CallbackHandlerProtection extends jni$_.JObject {
   factory KeyStore$CallbackHandlerProtection(
     jni$_.JObject? callbackHandler,
   ) {
-    final _$$classRef = _class.reference;
     final _$callbackHandler =
         callbackHandler?.reference ?? jni$_.jNullReference;
     return KeyStore$CallbackHandlerProtection.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$callbackHandler.pointer)
         .reference);
@@ -20270,9 +19862,8 @@ class KeyStore$CallbackHandlerProtection extends jni$_.JObject {
   /// from: `public javax.security.auth.callback.CallbackHandler getCallbackHandler()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getCallbackHandler() {
-    final _$$selfRef = reference;
     return _getCallbackHandler(
-            _$$selfRef.pointer, _id_getCallbackHandler as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getCallbackHandler as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 }
@@ -20396,8 +19987,7 @@ class KeyStore$Entry$Attribute extends jni$_.JObject {
   /// from: `public abstract java.lang.String getName()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getName() {
-    final _$$selfRef = reference;
-    return _getName(_$$selfRef.pointer, _id_getName as jni$_.JMethodIDPtr)
+    return _getName(reference.pointer, _id_getName as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -20421,8 +20011,7 @@ class KeyStore$Entry$Attribute extends jni$_.JObject {
   /// from: `public abstract java.lang.String getValue()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getValue() {
-    final _$$selfRef = reference;
-    return _getValue(_$$selfRef.pointer, _id_getValue as jni$_.JMethodIDPtr)
+    return _getValue(reference.pointer, _id_getValue as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -20657,9 +20246,8 @@ class KeyStore$Entry extends jni$_.JObject {
   /// from: `public java.util.Set getAttributes()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JSet<KeyStore$Entry$Attribute?>? getAttributes() {
-    final _$$selfRef = reference;
     return _getAttributes(
-            _$$selfRef.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
         .object<jni$_.JSet<KeyStore$Entry$Attribute?>?>(
             const jni$_.JSetNullableType<KeyStore$Entry$Attribute?>(
                 $KeyStore$Entry$Attribute$NullableType()));
@@ -20878,9 +20466,8 @@ class KeyStore$LoadStoreParameter extends jni$_.JObject {
   /// from: `public abstract java.security.KeyStore$ProtectionParameter getProtectionParameter()`
   /// The returned object must be released after use, by calling the [release] method.
   KeyStore$ProtectionParameter? getProtectionParameter() {
-    final _$$selfRef = reference;
-    return _getProtectionParameter(_$$selfRef.pointer,
-            _id_getProtectionParameter as jni$_.JMethodIDPtr)
+    return _getProtectionParameter(
+            reference.pointer, _id_getProtectionParameter as jni$_.JMethodIDPtr)
         .object<KeyStore$ProtectionParameter?>(
             const $KeyStore$ProtectionParameter$NullableType());
   }
@@ -21101,11 +20688,12 @@ class KeyStore$PasswordProtection extends jni$_.JObject {
   factory KeyStore$PasswordProtection(
     jni$_.JCharArray? cs,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return KeyStore$PasswordProtection.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr, _$cs.pointer)
-            .reference);
+    return KeyStore$PasswordProtection.fromReference(_new$(
+            _class.reference.pointer,
+            _id_new$ as jni$_.JMethodIDPtr,
+            _$cs.pointer)
+        .reference);
   }
 
   static final _id_new$1 = _class.constructorId(
@@ -21138,13 +20726,12 @@ class KeyStore$PasswordProtection extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? algorithmParameterSpec,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$algorithmParameterSpec =
         algorithmParameterSpec?.reference ?? jni$_.jNullReference;
     return KeyStore$PasswordProtection.fromReference(_new$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr,
             _$cs.pointer,
             _$string.pointer,
@@ -21172,9 +20759,8 @@ class KeyStore$PasswordProtection extends jni$_.JObject {
   /// from: `public java.lang.String getProtectionAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getProtectionAlgorithm() {
-    final _$$selfRef = reference;
-    return _getProtectionAlgorithm(_$$selfRef.pointer,
-            _id_getProtectionAlgorithm as jni$_.JMethodIDPtr)
+    return _getProtectionAlgorithm(
+            reference.pointer, _id_getProtectionAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -21198,8 +20784,7 @@ class KeyStore$PasswordProtection extends jni$_.JObject {
   /// from: `public java.security.spec.AlgorithmParameterSpec getProtectionParameters()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getProtectionParameters() {
-    final _$$selfRef = reference;
-    return _getProtectionParameters(_$$selfRef.pointer,
+    return _getProtectionParameters(reference.pointer,
             _id_getProtectionParameters as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -21224,9 +20809,8 @@ class KeyStore$PasswordProtection extends jni$_.JObject {
   /// from: `public char[] getPassword()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JCharArray? getPassword() {
-    final _$$selfRef = reference;
     return _getPassword(
-            _$$selfRef.pointer, _id_getPassword as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getPassword as jni$_.JMethodIDPtr)
         .object<jni$_.JCharArray?>(const jni$_.JCharArrayNullableType());
   }
 
@@ -21249,8 +20833,7 @@ class KeyStore$PasswordProtection extends jni$_.JObject {
 
   /// from: `public void destroy()`
   void destroy() {
-    final _$$selfRef = reference;
-    _destroy(_$$selfRef.pointer, _id_destroy as jni$_.JMethodIDPtr).check();
+    _destroy(reference.pointer, _id_destroy as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_isDestroyed = _class.instanceMethodId(
@@ -21272,9 +20855,8 @@ class KeyStore$PasswordProtection extends jni$_.JObject {
 
   /// from: `public boolean isDestroyed()`
   bool isDestroyed() {
-    final _$$selfRef = reference;
     return _isDestroyed(
-            _$$selfRef.pointer, _id_isDestroyed as jni$_.JMethodIDPtr)
+            reference.pointer, _id_isDestroyed as jni$_.JMethodIDPtr)
         .boolean;
   }
 }
@@ -21401,11 +20983,10 @@ class KeyStore$PrivateKeyEntry extends jni$_.JObject {
     PrivateKey? privateKey,
     jni$_.JArray<Certificate?>? certificates,
   ) {
-    final _$$classRef = _class.reference;
     final _$privateKey = privateKey?.reference ?? jni$_.jNullReference;
     final _$certificates = certificates?.reference ?? jni$_.jNullReference;
     return KeyStore$PrivateKeyEntry.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$privateKey.pointer,
             _$certificates.pointer)
@@ -21442,12 +21023,11 @@ class KeyStore$PrivateKeyEntry extends jni$_.JObject {
     jni$_.JArray<Certificate?>? certificates,
     jni$_.JSet<KeyStore$Entry$Attribute?>? set,
   ) {
-    final _$$classRef = _class.reference;
     final _$privateKey = privateKey?.reference ?? jni$_.jNullReference;
     final _$certificates = certificates?.reference ?? jni$_.jNullReference;
     final _$set = set?.reference ?? jni$_.jNullReference;
     return KeyStore$PrivateKeyEntry.fromReference(_new$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr,
             _$privateKey.pointer,
             _$certificates.pointer,
@@ -21475,9 +21055,8 @@ class KeyStore$PrivateKeyEntry extends jni$_.JObject {
   /// from: `public java.security.PrivateKey getPrivateKey()`
   /// The returned object must be released after use, by calling the [release] method.
   PrivateKey? getPrivateKey() {
-    final _$$selfRef = reference;
     return _getPrivateKey(
-            _$$selfRef.pointer, _id_getPrivateKey as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getPrivateKey as jni$_.JMethodIDPtr)
         .object<PrivateKey?>(const $PrivateKey$NullableType());
   }
 
@@ -21501,9 +21080,8 @@ class KeyStore$PrivateKeyEntry extends jni$_.JObject {
   /// from: `public java.security.cert.Certificate[] getCertificateChain()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JArray<Certificate?>? getCertificateChain() {
-    final _$$selfRef = reference;
     return _getCertificateChain(
-            _$$selfRef.pointer, _id_getCertificateChain as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getCertificateChain as jni$_.JMethodIDPtr)
         .object<jni$_.JArray<Certificate?>?>(
             const jni$_.JArrayNullableType<Certificate?>(
                 $Certificate$NullableType()));
@@ -21529,9 +21107,8 @@ class KeyStore$PrivateKeyEntry extends jni$_.JObject {
   /// from: `public java.security.cert.Certificate getCertificate()`
   /// The returned object must be released after use, by calling the [release] method.
   Certificate? getCertificate() {
-    final _$$selfRef = reference;
     return _getCertificate(
-            _$$selfRef.pointer, _id_getCertificate as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getCertificate as jni$_.JMethodIDPtr)
         .object<Certificate?>(const $Certificate$NullableType());
   }
 
@@ -21555,9 +21132,8 @@ class KeyStore$PrivateKeyEntry extends jni$_.JObject {
   /// from: `public java.util.Set getAttributes()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JSet<KeyStore$Entry$Attribute?>? getAttributes() {
-    final _$$selfRef = reference;
     return _getAttributes(
-            _$$selfRef.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
         .object<jni$_.JSet<KeyStore$Entry$Attribute?>?>(
             const jni$_.JSetNullableType<KeyStore$Entry$Attribute?>(
                 $KeyStore$Entry$Attribute$NullableType()));
@@ -21583,8 +21159,7 @@ class KeyStore$PrivateKeyEntry extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 }
@@ -21880,9 +21455,8 @@ class KeyStore$SecretKeyEntry extends jni$_.JObject {
   factory KeyStore$SecretKeyEntry(
     jni$_.JObject? secretKey,
   ) {
-    final _$$classRef = _class.reference;
     final _$secretKey = secretKey?.reference ?? jni$_.jNullReference;
-    return KeyStore$SecretKeyEntry.fromReference(_new$(_$$classRef.pointer,
+    return KeyStore$SecretKeyEntry.fromReference(_new$(_class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr, _$secretKey.pointer)
         .reference);
   }
@@ -21914,11 +21488,13 @@ class KeyStore$SecretKeyEntry extends jni$_.JObject {
     jni$_.JObject? secretKey,
     jni$_.JSet<KeyStore$Entry$Attribute?>? set,
   ) {
-    final _$$classRef = _class.reference;
     final _$secretKey = secretKey?.reference ?? jni$_.jNullReference;
     final _$set = set?.reference ?? jni$_.jNullReference;
-    return KeyStore$SecretKeyEntry.fromReference(_new$1(_$$classRef.pointer,
-            _id_new$1 as jni$_.JMethodIDPtr, _$secretKey.pointer, _$set.pointer)
+    return KeyStore$SecretKeyEntry.fromReference(_new$1(
+            _class.reference.pointer,
+            _id_new$1 as jni$_.JMethodIDPtr,
+            _$secretKey.pointer,
+            _$set.pointer)
         .reference);
   }
 
@@ -21942,9 +21518,8 @@ class KeyStore$SecretKeyEntry extends jni$_.JObject {
   /// from: `public javax.crypto.SecretKey getSecretKey()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getSecretKey() {
-    final _$$selfRef = reference;
     return _getSecretKey(
-            _$$selfRef.pointer, _id_getSecretKey as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSecretKey as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -21968,9 +21543,8 @@ class KeyStore$SecretKeyEntry extends jni$_.JObject {
   /// from: `public java.util.Set getAttributes()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JSet<KeyStore$Entry$Attribute?>? getAttributes() {
-    final _$$selfRef = reference;
     return _getAttributes(
-            _$$selfRef.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
         .object<jni$_.JSet<KeyStore$Entry$Attribute?>?>(
             const jni$_.JSetNullableType<KeyStore$Entry$Attribute?>(
                 $KeyStore$Entry$Attribute$NullableType()));
@@ -21996,8 +21570,7 @@ class KeyStore$SecretKeyEntry extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 }
@@ -22117,10 +21690,9 @@ class KeyStore$TrustedCertificateEntry extends jni$_.JObject {
   factory KeyStore$TrustedCertificateEntry(
     Certificate? certificate,
   ) {
-    final _$$classRef = _class.reference;
     final _$certificate = certificate?.reference ?? jni$_.jNullReference;
     return KeyStore$TrustedCertificateEntry.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$certificate.pointer)
         .reference);
@@ -22153,11 +21725,10 @@ class KeyStore$TrustedCertificateEntry extends jni$_.JObject {
     Certificate? certificate,
     jni$_.JSet<KeyStore$Entry$Attribute?>? set,
   ) {
-    final _$$classRef = _class.reference;
     final _$certificate = certificate?.reference ?? jni$_.jNullReference;
     final _$set = set?.reference ?? jni$_.jNullReference;
     return KeyStore$TrustedCertificateEntry.fromReference(_new$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr,
             _$certificate.pointer,
             _$set.pointer)
@@ -22184,9 +21755,8 @@ class KeyStore$TrustedCertificateEntry extends jni$_.JObject {
   /// from: `public java.security.cert.Certificate getTrustedCertificate()`
   /// The returned object must be released after use, by calling the [release] method.
   Certificate? getTrustedCertificate() {
-    final _$$selfRef = reference;
     return _getTrustedCertificate(
-            _$$selfRef.pointer, _id_getTrustedCertificate as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getTrustedCertificate as jni$_.JMethodIDPtr)
         .object<Certificate?>(const $Certificate$NullableType());
   }
 
@@ -22210,9 +21780,8 @@ class KeyStore$TrustedCertificateEntry extends jni$_.JObject {
   /// from: `public java.util.Set getAttributes()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JSet<KeyStore$Entry$Attribute?>? getAttributes() {
-    final _$$selfRef = reference;
     return _getAttributes(
-            _$$selfRef.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAttributes as jni$_.JMethodIDPtr)
         .object<jni$_.JSet<KeyStore$Entry$Attribute?>?>(
             const jni$_.JSetNullableType<KeyStore$Entry$Attribute?>(
                 $KeyStore$Entry$Attribute$NullableType()));
@@ -22238,8 +21807,7 @@ class KeyStore$TrustedCertificateEntry extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 }
@@ -22360,9 +21928,8 @@ class KeyStore extends jni$_.JObject {
   static KeyStore? getInstance(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getInstance(_$$classRef.pointer,
+    return _getInstance(_class.reference.pointer,
             _id_getInstance as jni$_.JMethodIDPtr, _$string.pointer)
         .object<KeyStore?>(const $KeyStore$NullableType());
   }
@@ -22395,11 +21962,10 @@ class KeyStore extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     return _getInstance$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$1 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$string1.pointer)
@@ -22434,11 +22000,10 @@ class KeyStore extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? provider,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     return _getInstance$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$2 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer)
@@ -22465,9 +22030,8 @@ class KeyStore extends jni$_.JObject {
   /// from: `static public final java.lang.String getDefaultType()`
   /// The returned object must be released after use, by calling the [release] method.
   static jni$_.JString? getDefaultType() {
-    final _$$classRef = _class.reference;
     return _getDefaultType(
-            _$$classRef.pointer, _id_getDefaultType as jni$_.JMethodIDPtr)
+            _class.reference.pointer, _id_getDefaultType as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -22491,9 +22055,8 @@ class KeyStore extends jni$_.JObject {
   /// from: `public final java.security.Provider getProvider()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getProvider() {
-    final _$$selfRef = reference;
     return _getProvider(
-            _$$selfRef.pointer, _id_getProvider as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getProvider as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -22517,8 +22080,7 @@ class KeyStore extends jni$_.JObject {
   /// from: `public final java.lang.String getType()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getType() {
-    final _$$selfRef = reference;
-    return _getType(_$$selfRef.pointer, _id_getType as jni$_.JMethodIDPtr)
+    return _getType(reference.pointer, _id_getType as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -22550,10 +22112,9 @@ class KeyStore extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JCharArray? cs,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return _getKey(_$$selfRef.pointer, _id_getKey as jni$_.JMethodIDPtr,
+    return _getKey(reference.pointer, _id_getKey as jni$_.JMethodIDPtr,
             _$string.pointer, _$cs.pointer)
         .object<Key?>(const $Key$NullableType());
   }
@@ -22579,9 +22140,8 @@ class KeyStore extends jni$_.JObject {
   jni$_.JArray<Certificate?>? getCertificateChain(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getCertificateChain(_$$selfRef.pointer,
+    return _getCertificateChain(reference.pointer,
             _id_getCertificateChain as jni$_.JMethodIDPtr, _$string.pointer)
         .object<jni$_.JArray<Certificate?>?>(
             const jni$_.JArrayNullableType<Certificate?>(
@@ -22609,9 +22169,8 @@ class KeyStore extends jni$_.JObject {
   Certificate? getCertificate(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getCertificate(_$$selfRef.pointer,
+    return _getCertificate(reference.pointer,
             _id_getCertificate as jni$_.JMethodIDPtr, _$string.pointer)
         .object<Certificate?>(const $Certificate$NullableType());
   }
@@ -22637,9 +22196,8 @@ class KeyStore extends jni$_.JObject {
   jni$_.JObject? getCreationDate(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getCreationDate(_$$selfRef.pointer,
+    return _getCreationDate(reference.pointer,
             _id_getCreationDate as jni$_.JMethodIDPtr, _$string.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -22677,13 +22235,12 @@ class KeyStore extends jni$_.JObject {
     jni$_.JCharArray? cs,
     jni$_.JArray<Certificate?>? certificates,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$key = key?.reference ?? jni$_.jNullReference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$certificates = certificates?.reference ?? jni$_.jNullReference;
     _setKeyEntry(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_setKeyEntry as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$key.pointer,
@@ -22722,11 +22279,10 @@ class KeyStore extends jni$_.JObject {
     jni$_.JByteArray? bs,
     jni$_.JArray<Certificate?>? certificates,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$certificates = certificates?.reference ?? jni$_.jNullReference;
-    _setKeyEntry$1(_$$selfRef.pointer, _id_setKeyEntry$1 as jni$_.JMethodIDPtr,
+    _setKeyEntry$1(reference.pointer, _id_setKeyEntry$1 as jni$_.JMethodIDPtr,
             _$string.pointer, _$bs.pointer, _$certificates.pointer)
         .check();
   }
@@ -22758,11 +22314,10 @@ class KeyStore extends jni$_.JObject {
     jni$_.JString? string,
     Certificate? certificate,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$certificate = certificate?.reference ?? jni$_.jNullReference;
     _setCertificateEntry(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_setCertificateEntry as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$certificate.pointer)
@@ -22789,9 +22344,8 @@ class KeyStore extends jni$_.JObject {
   void deleteEntry(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    _deleteEntry(_$$selfRef.pointer, _id_deleteEntry as jni$_.JMethodIDPtr,
+    _deleteEntry(reference.pointer, _id_deleteEntry as jni$_.JMethodIDPtr,
             _$string.pointer)
         .check();
   }
@@ -22816,8 +22370,7 @@ class KeyStore extends jni$_.JObject {
   /// from: `public final java.util.Enumeration aliases()`
   /// The returned object must be released after use, by calling the [release] method.
   Enumeration<jni$_.JString?>? aliases() {
-    final _$$selfRef = reference;
-    return _aliases(_$$selfRef.pointer, _id_aliases as jni$_.JMethodIDPtr)
+    return _aliases(reference.pointer, _id_aliases as jni$_.JMethodIDPtr)
         .object<Enumeration<jni$_.JString?>?>(
             const $Enumeration$NullableType<jni$_.JString?>(
                 jni$_.JStringNullableType()));
@@ -22843,9 +22396,8 @@ class KeyStore extends jni$_.JObject {
   bool containsAlias(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _containsAlias(_$$selfRef.pointer,
+    return _containsAlias(reference.pointer,
             _id_containsAlias as jni$_.JMethodIDPtr, _$string.pointer)
         .boolean;
   }
@@ -22869,8 +22421,7 @@ class KeyStore extends jni$_.JObject {
 
   /// from: `public final int size()`
   int size() {
-    final _$$selfRef = reference;
-    return _size(_$$selfRef.pointer, _id_size as jni$_.JMethodIDPtr).integer;
+    return _size(reference.pointer, _id_size as jni$_.JMethodIDPtr).integer;
   }
 
   static final _id_isKeyEntry = _class.instanceMethodId(
@@ -22893,9 +22444,8 @@ class KeyStore extends jni$_.JObject {
   bool isKeyEntry(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _isKeyEntry(_$$selfRef.pointer, _id_isKeyEntry as jni$_.JMethodIDPtr,
+    return _isKeyEntry(reference.pointer, _id_isKeyEntry as jni$_.JMethodIDPtr,
             _$string.pointer)
         .boolean;
   }
@@ -22920,9 +22470,8 @@ class KeyStore extends jni$_.JObject {
   bool isCertificateEntry(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _isCertificateEntry(_$$selfRef.pointer,
+    return _isCertificateEntry(reference.pointer,
             _id_isCertificateEntry as jni$_.JMethodIDPtr, _$string.pointer)
         .boolean;
   }
@@ -22948,10 +22497,9 @@ class KeyStore extends jni$_.JObject {
   jni$_.JString? getCertificateAlias(
     Certificate? certificate,
   ) {
-    final _$$selfRef = reference;
     final _$certificate = certificate?.reference ?? jni$_.jNullReference;
     return _getCertificateAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_getCertificateAlias as jni$_.JMethodIDPtr,
             _$certificate.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
@@ -22984,10 +22532,9 @@ class KeyStore extends jni$_.JObject {
     jni$_.JObject? outputStream,
     jni$_.JCharArray? cs,
   ) {
-    final _$$selfRef = reference;
     final _$outputStream = outputStream?.reference ?? jni$_.jNullReference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _store(_$$selfRef.pointer, _id_store as jni$_.JMethodIDPtr,
+    _store(reference.pointer, _id_store as jni$_.JMethodIDPtr,
             _$outputStream.pointer, _$cs.pointer)
         .check();
   }
@@ -23012,10 +22559,9 @@ class KeyStore extends jni$_.JObject {
   void store$1(
     KeyStore$LoadStoreParameter? loadStoreParameter,
   ) {
-    final _$$selfRef = reference;
     final _$loadStoreParameter =
         loadStoreParameter?.reference ?? jni$_.jNullReference;
-    _store$1(_$$selfRef.pointer, _id_store$1 as jni$_.JMethodIDPtr,
+    _store$1(reference.pointer, _id_store$1 as jni$_.JMethodIDPtr,
             _$loadStoreParameter.pointer)
         .check();
   }
@@ -23047,10 +22593,9 @@ class KeyStore extends jni$_.JObject {
     jni$_.JObject? inputStream,
     jni$_.JCharArray? cs,
   ) {
-    final _$$selfRef = reference;
     final _$inputStream = inputStream?.reference ?? jni$_.jNullReference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _load(_$$selfRef.pointer, _id_load as jni$_.JMethodIDPtr,
+    _load(reference.pointer, _id_load as jni$_.JMethodIDPtr,
             _$inputStream.pointer, _$cs.pointer)
         .check();
   }
@@ -23075,10 +22620,9 @@ class KeyStore extends jni$_.JObject {
   void load$1(
     KeyStore$LoadStoreParameter? loadStoreParameter,
   ) {
-    final _$$selfRef = reference;
     final _$loadStoreParameter =
         loadStoreParameter?.reference ?? jni$_.jNullReference;
-    _load$1(_$$selfRef.pointer, _id_load$1 as jni$_.JMethodIDPtr,
+    _load$1(reference.pointer, _id_load$1 as jni$_.JMethodIDPtr,
             _$loadStoreParameter.pointer)
         .check();
   }
@@ -23111,11 +22655,10 @@ class KeyStore extends jni$_.JObject {
     jni$_.JString? string,
     KeyStore$ProtectionParameter? protectionParameter,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$protectionParameter =
         protectionParameter?.reference ?? jni$_.jNullReference;
-    return _getEntry(_$$selfRef.pointer, _id_getEntry as jni$_.JMethodIDPtr,
+    return _getEntry(reference.pointer, _id_getEntry as jni$_.JMethodIDPtr,
             _$string.pointer, _$protectionParameter.pointer)
         .object<KeyStore$Entry?>(const $KeyStore$Entry$NullableType());
   }
@@ -23150,12 +22693,11 @@ class KeyStore extends jni$_.JObject {
     KeyStore$Entry? entry,
     KeyStore$ProtectionParameter? protectionParameter,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$entry = entry?.reference ?? jni$_.jNullReference;
     final _$protectionParameter =
         protectionParameter?.reference ?? jni$_.jNullReference;
-    _setEntry(_$$selfRef.pointer, _id_setEntry as jni$_.JMethodIDPtr,
+    _setEntry(reference.pointer, _id_setEntry as jni$_.JMethodIDPtr,
             _$string.pointer, _$entry.pointer, _$protectionParameter.pointer)
         .check();
   }
@@ -23187,11 +22729,10 @@ class KeyStore extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? class$,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$class$ = class$?.reference ?? jni$_.jNullReference;
     return _entryInstanceOf(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_entryInstanceOf as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$class$.pointer)
@@ -23226,11 +22767,10 @@ class KeyStore extends jni$_.JObject {
     jni$_.JObject? file,
     jni$_.JCharArray? cs,
   ) {
-    final _$$classRef = _class.reference;
     final _$file = file?.reference ?? jni$_.jNullReference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     return _getInstance$3(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$3 as jni$_.JMethodIDPtr,
             _$file.pointer,
             _$cs.pointer)
@@ -23265,12 +22805,11 @@ class KeyStore extends jni$_.JObject {
     jni$_.JObject? file,
     KeyStore$LoadStoreParameter? loadStoreParameter,
   ) {
-    final _$$classRef = _class.reference;
     final _$file = file?.reference ?? jni$_.jNullReference;
     final _$loadStoreParameter =
         loadStoreParameter?.reference ?? jni$_.jNullReference;
     return _getInstance$4(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$4 as jni$_.JMethodIDPtr,
             _$file.pointer,
             _$loadStoreParameter.pointer)
@@ -23556,9 +23095,9 @@ class SecureRandom extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory SecureRandom() {
-    final _$$classRef = _class.reference;
     return SecureRandom.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_new$1 = _class.constructorId(
@@ -23581,10 +23120,9 @@ class SecureRandom extends jni$_.JObject {
   factory SecureRandom.new$1(
     jni$_.JByteArray? bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return SecureRandom.fromReference(_new$1(
-            _$$classRef.pointer, _id_new$1 as jni$_.JMethodIDPtr, _$bs.pointer)
+    return SecureRandom.fromReference(_new$1(_class.reference.pointer,
+            _id_new$1 as jni$_.JMethodIDPtr, _$bs.pointer)
         .reference);
   }
 
@@ -23609,9 +23147,8 @@ class SecureRandom extends jni$_.JObject {
   static SecureRandom? getInstance(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getInstance(_$$classRef.pointer,
+    return _getInstance(_class.reference.pointer,
             _id_getInstance as jni$_.JMethodIDPtr, _$string.pointer)
         .object<SecureRandom?>(const $SecureRandom$NullableType());
   }
@@ -23644,11 +23181,10 @@ class SecureRandom extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     return _getInstance$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$1 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$string1.pointer)
@@ -23683,11 +23219,10 @@ class SecureRandom extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? provider,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     return _getInstance$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$2 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer)
@@ -23722,12 +23257,11 @@ class SecureRandom extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? secureRandomParameters,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$secureRandomParameters =
         secureRandomParameters?.reference ?? jni$_.jNullReference;
     return _getInstance$3(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$3 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$secureRandomParameters.pointer)
@@ -23765,13 +23299,12 @@ class SecureRandom extends jni$_.JObject {
     jni$_.JObject? secureRandomParameters,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$secureRandomParameters =
         secureRandomParameters?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     return _getInstance$4(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$4 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$secureRandomParameters.pointer,
@@ -23810,13 +23343,12 @@ class SecureRandom extends jni$_.JObject {
     jni$_.JObject? secureRandomParameters,
     jni$_.JObject? provider,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$secureRandomParameters =
         secureRandomParameters?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     return _getInstance$5(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$5 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$secureRandomParameters.pointer,
@@ -23844,9 +23376,8 @@ class SecureRandom extends jni$_.JObject {
   /// from: `public final java.security.Provider getProvider()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getProvider() {
-    final _$$selfRef = reference;
     return _getProvider(
-            _$$selfRef.pointer, _id_getProvider as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getProvider as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -23870,9 +23401,8 @@ class SecureRandom extends jni$_.JObject {
   /// from: `public java.lang.String getAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getAlgorithm() {
-    final _$$selfRef = reference;
     return _getAlgorithm(
-            _$$selfRef.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -23896,8 +23426,7 @@ class SecureRandom extends jni$_.JObject {
   /// from: `public java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -23921,9 +23450,8 @@ class SecureRandom extends jni$_.JObject {
   /// from: `public java.security.SecureRandomParameters getParameters()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getParameters() {
-    final _$$selfRef = reference;
     return _getParameters(
-            _$$selfRef.pointer, _id_getParameters as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getParameters as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -23947,10 +23475,8 @@ class SecureRandom extends jni$_.JObject {
   void setSeed(
     jni$_.JByteArray? bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _setSeed(
-            _$$selfRef.pointer, _id_setSeed as jni$_.JMethodIDPtr, _$bs.pointer)
+    _setSeed(reference.pointer, _id_setSeed as jni$_.JMethodIDPtr, _$bs.pointer)
         .check();
   }
 
@@ -23973,8 +23499,7 @@ class SecureRandom extends jni$_.JObject {
   void setSeed$1(
     int j,
   ) {
-    final _$$selfRef = reference;
-    _setSeed$1(_$$selfRef.pointer, _id_setSeed$1 as jni$_.JMethodIDPtr, j)
+    _setSeed$1(reference.pointer, _id_setSeed$1 as jni$_.JMethodIDPtr, j)
         .check();
   }
 
@@ -23998,9 +23523,8 @@ class SecureRandom extends jni$_.JObject {
   void nextBytes(
     jni$_.JByteArray? bs,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _nextBytes(_$$selfRef.pointer, _id_nextBytes as jni$_.JMethodIDPtr,
+    _nextBytes(reference.pointer, _id_nextBytes as jni$_.JMethodIDPtr,
             _$bs.pointer)
         .check();
   }
@@ -24032,11 +23556,10 @@ class SecureRandom extends jni$_.JObject {
     jni$_.JByteArray? bs,
     jni$_.JObject? secureRandomParameters,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$secureRandomParameters =
         secureRandomParameters?.reference ?? jni$_.jNullReference;
-    _nextBytes$1(_$$selfRef.pointer, _id_nextBytes$1 as jni$_.JMethodIDPtr,
+    _nextBytes$1(reference.pointer, _id_nextBytes$1 as jni$_.JMethodIDPtr,
             _$bs.pointer, _$secureRandomParameters.pointer)
         .check();
   }
@@ -24060,8 +23583,8 @@ class SecureRandom extends jni$_.JObject {
   static jni$_.JByteArray? getSeed(
     int i,
   ) {
-    final _$$classRef = _class.reference;
-    return _getSeed(_$$classRef.pointer, _id_getSeed as jni$_.JMethodIDPtr, i)
+    return _getSeed(
+            _class.reference.pointer, _id_getSeed as jni$_.JMethodIDPtr, i)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -24085,9 +23608,8 @@ class SecureRandom extends jni$_.JObject {
   jni$_.JByteArray? generateSeed(
     int i,
   ) {
-    final _$$selfRef = reference;
     return _generateSeed(
-            _$$selfRef.pointer, _id_generateSeed as jni$_.JMethodIDPtr, i)
+            reference.pointer, _id_generateSeed as jni$_.JMethodIDPtr, i)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -24111,9 +23633,8 @@ class SecureRandom extends jni$_.JObject {
   /// from: `static public java.security.SecureRandom getInstanceStrong()`
   /// The returned object must be released after use, by calling the [release] method.
   static SecureRandom? getInstanceStrong() {
-    final _$$classRef = _class.reference;
-    return _getInstanceStrong(
-            _$$classRef.pointer, _id_getInstanceStrong as jni$_.JMethodIDPtr)
+    return _getInstanceStrong(_class.reference.pointer,
+            _id_getInstanceStrong as jni$_.JMethodIDPtr)
         .object<SecureRandom?>(const $SecureRandom$NullableType());
   }
 
@@ -24136,8 +23657,7 @@ class SecureRandom extends jni$_.JObject {
 
   /// from: `public void reseed()`
   void reseed() {
-    final _$$selfRef = reference;
-    _reseed(_$$selfRef.pointer, _id_reseed as jni$_.JMethodIDPtr).check();
+    _reseed(reference.pointer, _id_reseed as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_reseed$1 = _class.instanceMethodId(
@@ -24160,10 +23680,9 @@ class SecureRandom extends jni$_.JObject {
   void reseed$1(
     jni$_.JObject? secureRandomParameters,
   ) {
-    final _$$selfRef = reference;
     final _$secureRandomParameters =
         secureRandomParameters?.reference ?? jni$_.jNullReference;
-    _reseed$1(_$$selfRef.pointer, _id_reseed$1 as jni$_.JMethodIDPtr,
+    _reseed$1(reference.pointer, _id_reseed$1 as jni$_.JMethodIDPtr,
             _$secureRandomParameters.pointer)
         .check();
   }
@@ -24288,11 +23807,10 @@ class X509KeyManager extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JArray<jni$_.JObject?>? principals,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     return _getClientAliases(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_getClientAliases as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer)
@@ -24332,12 +23850,11 @@ class X509KeyManager extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? principals,
     jni$_.JObject? socket,
   ) {
-    final _$$selfRef = reference;
     final _$strings = strings?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$socket = socket?.reference ?? jni$_.jNullReference;
     return _chooseClientAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseClientAlias as jni$_.JMethodIDPtr,
             _$strings.pointer,
             _$principals.pointer,
@@ -24373,11 +23890,10 @@ class X509KeyManager extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JArray<jni$_.JObject?>? principals,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     return _getServerAliases(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_getServerAliases as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer)
@@ -24417,12 +23933,11 @@ class X509KeyManager extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? principals,
     jni$_.JObject? socket,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$socket = socket?.reference ?? jni$_.jNullReference;
     return _chooseServerAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseServerAlias as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer,
@@ -24451,9 +23966,8 @@ class X509KeyManager extends jni$_.JObject {
   jni$_.JArray<X509Certificate?>? getCertificateChain(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getCertificateChain(_$$selfRef.pointer,
+    return _getCertificateChain(reference.pointer,
             _id_getCertificateChain as jni$_.JMethodIDPtr, _$string.pointer)
         .object<jni$_.JArray<X509Certificate?>?>(
             const jni$_.JArrayNullableType<X509Certificate?>(
@@ -24481,9 +23995,8 @@ class X509KeyManager extends jni$_.JObject {
   PrivateKey? getPrivateKey(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getPrivateKey(_$$selfRef.pointer,
+    return _getPrivateKey(reference.pointer,
             _id_getPrivateKey as jni$_.JMethodIDPtr, _$string.pointer)
         .object<PrivateKey?>(const $PrivateKey$NullableType());
   }
@@ -24873,12 +24386,11 @@ class X509ExtendedKeyManager extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? principals,
     jni$_.JObject? sSLEngine,
   ) {
-    final _$$selfRef = reference;
     final _$strings = strings?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$sSLEngine = sSLEngine?.reference ?? jni$_.jNullReference;
     return _chooseEngineClientAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseEngineClientAlias as jni$_.JMethodIDPtr,
             _$strings.pointer,
             _$principals.pointer,
@@ -24917,12 +24429,11 @@ class X509ExtendedKeyManager extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? principals,
     jni$_.JObject? sSLEngine,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$principals = principals?.reference ?? jni$_.jNullReference;
     final _$sSLEngine = sSLEngine?.reference ?? jni$_.jNullReference;
     return _chooseEngineServerAlias(
-            _$$selfRef.pointer,
+            reference.pointer,
             _id_chooseEngineServerAlias as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$principals.pointer,
@@ -25052,10 +24563,9 @@ class HostnameVerifier extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? sSLSession,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$sSLSession = sSLSession?.reference ?? jni$_.jNullReference;
-    return _verify(_$$selfRef.pointer, _id_verify as jni$_.JMethodIDPtr,
+    return _verify(reference.pointer, _id_verify as jni$_.JMethodIDPtr,
             _$string.pointer, _$sSLSession.pointer)
         .boolean;
   }
@@ -25274,8 +24784,7 @@ class X509Certificate extends Certificate {
 
   /// from: `public abstract void checkValidity()`
   void checkValidity() {
-    final _$$selfRef = reference;
-    _checkValidity(_$$selfRef.pointer, _id_checkValidity as jni$_.JMethodIDPtr)
+    _checkValidity(reference.pointer, _id_checkValidity as jni$_.JMethodIDPtr)
         .check();
   }
 
@@ -25299,9 +24808,8 @@ class X509Certificate extends Certificate {
   void checkValidity$1(
     jni$_.JObject? date,
   ) {
-    final _$$selfRef = reference;
     final _$date = date?.reference ?? jni$_.jNullReference;
-    _checkValidity$1(_$$selfRef.pointer,
+    _checkValidity$1(reference.pointer,
             _id_checkValidity$1 as jni$_.JMethodIDPtr, _$date.pointer)
         .check();
   }
@@ -25325,8 +24833,7 @@ class X509Certificate extends Certificate {
 
   /// from: `public abstract int getVersion()`
   int getVersion() {
-    final _$$selfRef = reference;
-    return _getVersion(_$$selfRef.pointer, _id_getVersion as jni$_.JMethodIDPtr)
+    return _getVersion(reference.pointer, _id_getVersion as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -25350,9 +24857,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract java.math.BigInteger getSerialNumber()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getSerialNumber() {
-    final _$$selfRef = reference;
     return _getSerialNumber(
-            _$$selfRef.pointer, _id_getSerialNumber as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSerialNumber as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -25376,9 +24882,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract java.security.Principal getIssuerDN()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getIssuerDN() {
-    final _$$selfRef = reference;
     return _getIssuerDN(
-            _$$selfRef.pointer, _id_getIssuerDN as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getIssuerDN as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -25402,9 +24907,8 @@ class X509Certificate extends Certificate {
   /// from: `public javax.security.auth.x500.X500Principal getIssuerX500Principal()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getIssuerX500Principal() {
-    final _$$selfRef = reference;
-    return _getIssuerX500Principal(_$$selfRef.pointer,
-            _id_getIssuerX500Principal as jni$_.JMethodIDPtr)
+    return _getIssuerX500Principal(
+            reference.pointer, _id_getIssuerX500Principal as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -25428,9 +24932,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract java.security.Principal getSubjectDN()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getSubjectDN() {
-    final _$$selfRef = reference;
     return _getSubjectDN(
-            _$$selfRef.pointer, _id_getSubjectDN as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSubjectDN as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -25454,8 +24957,7 @@ class X509Certificate extends Certificate {
   /// from: `public javax.security.auth.x500.X500Principal getSubjectX500Principal()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getSubjectX500Principal() {
-    final _$$selfRef = reference;
-    return _getSubjectX500Principal(_$$selfRef.pointer,
+    return _getSubjectX500Principal(reference.pointer,
             _id_getSubjectX500Principal as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -25480,9 +24982,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract java.util.Date getNotBefore()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getNotBefore() {
-    final _$$selfRef = reference;
     return _getNotBefore(
-            _$$selfRef.pointer, _id_getNotBefore as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getNotBefore as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -25506,9 +25007,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract java.util.Date getNotAfter()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getNotAfter() {
-    final _$$selfRef = reference;
     return _getNotAfter(
-            _$$selfRef.pointer, _id_getNotAfter as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getNotAfter as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -25532,9 +25032,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract byte[] getTBSCertificate()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray? getTBSCertificate() {
-    final _$$selfRef = reference;
     return _getTBSCertificate(
-            _$$selfRef.pointer, _id_getTBSCertificate as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getTBSCertificate as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -25558,9 +25057,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract byte[] getSignature()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray? getSignature() {
-    final _$$selfRef = reference;
     return _getSignature(
-            _$$selfRef.pointer, _id_getSignature as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSignature as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -25584,9 +25082,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract java.lang.String getSigAlgName()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getSigAlgName() {
-    final _$$selfRef = reference;
     return _getSigAlgName(
-            _$$selfRef.pointer, _id_getSigAlgName as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSigAlgName as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -25610,9 +25107,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract java.lang.String getSigAlgOID()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getSigAlgOID() {
-    final _$$selfRef = reference;
     return _getSigAlgOID(
-            _$$selfRef.pointer, _id_getSigAlgOID as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSigAlgOID as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -25636,9 +25132,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract byte[] getSigAlgParams()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray? getSigAlgParams() {
-    final _$$selfRef = reference;
     return _getSigAlgParams(
-            _$$selfRef.pointer, _id_getSigAlgParams as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSigAlgParams as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -25662,9 +25157,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract boolean[] getIssuerUniqueID()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JBooleanArray? getIssuerUniqueID() {
-    final _$$selfRef = reference;
     return _getIssuerUniqueID(
-            _$$selfRef.pointer, _id_getIssuerUniqueID as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getIssuerUniqueID as jni$_.JMethodIDPtr)
         .object<jni$_.JBooleanArray?>(const jni$_.JBooleanArrayNullableType());
   }
 
@@ -25688,9 +25182,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract boolean[] getSubjectUniqueID()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JBooleanArray? getSubjectUniqueID() {
-    final _$$selfRef = reference;
     return _getSubjectUniqueID(
-            _$$selfRef.pointer, _id_getSubjectUniqueID as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getSubjectUniqueID as jni$_.JMethodIDPtr)
         .object<jni$_.JBooleanArray?>(const jni$_.JBooleanArrayNullableType());
   }
 
@@ -25714,9 +25207,8 @@ class X509Certificate extends Certificate {
   /// from: `public abstract boolean[] getKeyUsage()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JBooleanArray? getKeyUsage() {
-    final _$$selfRef = reference;
     return _getKeyUsage(
-            _$$selfRef.pointer, _id_getKeyUsage as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getKeyUsage as jni$_.JMethodIDPtr)
         .object<jni$_.JBooleanArray?>(const jni$_.JBooleanArrayNullableType());
   }
 
@@ -25740,9 +25232,8 @@ class X509Certificate extends Certificate {
   /// from: `public java.util.List getExtendedKeyUsage()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JList<jni$_.JString?>? getExtendedKeyUsage() {
-    final _$$selfRef = reference;
     return _getExtendedKeyUsage(
-            _$$selfRef.pointer, _id_getExtendedKeyUsage as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getExtendedKeyUsage as jni$_.JMethodIDPtr)
         .object<jni$_.JList<jni$_.JString?>?>(
             const jni$_.JListNullableType<jni$_.JString?>(
                 jni$_.JStringNullableType()));
@@ -25767,9 +25258,8 @@ class X509Certificate extends Certificate {
 
   /// from: `public abstract int getBasicConstraints()`
   int getBasicConstraints() {
-    final _$$selfRef = reference;
     return _getBasicConstraints(
-            _$$selfRef.pointer, _id_getBasicConstraints as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getBasicConstraints as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -25794,8 +25284,7 @@ class X509Certificate extends Certificate {
   /// from: `public java.util.Collection getSubjectAlternativeNames()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getSubjectAlternativeNames() {
-    final _$$selfRef = reference;
-    return _getSubjectAlternativeNames(_$$selfRef.pointer,
+    return _getSubjectAlternativeNames(reference.pointer,
             _id_getSubjectAlternativeNames as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -25820,8 +25309,7 @@ class X509Certificate extends Certificate {
   /// from: `public java.util.Collection getIssuerAlternativeNames()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getIssuerAlternativeNames() {
-    final _$$selfRef = reference;
-    return _getIssuerAlternativeNames(_$$selfRef.pointer,
+    return _getIssuerAlternativeNames(reference.pointer,
             _id_getIssuerAlternativeNames as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -25853,10 +25341,9 @@ class X509Certificate extends Certificate {
     PublicKey? publicKey,
     jni$_.JObject? provider,
   ) {
-    final _$$selfRef = reference;
     final _$publicKey = publicKey?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
-    _verify2(_$$selfRef.pointer, _id_verify2 as jni$_.JMethodIDPtr,
+    _verify2(reference.pointer, _id_verify2 as jni$_.JMethodIDPtr,
             _$publicKey.pointer, _$provider.pointer)
         .check();
   }
@@ -26077,9 +25564,9 @@ class KeyChain extends jni$_.JObject {
   /// from: `public void <init>()`
   /// The returned object must be released after use, by calling the [release] method.
   factory KeyChain() {
-    final _$$classRef = _class.reference;
     return KeyChain.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr).reference);
+        _new$(_class.reference.pointer, _id_new$ as jni$_.JMethodIDPtr)
+            .reference);
   }
 
   static final _id_createInstallIntent = _class.staticMethodId(
@@ -26102,9 +25589,8 @@ class KeyChain extends jni$_.JObject {
   /// from: `static public android.content.Intent createInstallIntent()`
   /// The returned object must be released after use, by calling the [release] method.
   static jni$_.JObject? createInstallIntent() {
-    final _$$classRef = _class.reference;
-    return _createInstallIntent(
-            _$$classRef.pointer, _id_createInstallIntent as jni$_.JMethodIDPtr)
+    return _createInstallIntent(_class.reference.pointer,
+            _id_createInstallIntent as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -26130,11 +25616,10 @@ class KeyChain extends jni$_.JObject {
   static jni$_.JObject? createManageCredentialsIntent(
     jni$_.JObject? appUriAuthenticationPolicy,
   ) {
-    final _$$classRef = _class.reference;
     final _$appUriAuthenticationPolicy =
         appUriAuthenticationPolicy?.reference ?? jni$_.jNullReference;
     return _createManageCredentialsIntent(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_createManageCredentialsIntent as jni$_.JMethodIDPtr,
             _$appUriAuthenticationPolicy.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
@@ -26182,7 +25667,6 @@ class KeyChain extends jni$_.JObject {
     int i,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$activity = activity?.reference ?? jni$_.jNullReference;
     final _$keyChainAliasCallback =
         keyChainAliasCallback?.reference ?? jni$_.jNullReference;
@@ -26191,7 +25675,7 @@ class KeyChain extends jni$_.JObject {
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     _choosePrivateKeyAlias(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_choosePrivateKeyAlias as jni$_.JMethodIDPtr,
             _$activity.pointer,
             _$keyChainAliasCallback.pointer,
@@ -26242,7 +25726,6 @@ class KeyChain extends jni$_.JObject {
     jni$_.JObject? uri,
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$activity = activity?.reference ?? jni$_.jNullReference;
     final _$keyChainAliasCallback =
         keyChainAliasCallback?.reference ?? jni$_.jNullReference;
@@ -26251,7 +25734,7 @@ class KeyChain extends jni$_.JObject {
     final _$uri = uri?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     _choosePrivateKeyAlias$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_choosePrivateKeyAlias$1 as jni$_.JMethodIDPtr,
             _$activity.pointer,
             _$keyChainAliasCallback.pointer,
@@ -26282,10 +25765,9 @@ class KeyChain extends jni$_.JObject {
   static bool isCredentialManagementApp(
     jni$_.JObject? context,
   ) {
-    final _$$classRef = _class.reference;
     final _$context = context?.reference ?? jni$_.jNullReference;
     return _isCredentialManagementApp(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_isCredentialManagementApp as jni$_.JMethodIDPtr,
             _$context.pointer)
         .boolean;
@@ -26313,10 +25795,9 @@ class KeyChain extends jni$_.JObject {
   static jni$_.JObject? getCredentialManagementAppPolicy(
     jni$_.JObject? context,
   ) {
-    final _$$classRef = _class.reference;
     final _$context = context?.reference ?? jni$_.jNullReference;
     return _getCredentialManagementAppPolicy(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getCredentialManagementAppPolicy as jni$_.JMethodIDPtr,
             _$context.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
@@ -26343,10 +25824,9 @@ class KeyChain extends jni$_.JObject {
   static bool removeCredentialManagementApp(
     jni$_.JObject? context,
   ) {
-    final _$$classRef = _class.reference;
     final _$context = context?.reference ?? jni$_.jNullReference;
     return _removeCredentialManagementApp(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_removeCredentialManagementApp as jni$_.JMethodIDPtr,
             _$context.pointer)
         .boolean;
@@ -26380,11 +25860,10 @@ class KeyChain extends jni$_.JObject {
     jni$_.JObject? context,
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$context = context?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     return _getPrivateKey(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getPrivateKey as jni$_.JMethodIDPtr,
             _$context.pointer,
             _$string.pointer)
@@ -26419,11 +25898,10 @@ class KeyChain extends jni$_.JObject {
     jni$_.JObject? context,
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$context = context?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     return _getCertificateChain(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getCertificateChain as jni$_.JMethodIDPtr,
             _$context.pointer,
             _$string.pointer)
@@ -26452,9 +25930,8 @@ class KeyChain extends jni$_.JObject {
   static bool isKeyAlgorithmSupported(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _isKeyAlgorithmSupported(_$$classRef.pointer,
+    return _isKeyAlgorithmSupported(_class.reference.pointer,
             _id_isKeyAlgorithmSupported as jni$_.JMethodIDPtr, _$string.pointer)
         .boolean;
   }
@@ -26479,9 +25956,8 @@ class KeyChain extends jni$_.JObject {
   static bool isBoundKeyAlgorithm(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _isBoundKeyAlgorithm(_$$classRef.pointer,
+    return _isBoundKeyAlgorithm(_class.reference.pointer,
             _id_isBoundKeyAlgorithm as jni$_.JMethodIDPtr, _$string.pointer)
         .boolean;
   }
@@ -26596,10 +26072,8 @@ class KeyChainAliasCallback extends jni$_.JObject {
   void alias(
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    _alias(_$$selfRef.pointer, _id_alias as jni$_.JMethodIDPtr,
-            _$string.pointer)
+    _alias(reference.pointer, _id_alias as jni$_.JMethodIDPtr, _$string.pointer)
         .check();
   }
 
@@ -26998,9 +26472,8 @@ class Key extends jni$_.JObject {
   /// from: `public abstract java.lang.String getAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getAlgorithm() {
-    final _$$selfRef = reference;
     return _getAlgorithm(
-            _$$selfRef.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -27024,8 +26497,7 @@ class Key extends jni$_.JObject {
   /// from: `public abstract java.lang.String getFormat()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getFormat() {
-    final _$$selfRef = reference;
-    return _getFormat(_$$selfRef.pointer, _id_getFormat as jni$_.JMethodIDPtr)
+    return _getFormat(reference.pointer, _id_getFormat as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -27049,8 +26521,7 @@ class Key extends jni$_.JObject {
   /// from: `public abstract byte[] getEncoded()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray? getEncoded() {
-    final _$$selfRef = reference;
-    return _getEncoded(_$$selfRef.pointer, _id_getEncoded as jni$_.JMethodIDPtr)
+    return _getEncoded(reference.pointer, _id_getEncoded as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -27297,9 +26768,8 @@ class KeyManagerFactory extends jni$_.JObject {
   /// from: `static public final java.lang.String getDefaultAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   static jni$_.JString? getDefaultAlgorithm() {
-    final _$$classRef = _class.reference;
-    return _getDefaultAlgorithm(
-            _$$classRef.pointer, _id_getDefaultAlgorithm as jni$_.JMethodIDPtr)
+    return _getDefaultAlgorithm(_class.reference.pointer,
+            _id_getDefaultAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -27323,9 +26793,8 @@ class KeyManagerFactory extends jni$_.JObject {
   /// from: `public final java.lang.String getAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getAlgorithm() {
-    final _$$selfRef = reference;
     return _getAlgorithm(
-            _$$selfRef.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -27350,9 +26819,8 @@ class KeyManagerFactory extends jni$_.JObject {
   static KeyManagerFactory? getInstance(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getInstance(_$$classRef.pointer,
+    return _getInstance(_class.reference.pointer,
             _id_getInstance as jni$_.JMethodIDPtr, _$string.pointer)
         .object<KeyManagerFactory?>(const $KeyManagerFactory$NullableType());
   }
@@ -27385,11 +26853,10 @@ class KeyManagerFactory extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     return _getInstance$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$1 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$string1.pointer)
@@ -27424,11 +26891,10 @@ class KeyManagerFactory extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? provider,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     return _getInstance$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$2 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer)
@@ -27455,9 +26921,8 @@ class KeyManagerFactory extends jni$_.JObject {
   /// from: `public final java.security.Provider getProvider()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getProvider() {
-    final _$$selfRef = reference;
     return _getProvider(
-            _$$selfRef.pointer, _id_getProvider as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getProvider as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -27488,11 +26953,10 @@ class KeyManagerFactory extends jni$_.JObject {
     KeyStore? keyStore,
     jni$_.JCharArray? cs,
   ) {
-    final _$$selfRef = reference;
     final _$keyStore = keyStore?.reference ?? jni$_.jNullReference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _init(_$$selfRef.pointer, _id_init as jni$_.JMethodIDPtr,
-            _$keyStore.pointer, _$cs.pointer)
+    _init(reference.pointer, _id_init as jni$_.JMethodIDPtr, _$keyStore.pointer,
+            _$cs.pointer)
         .check();
   }
 
@@ -27516,10 +26980,9 @@ class KeyManagerFactory extends jni$_.JObject {
   void init$1(
     jni$_.JObject? managerFactoryParameters,
   ) {
-    final _$$selfRef = reference;
     final _$managerFactoryParameters =
         managerFactoryParameters?.reference ?? jni$_.jNullReference;
-    _init$1(_$$selfRef.pointer, _id_init$1 as jni$_.JMethodIDPtr,
+    _init$1(reference.pointer, _id_init$1 as jni$_.JMethodIDPtr,
             _$managerFactoryParameters.pointer)
         .check();
   }
@@ -27544,9 +27007,8 @@ class KeyManagerFactory extends jni$_.JObject {
   /// from: `public final javax.net.ssl.KeyManager[] getKeyManagers()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JArray<KeyManager?>? getKeyManagers() {
-    final _$$selfRef = reference;
     return _getKeyManagers(
-            _$$selfRef.pointer, _id_getKeyManagers as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getKeyManagers as jni$_.JMethodIDPtr)
         .object<jni$_.JArray<KeyManager?>?>(
             const jni$_.JArrayNullableType<KeyManager?>(
                 $KeyManager$NullableType()));
@@ -27666,9 +27128,8 @@ class KeyPairGenerator extends jni$_.JObject {
   /// from: `public java.lang.String getAlgorithm()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getAlgorithm() {
-    final _$$selfRef = reference;
     return _getAlgorithm(
-            _$$selfRef.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getAlgorithm as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -27693,9 +27154,8 @@ class KeyPairGenerator extends jni$_.JObject {
   static KeyPairGenerator? getInstance(
     jni$_.JString? string,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    return _getInstance(_$$classRef.pointer,
+    return _getInstance(_class.reference.pointer,
             _id_getInstance as jni$_.JMethodIDPtr, _$string.pointer)
         .object<KeyPairGenerator?>(const $KeyPairGenerator$NullableType());
   }
@@ -27728,11 +27188,10 @@ class KeyPairGenerator extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JString? string1,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$string1 = string1?.reference ?? jni$_.jNullReference;
     return _getInstance$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$1 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$string1.pointer)
@@ -27767,11 +27226,10 @@ class KeyPairGenerator extends jni$_.JObject {
     jni$_.JString? string,
     jni$_.JObject? provider,
   ) {
-    final _$$classRef = _class.reference;
     final _$string = string?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
     return _getInstance$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_getInstance$2 as jni$_.JMethodIDPtr,
             _$string.pointer,
             _$provider.pointer)
@@ -27798,9 +27256,8 @@ class KeyPairGenerator extends jni$_.JObject {
   /// from: `public final java.security.Provider getProvider()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JObject? getProvider() {
-    final _$$selfRef = reference;
     return _getProvider(
-            _$$selfRef.pointer, _id_getProvider as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getProvider as jni$_.JMethodIDPtr)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -27823,8 +27280,7 @@ class KeyPairGenerator extends jni$_.JObject {
   void initialize(
     int i,
   ) {
-    final _$$selfRef = reference;
-    _initialize(_$$selfRef.pointer, _id_initialize as jni$_.JMethodIDPtr, i)
+    _initialize(reference.pointer, _id_initialize as jni$_.JMethodIDPtr, i)
         .check();
   }
 
@@ -27850,9 +27306,8 @@ class KeyPairGenerator extends jni$_.JObject {
     int i,
     SecureRandom? secureRandom,
   ) {
-    final _$$selfRef = reference;
     final _$secureRandom = secureRandom?.reference ?? jni$_.jNullReference;
-    _initialize$1(_$$selfRef.pointer, _id_initialize$1 as jni$_.JMethodIDPtr, i,
+    _initialize$1(reference.pointer, _id_initialize$1 as jni$_.JMethodIDPtr, i,
             _$secureRandom.pointer)
         .check();
   }
@@ -27877,10 +27332,9 @@ class KeyPairGenerator extends jni$_.JObject {
   void initialize$2(
     jni$_.JObject? algorithmParameterSpec,
   ) {
-    final _$$selfRef = reference;
     final _$algorithmParameterSpec =
         algorithmParameterSpec?.reference ?? jni$_.jNullReference;
-    _initialize$2(_$$selfRef.pointer, _id_initialize$2 as jni$_.JMethodIDPtr,
+    _initialize$2(reference.pointer, _id_initialize$2 as jni$_.JMethodIDPtr,
             _$algorithmParameterSpec.pointer)
         .check();
   }
@@ -27912,11 +27366,10 @@ class KeyPairGenerator extends jni$_.JObject {
     jni$_.JObject? algorithmParameterSpec,
     SecureRandom? secureRandom,
   ) {
-    final _$$selfRef = reference;
     final _$algorithmParameterSpec =
         algorithmParameterSpec?.reference ?? jni$_.jNullReference;
     final _$secureRandom = secureRandom?.reference ?? jni$_.jNullReference;
-    _initialize$3(_$$selfRef.pointer, _id_initialize$3 as jni$_.JMethodIDPtr,
+    _initialize$3(reference.pointer, _id_initialize$3 as jni$_.JMethodIDPtr,
             _$algorithmParameterSpec.pointer, _$secureRandom.pointer)
         .check();
   }
@@ -27941,8 +27394,7 @@ class KeyPairGenerator extends jni$_.JObject {
   /// from: `public final java.security.KeyPair genKeyPair()`
   /// The returned object must be released after use, by calling the [release] method.
   KeyPair? genKeyPair() {
-    final _$$selfRef = reference;
-    return _genKeyPair(_$$selfRef.pointer, _id_genKeyPair as jni$_.JMethodIDPtr)
+    return _genKeyPair(reference.pointer, _id_genKeyPair as jni$_.JMethodIDPtr)
         .object<KeyPair?>(const $KeyPair$NullableType());
   }
 
@@ -27966,9 +27418,8 @@ class KeyPairGenerator extends jni$_.JObject {
   /// from: `public java.security.KeyPair generateKeyPair()`
   /// The returned object must be released after use, by calling the [release] method.
   KeyPair? generateKeyPair() {
-    final _$$selfRef = reference;
     return _generateKeyPair(
-            _$$selfRef.pointer, _id_generateKeyPair as jni$_.JMethodIDPtr)
+            reference.pointer, _id_generateKeyPair as jni$_.JMethodIDPtr)
         .object<KeyPair?>(const $KeyPair$NullableType());
   }
 }
@@ -28093,11 +27544,10 @@ class KeyPair extends jni$_.JObject {
     PublicKey? publicKey,
     PrivateKey? privateKey,
   ) {
-    final _$$classRef = _class.reference;
     final _$publicKey = publicKey?.reference ?? jni$_.jNullReference;
     final _$privateKey = privateKey?.reference ?? jni$_.jNullReference;
     return KeyPair.fromReference(_new$(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_new$ as jni$_.JMethodIDPtr,
             _$publicKey.pointer,
             _$privateKey.pointer)
@@ -28124,8 +27574,7 @@ class KeyPair extends jni$_.JObject {
   /// from: `public java.security.PublicKey getPublic()`
   /// The returned object must be released after use, by calling the [release] method.
   PublicKey? getPublic() {
-    final _$$selfRef = reference;
-    return _getPublic(_$$selfRef.pointer, _id_getPublic as jni$_.JMethodIDPtr)
+    return _getPublic(reference.pointer, _id_getPublic as jni$_.JMethodIDPtr)
         .object<PublicKey?>(const $PublicKey$NullableType());
   }
 
@@ -28149,8 +27598,7 @@ class KeyPair extends jni$_.JObject {
   /// from: `public java.security.PrivateKey getPrivate()`
   /// The returned object must be released after use, by calling the [release] method.
   PrivateKey? getPrivate() {
-    final _$$selfRef = reference;
-    return _getPrivate(_$$selfRef.pointer, _id_getPrivate as jni$_.JMethodIDPtr)
+    return _getPrivate(reference.pointer, _id_getPrivate as jni$_.JMethodIDPtr)
         .object<PrivateKey?>(const $PrivateKey$NullableType());
   }
 }
@@ -28437,11 +27885,10 @@ class ByteArrayInputStream extends jni$_.JObject {
   factory ByteArrayInputStream(
     jni$_.JByteArray? bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return ByteArrayInputStream.fromReference(
-        _new$(_$$classRef.pointer, _id_new$ as jni$_.JMethodIDPtr, _$bs.pointer)
-            .reference);
+    return ByteArrayInputStream.fromReference(_new$(_class.reference.pointer,
+            _id_new$ as jni$_.JMethodIDPtr, _$bs.pointer)
+        .reference);
   }
 
   static final _id_new$1 = _class.constructorId(
@@ -28470,9 +27917,8 @@ class ByteArrayInputStream extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return ByteArrayInputStream.fromReference(_new$1(_$$classRef.pointer,
+    return ByteArrayInputStream.fromReference(_new$1(_class.reference.pointer,
             _id_new$1 as jni$_.JMethodIDPtr, _$bs.pointer, i, i1)
         .reference);
   }
@@ -28496,8 +27942,7 @@ class ByteArrayInputStream extends jni$_.JObject {
 
   /// from: `public int read()`
   int read() {
-    final _$$selfRef = reference;
-    return _read(_$$selfRef.pointer, _id_read as jni$_.JMethodIDPtr).integer;
+    return _read(reference.pointer, _id_read as jni$_.JMethodIDPtr).integer;
   }
 
   static final _id_read$1 = _class.instanceMethodId(
@@ -28526,9 +27971,8 @@ class ByteArrayInputStream extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _read$1(_$$selfRef.pointer, _id_read$1 as jni$_.JMethodIDPtr,
+    return _read$1(reference.pointer, _id_read$1 as jni$_.JMethodIDPtr,
             _$bs.pointer, i, i1)
         .integer;
   }
@@ -28553,9 +27997,8 @@ class ByteArrayInputStream extends jni$_.JObject {
   /// from: `public byte[] readAllBytes()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray? readAllBytes() {
-    final _$$selfRef = reference;
     return _readAllBytes(
-            _$$selfRef.pointer, _id_readAllBytes as jni$_.JMethodIDPtr)
+            reference.pointer, _id_readAllBytes as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -28585,9 +28028,8 @@ class ByteArrayInputStream extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$selfRef = reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _readNBytes(_$$selfRef.pointer, _id_readNBytes as jni$_.JMethodIDPtr,
+    return _readNBytes(reference.pointer, _id_readNBytes as jni$_.JMethodIDPtr,
             _$bs.pointer, i, i1)
         .integer;
   }
@@ -28612,9 +28054,8 @@ class ByteArrayInputStream extends jni$_.JObject {
   int transferTo(
     jni$_.JObject? outputStream,
   ) {
-    final _$$selfRef = reference;
     final _$outputStream = outputStream?.reference ?? jni$_.jNullReference;
-    return _transferTo(_$$selfRef.pointer, _id_transferTo as jni$_.JMethodIDPtr,
+    return _transferTo(reference.pointer, _id_transferTo as jni$_.JMethodIDPtr,
             _$outputStream.pointer)
         .long;
   }
@@ -28638,8 +28079,7 @@ class ByteArrayInputStream extends jni$_.JObject {
   int skip(
     int j,
   ) {
-    final _$$selfRef = reference;
-    return _skip(_$$selfRef.pointer, _id_skip as jni$_.JMethodIDPtr, j).long;
+    return _skip(reference.pointer, _id_skip as jni$_.JMethodIDPtr, j).long;
   }
 
   static final _id_available = _class.instanceMethodId(
@@ -28661,8 +28101,7 @@ class ByteArrayInputStream extends jni$_.JObject {
 
   /// from: `public int available()`
   int available() {
-    final _$$selfRef = reference;
-    return _available(_$$selfRef.pointer, _id_available as jni$_.JMethodIDPtr)
+    return _available(reference.pointer, _id_available as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -28685,9 +28124,8 @@ class ByteArrayInputStream extends jni$_.JObject {
 
   /// from: `public boolean markSupported()`
   bool markSupported() {
-    final _$$selfRef = reference;
     return _markSupported(
-            _$$selfRef.pointer, _id_markSupported as jni$_.JMethodIDPtr)
+            reference.pointer, _id_markSupported as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -28710,8 +28148,7 @@ class ByteArrayInputStream extends jni$_.JObject {
   void mark(
     int i,
   ) {
-    final _$$selfRef = reference;
-    _mark(_$$selfRef.pointer, _id_mark as jni$_.JMethodIDPtr, i).check();
+    _mark(reference.pointer, _id_mark as jni$_.JMethodIDPtr, i).check();
   }
 
   static final _id_reset = _class.instanceMethodId(
@@ -28733,8 +28170,7 @@ class ByteArrayInputStream extends jni$_.JObject {
 
   /// from: `public void reset()`
   void reset() {
-    final _$$selfRef = reference;
-    _reset(_$$selfRef.pointer, _id_reset as jni$_.JMethodIDPtr).check();
+    _reset(reference.pointer, _id_reset as jni$_.JMethodIDPtr).check();
   }
 
   static final _id_close = _class.instanceMethodId(
@@ -28756,8 +28192,7 @@ class ByteArrayInputStream extends jni$_.JObject {
 
   /// from: `public void close()`
   void close() {
-    final _$$selfRef = reference;
-    _close(_$$selfRef.pointer, _id_close as jni$_.JMethodIDPtr).check();
+    _close(reference.pointer, _id_close as jni$_.JMethodIDPtr).check();
   }
 }
 
@@ -28892,9 +28327,8 @@ class Enumeration<$E extends jni$_.JObject?> extends jni$_.JObject {
 
   /// from: `public abstract boolean hasMoreElements()`
   bool hasMoreElements() {
-    final _$$selfRef = reference;
     return _hasMoreElements(
-            _$$selfRef.pointer, _id_hasMoreElements as jni$_.JMethodIDPtr)
+            reference.pointer, _id_hasMoreElements as jni$_.JMethodIDPtr)
         .boolean;
   }
 
@@ -28918,9 +28352,8 @@ class Enumeration<$E extends jni$_.JObject?> extends jni$_.JObject {
   /// from: `public abstract E nextElement()`
   /// The returned object must be released after use, by calling the [release] method.
   $E? nextElement() {
-    final _$$selfRef = reference;
     return _nextElement(
-            _$$selfRef.pointer, _id_nextElement as jni$_.JMethodIDPtr)
+            reference.pointer, _id_nextElement as jni$_.JMethodIDPtr)
         .object<$E?>(E.nullableType);
   }
 
@@ -28944,8 +28377,7 @@ class Enumeration<$E extends jni$_.JObject?> extends jni$_.JObject {
   /// from: `public java.util.Iterator asIterator()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JIterator<$E?>? asIterator() {
-    final _$$selfRef = reference;
-    return _asIterator(_$$selfRef.pointer, _id_asIterator as jni$_.JMethodIDPtr)
+    return _asIterator(reference.pointer, _id_asIterator as jni$_.JMethodIDPtr)
         .object<jni$_.JIterator<$E?>?>(
             jni$_.JIteratorNullableType<$E?>(E.nullableType));
   }
@@ -29215,9 +28647,9 @@ class Arrays extends jni$_.JObject {
   static void sort(
     jni$_.JIntArray? is$,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    _sort(_$$classRef.pointer, _id_sort as jni$_.JMethodIDPtr, _$is$.pointer)
+    _sort(_class.reference.pointer, _id_sort as jni$_.JMethodIDPtr,
+            _$is$.pointer)
         .check();
   }
 
@@ -29247,9 +28679,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    _sort$1(_$$classRef.pointer, _id_sort$1 as jni$_.JMethodIDPtr,
+    _sort$1(_class.reference.pointer, _id_sort$1 as jni$_.JMethodIDPtr,
             _$is$.pointer, i, i1)
         .check();
   }
@@ -29274,9 +28705,9 @@ class Arrays extends jni$_.JObject {
   static void sort$2(
     jni$_.JLongArray? js,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    _sort$2(_$$classRef.pointer, _id_sort$2 as jni$_.JMethodIDPtr, _$js.pointer)
+    _sort$2(_class.reference.pointer, _id_sort$2 as jni$_.JMethodIDPtr,
+            _$js.pointer)
         .check();
   }
 
@@ -29306,10 +28737,9 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    _sort$3(_$$classRef.pointer, _id_sort$3 as jni$_.JMethodIDPtr, _$js.pointer,
-            i, i1)
+    _sort$3(_class.reference.pointer, _id_sort$3 as jni$_.JMethodIDPtr,
+            _$js.pointer, i, i1)
         .check();
   }
 
@@ -29333,9 +28763,9 @@ class Arrays extends jni$_.JObject {
   static void sort$4(
     jni$_.JShortArray? ss,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    _sort$4(_$$classRef.pointer, _id_sort$4 as jni$_.JMethodIDPtr, _$ss.pointer)
+    _sort$4(_class.reference.pointer, _id_sort$4 as jni$_.JMethodIDPtr,
+            _$ss.pointer)
         .check();
   }
 
@@ -29365,10 +28795,9 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    _sort$5(_$$classRef.pointer, _id_sort$5 as jni$_.JMethodIDPtr, _$ss.pointer,
-            i, i1)
+    _sort$5(_class.reference.pointer, _id_sort$5 as jni$_.JMethodIDPtr,
+            _$ss.pointer, i, i1)
         .check();
   }
 
@@ -29392,9 +28821,9 @@ class Arrays extends jni$_.JObject {
   static void sort$6(
     jni$_.JCharArray? cs,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _sort$6(_$$classRef.pointer, _id_sort$6 as jni$_.JMethodIDPtr, _$cs.pointer)
+    _sort$6(_class.reference.pointer, _id_sort$6 as jni$_.JMethodIDPtr,
+            _$cs.pointer)
         .check();
   }
 
@@ -29424,10 +28853,9 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _sort$7(_$$classRef.pointer, _id_sort$7 as jni$_.JMethodIDPtr, _$cs.pointer,
-            i, i1)
+    _sort$7(_class.reference.pointer, _id_sort$7 as jni$_.JMethodIDPtr,
+            _$cs.pointer, i, i1)
         .check();
   }
 
@@ -29451,9 +28879,9 @@ class Arrays extends jni$_.JObject {
   static void sort$8(
     jni$_.JByteArray? bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _sort$8(_$$classRef.pointer, _id_sort$8 as jni$_.JMethodIDPtr, _$bs.pointer)
+    _sort$8(_class.reference.pointer, _id_sort$8 as jni$_.JMethodIDPtr,
+            _$bs.pointer)
         .check();
   }
 
@@ -29483,10 +28911,9 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _sort$9(_$$classRef.pointer, _id_sort$9 as jni$_.JMethodIDPtr, _$bs.pointer,
-            i, i1)
+    _sort$9(_class.reference.pointer, _id_sort$9 as jni$_.JMethodIDPtr,
+            _$bs.pointer, i, i1)
         .check();
   }
 
@@ -29510,9 +28937,8 @@ class Arrays extends jni$_.JObject {
   static void sort$10(
     jni$_.JFloatArray? fs,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    _sort$10(_$$classRef.pointer, _id_sort$10 as jni$_.JMethodIDPtr,
+    _sort$10(_class.reference.pointer, _id_sort$10 as jni$_.JMethodIDPtr,
             _$fs.pointer)
         .check();
   }
@@ -29543,9 +28969,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    _sort$11(_$$classRef.pointer, _id_sort$11 as jni$_.JMethodIDPtr,
+    _sort$11(_class.reference.pointer, _id_sort$11 as jni$_.JMethodIDPtr,
             _$fs.pointer, i, i1)
         .check();
   }
@@ -29570,9 +28995,8 @@ class Arrays extends jni$_.JObject {
   static void sort$12(
     jni$_.JDoubleArray? ds,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    _sort$12(_$$classRef.pointer, _id_sort$12 as jni$_.JMethodIDPtr,
+    _sort$12(_class.reference.pointer, _id_sort$12 as jni$_.JMethodIDPtr,
             _$ds.pointer)
         .check();
   }
@@ -29603,9 +29027,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    _sort$13(_$$classRef.pointer, _id_sort$13 as jni$_.JMethodIDPtr,
+    _sort$13(_class.reference.pointer, _id_sort$13 as jni$_.JMethodIDPtr,
             _$ds.pointer, i, i1)
         .check();
   }
@@ -29630,10 +29053,9 @@ class Arrays extends jni$_.JObject {
   static void parallelSort(
     jni$_.JByteArray? bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _parallelSort(_$$classRef.pointer, _id_parallelSort as jni$_.JMethodIDPtr,
-            _$bs.pointer)
+    _parallelSort(_class.reference.pointer,
+            _id_parallelSort as jni$_.JMethodIDPtr, _$bs.pointer)
         .check();
   }
 
@@ -29663,9 +29085,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _parallelSort$1(_$$classRef.pointer,
+    _parallelSort$1(_class.reference.pointer,
             _id_parallelSort$1 as jni$_.JMethodIDPtr, _$bs.pointer, i, i1)
         .check();
   }
@@ -29690,9 +29111,8 @@ class Arrays extends jni$_.JObject {
   static void parallelSort$2(
     jni$_.JCharArray? cs,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _parallelSort$2(_$$classRef.pointer,
+    _parallelSort$2(_class.reference.pointer,
             _id_parallelSort$2 as jni$_.JMethodIDPtr, _$cs.pointer)
         .check();
   }
@@ -29723,9 +29143,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _parallelSort$3(_$$classRef.pointer,
+    _parallelSort$3(_class.reference.pointer,
             _id_parallelSort$3 as jni$_.JMethodIDPtr, _$cs.pointer, i, i1)
         .check();
   }
@@ -29750,9 +29169,8 @@ class Arrays extends jni$_.JObject {
   static void parallelSort$4(
     jni$_.JShortArray? ss,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    _parallelSort$4(_$$classRef.pointer,
+    _parallelSort$4(_class.reference.pointer,
             _id_parallelSort$4 as jni$_.JMethodIDPtr, _$ss.pointer)
         .check();
   }
@@ -29783,9 +29201,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    _parallelSort$5(_$$classRef.pointer,
+    _parallelSort$5(_class.reference.pointer,
             _id_parallelSort$5 as jni$_.JMethodIDPtr, _$ss.pointer, i, i1)
         .check();
   }
@@ -29810,9 +29227,8 @@ class Arrays extends jni$_.JObject {
   static void parallelSort$6(
     jni$_.JIntArray? is$,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    _parallelSort$6(_$$classRef.pointer,
+    _parallelSort$6(_class.reference.pointer,
             _id_parallelSort$6 as jni$_.JMethodIDPtr, _$is$.pointer)
         .check();
   }
@@ -29843,9 +29259,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    _parallelSort$7(_$$classRef.pointer,
+    _parallelSort$7(_class.reference.pointer,
             _id_parallelSort$7 as jni$_.JMethodIDPtr, _$is$.pointer, i, i1)
         .check();
   }
@@ -29870,9 +29285,8 @@ class Arrays extends jni$_.JObject {
   static void parallelSort$8(
     jni$_.JLongArray? js,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    _parallelSort$8(_$$classRef.pointer,
+    _parallelSort$8(_class.reference.pointer,
             _id_parallelSort$8 as jni$_.JMethodIDPtr, _$js.pointer)
         .check();
   }
@@ -29903,9 +29317,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    _parallelSort$9(_$$classRef.pointer,
+    _parallelSort$9(_class.reference.pointer,
             _id_parallelSort$9 as jni$_.JMethodIDPtr, _$js.pointer, i, i1)
         .check();
   }
@@ -29930,9 +29343,8 @@ class Arrays extends jni$_.JObject {
   static void parallelSort$10(
     jni$_.JFloatArray? fs,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    _parallelSort$10(_$$classRef.pointer,
+    _parallelSort$10(_class.reference.pointer,
             _id_parallelSort$10 as jni$_.JMethodIDPtr, _$fs.pointer)
         .check();
   }
@@ -29963,9 +29375,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    _parallelSort$11(_$$classRef.pointer,
+    _parallelSort$11(_class.reference.pointer,
             _id_parallelSort$11 as jni$_.JMethodIDPtr, _$fs.pointer, i, i1)
         .check();
   }
@@ -29990,9 +29401,8 @@ class Arrays extends jni$_.JObject {
   static void parallelSort$12(
     jni$_.JDoubleArray? ds,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    _parallelSort$12(_$$classRef.pointer,
+    _parallelSort$12(_class.reference.pointer,
             _id_parallelSort$12 as jni$_.JMethodIDPtr, _$ds.pointer)
         .check();
   }
@@ -30023,9 +29433,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    _parallelSort$13(_$$classRef.pointer,
+    _parallelSort$13(_class.reference.pointer,
             _id_parallelSort$13 as jni$_.JMethodIDPtr, _$ds.pointer, i, i1)
         .check();
   }
@@ -30051,9 +29460,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<$T?>? comparables, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$comparables = comparables?.reference ?? jni$_.jNullReference;
-    _parallelSort$14(_$$classRef.pointer,
+    _parallelSort$14(_class.reference.pointer,
             _id_parallelSort$14 as jni$_.JMethodIDPtr, _$comparables.pointer)
         .check();
   }
@@ -30085,10 +29493,9 @@ class Arrays extends jni$_.JObject {
     int i1, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$comparables = comparables?.reference ?? jni$_.jNullReference;
     _parallelSort$15(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelSort$15 as jni$_.JMethodIDPtr,
             _$comparables.pointer,
             i,
@@ -30124,11 +29531,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     _parallelSort$16(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelSort$16 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$comparator.pointer)
@@ -30169,11 +29575,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     _parallelSort$17(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelSort$17 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -30202,9 +29607,8 @@ class Arrays extends jni$_.JObject {
   static void sort$14(
     jni$_.JArray<jni$_.JObject?>? objects,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    _sort$14(_$$classRef.pointer, _id_sort$14 as jni$_.JMethodIDPtr,
+    _sort$14(_class.reference.pointer, _id_sort$14 as jni$_.JMethodIDPtr,
             _$objects.pointer)
         .check();
   }
@@ -30235,9 +29639,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    _sort$15(_$$classRef.pointer, _id_sort$15 as jni$_.JMethodIDPtr,
+    _sort$15(_class.reference.pointer, _id_sort$15 as jni$_.JMethodIDPtr,
             _$objects.pointer, i, i1)
         .check();
   }
@@ -30270,10 +29673,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
-    _sort$16(_$$classRef.pointer, _id_sort$16 as jni$_.JMethodIDPtr,
+    _sort$16(_class.reference.pointer, _id_sort$16 as jni$_.JMethodIDPtr,
             _$objects.pointer, _$comparator.pointer)
         .check();
   }
@@ -30312,10 +29714,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
-    _sort$17(_$$classRef.pointer, _id_sort$17 as jni$_.JMethodIDPtr,
+    _sort$17(_class.reference.pointer, _id_sort$17 as jni$_.JMethodIDPtr,
             _$objects.pointer, i, i1, _$comparator.pointer)
         .check();
   }
@@ -30348,11 +29749,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? binaryOperator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$binaryOperator = binaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$binaryOperator.pointer)
@@ -30393,11 +29793,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? binaryOperator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$binaryOperator = binaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix$1 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -30433,12 +29832,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     jni$_.JObject? longBinaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$longBinaryOperator =
         longBinaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix$2 as jni$_.JMethodIDPtr,
             _$js.pointer,
             _$longBinaryOperator.pointer)
@@ -30478,12 +29876,11 @@ class Arrays extends jni$_.JObject {
     int i1,
     jni$_.JObject? longBinaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$longBinaryOperator =
         longBinaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix$3(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix$3 as jni$_.JMethodIDPtr,
             _$js.pointer,
             i,
@@ -30519,12 +29916,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     jni$_.JObject? doubleBinaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$doubleBinaryOperator =
         doubleBinaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix$4(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix$4 as jni$_.JMethodIDPtr,
             _$ds.pointer,
             _$doubleBinaryOperator.pointer)
@@ -30564,12 +29960,11 @@ class Arrays extends jni$_.JObject {
     int i1,
     jni$_.JObject? doubleBinaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$doubleBinaryOperator =
         doubleBinaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix$5(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix$5 as jni$_.JMethodIDPtr,
             _$ds.pointer,
             i,
@@ -30605,12 +30000,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     jni$_.JObject? intBinaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$intBinaryOperator =
         intBinaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix$6(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix$6 as jni$_.JMethodIDPtr,
             _$is$.pointer,
             _$intBinaryOperator.pointer)
@@ -30650,12 +30044,11 @@ class Arrays extends jni$_.JObject {
     int i1,
     jni$_.JObject? intBinaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$intBinaryOperator =
         intBinaryOperator?.reference ?? jni$_.jNullReference;
     _parallelPrefix$7(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelPrefix$7 as jni$_.JMethodIDPtr,
             _$is$.pointer,
             i,
@@ -30686,9 +30079,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     int j,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _binarySearch(_$$classRef.pointer,
+    return _binarySearch(_class.reference.pointer,
             _id_binarySearch as jni$_.JMethodIDPtr, _$js.pointer, j)
         .integer;
   }
@@ -30721,9 +30113,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     int j,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _binarySearch$1(_$$classRef.pointer,
+    return _binarySearch$1(_class.reference.pointer,
             _id_binarySearch$1 as jni$_.JMethodIDPtr, _$js.pointer, i, i1, j)
         .integer;
   }
@@ -30750,9 +30141,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _binarySearch$2(_$$classRef.pointer,
+    return _binarySearch$2(_class.reference.pointer,
             _id_binarySearch$2 as jni$_.JMethodIDPtr, _$is$.pointer, i)
         .integer;
   }
@@ -30785,9 +30175,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     int i2,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _binarySearch$3(_$$classRef.pointer,
+    return _binarySearch$3(_class.reference.pointer,
             _id_binarySearch$3 as jni$_.JMethodIDPtr, _$is$.pointer, i, i1, i2)
         .integer;
   }
@@ -30814,9 +30203,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JShortArray? ss,
     int s,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    return _binarySearch$4(_$$classRef.pointer,
+    return _binarySearch$4(_class.reference.pointer,
             _id_binarySearch$4 as jni$_.JMethodIDPtr, _$ss.pointer, s)
         .integer;
   }
@@ -30849,9 +30237,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     int s,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    return _binarySearch$5(_$$classRef.pointer,
+    return _binarySearch$5(_class.reference.pointer,
             _id_binarySearch$5 as jni$_.JMethodIDPtr, _$ss.pointer, i, i1, s)
         .integer;
   }
@@ -30878,9 +30265,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JCharArray? cs,
     int c,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return _binarySearch$6(_$$classRef.pointer,
+    return _binarySearch$6(_class.reference.pointer,
             _id_binarySearch$6 as jni$_.JMethodIDPtr, _$cs.pointer, c)
         .integer;
   }
@@ -30913,9 +30299,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     int c,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return _binarySearch$7(_$$classRef.pointer,
+    return _binarySearch$7(_class.reference.pointer,
             _id_binarySearch$7 as jni$_.JMethodIDPtr, _$cs.pointer, i, i1, c)
         .integer;
   }
@@ -30942,9 +30327,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JByteArray? bs,
     int b,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _binarySearch$8(_$$classRef.pointer,
+    return _binarySearch$8(_class.reference.pointer,
             _id_binarySearch$8 as jni$_.JMethodIDPtr, _$bs.pointer, b)
         .integer;
   }
@@ -30977,9 +30361,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     int b,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _binarySearch$9(_$$classRef.pointer,
+    return _binarySearch$9(_class.reference.pointer,
             _id_binarySearch$9 as jni$_.JMethodIDPtr, _$bs.pointer, i, i1, b)
         .integer;
   }
@@ -31008,9 +30391,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     double d,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _binarySearch$10(_$$classRef.pointer,
+    return _binarySearch$10(_class.reference.pointer,
             _id_binarySearch$10 as jni$_.JMethodIDPtr, _$ds.pointer, d)
         .integer;
   }
@@ -31048,9 +30430,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     double d,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _binarySearch$11(_$$classRef.pointer,
+    return _binarySearch$11(_class.reference.pointer,
             _id_binarySearch$11 as jni$_.JMethodIDPtr, _$ds.pointer, i, i1, d)
         .integer;
   }
@@ -31079,9 +30460,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JFloatArray? fs,
     double f,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    return _binarySearch$12(_$$classRef.pointer,
+    return _binarySearch$12(_class.reference.pointer,
             _id_binarySearch$12 as jni$_.JMethodIDPtr, _$fs.pointer, f)
         .integer;
   }
@@ -31119,9 +30499,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     double f,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    return _binarySearch$13(_$$classRef.pointer,
+    return _binarySearch$13(_class.reference.pointer,
             _id_binarySearch$13 as jni$_.JMethodIDPtr, _$fs.pointer, i, i1, f)
         .integer;
   }
@@ -31153,11 +30532,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? objects,
     jni$_.JObject? object,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$object = object?.reference ?? jni$_.jNullReference;
     return _binarySearch$14(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_binarySearch$14 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$object.pointer)
@@ -31197,11 +30575,10 @@ class Arrays extends jni$_.JObject {
     int i1,
     jni$_.JObject? object,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$object = object?.reference ?? jni$_.jNullReference;
     return _binarySearch$15(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_binarySearch$15 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -31241,12 +30618,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$object = object?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     return _binarySearch$16(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_binarySearch$16 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$object.pointer,
@@ -31291,12 +30667,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$object = object?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     return _binarySearch$17(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_binarySearch$17 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -31333,10 +30708,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     jni$_.JLongArray? js1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
-    return _equals(_$$classRef.pointer, _id_equals as jni$_.JMethodIDPtr,
+    return _equals(_class.reference.pointer, _id_equals as jni$_.JMethodIDPtr,
             _$js.pointer, _$js1.pointer)
         .boolean;
   }
@@ -31380,11 +30754,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
-    return _equals$1(_$$classRef.pointer, _id_equals$1 as jni$_.JMethodIDPtr,
-            _$js.pointer, i, i1, _$js1.pointer, i2, i3)
+    return _equals$1(
+            _class.reference.pointer,
+            _id_equals$1 as jni$_.JMethodIDPtr,
+            _$js.pointer,
+            i,
+            i1,
+            _$js1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31415,11 +30795,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     jni$_.JIntArray? is1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
-    return _equals$2(_$$classRef.pointer, _id_equals$2 as jni$_.JMethodIDPtr,
-            _$is$.pointer, _$is1.pointer)
+    return _equals$2(_class.reference.pointer,
+            _id_equals$2 as jni$_.JMethodIDPtr, _$is$.pointer, _$is1.pointer)
         .boolean;
   }
 
@@ -31462,11 +30841,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
-    return _equals$3(_$$classRef.pointer, _id_equals$3 as jni$_.JMethodIDPtr,
-            _$is$.pointer, i, i1, _$is1.pointer, i2, i3)
+    return _equals$3(
+            _class.reference.pointer,
+            _id_equals$3 as jni$_.JMethodIDPtr,
+            _$is$.pointer,
+            i,
+            i1,
+            _$is1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31497,11 +30882,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JShortArray? ss,
     jni$_.JShortArray? ss1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
-    return _equals$4(_$$classRef.pointer, _id_equals$4 as jni$_.JMethodIDPtr,
-            _$ss.pointer, _$ss1.pointer)
+    return _equals$4(_class.reference.pointer,
+            _id_equals$4 as jni$_.JMethodIDPtr, _$ss.pointer, _$ss1.pointer)
         .boolean;
   }
 
@@ -31544,11 +30928,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
-    return _equals$5(_$$classRef.pointer, _id_equals$5 as jni$_.JMethodIDPtr,
-            _$ss.pointer, i, i1, _$ss1.pointer, i2, i3)
+    return _equals$5(
+            _class.reference.pointer,
+            _id_equals$5 as jni$_.JMethodIDPtr,
+            _$ss.pointer,
+            i,
+            i1,
+            _$ss1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31579,11 +30969,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JCharArray? cs,
     jni$_.JCharArray? cs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$cs1 = cs1?.reference ?? jni$_.jNullReference;
-    return _equals$6(_$$classRef.pointer, _id_equals$6 as jni$_.JMethodIDPtr,
-            _$cs.pointer, _$cs1.pointer)
+    return _equals$6(_class.reference.pointer,
+            _id_equals$6 as jni$_.JMethodIDPtr, _$cs.pointer, _$cs1.pointer)
         .boolean;
   }
 
@@ -31626,11 +31015,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$cs1 = cs1?.reference ?? jni$_.jNullReference;
-    return _equals$7(_$$classRef.pointer, _id_equals$7 as jni$_.JMethodIDPtr,
-            _$cs.pointer, i, i1, _$cs1.pointer, i2, i3)
+    return _equals$7(
+            _class.reference.pointer,
+            _id_equals$7 as jni$_.JMethodIDPtr,
+            _$cs.pointer,
+            i,
+            i1,
+            _$cs1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31661,11 +31056,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JByteArray? bs,
     jni$_.JByteArray? bs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
-    return _equals$8(_$$classRef.pointer, _id_equals$8 as jni$_.JMethodIDPtr,
-            _$bs.pointer, _$bs1.pointer)
+    return _equals$8(_class.reference.pointer,
+            _id_equals$8 as jni$_.JMethodIDPtr, _$bs.pointer, _$bs1.pointer)
         .boolean;
   }
 
@@ -31708,11 +31102,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
-    return _equals$9(_$$classRef.pointer, _id_equals$9 as jni$_.JMethodIDPtr,
-            _$bs.pointer, i, i1, _$bs1.pointer, i2, i3)
+    return _equals$9(
+            _class.reference.pointer,
+            _id_equals$9 as jni$_.JMethodIDPtr,
+            _$bs.pointer,
+            i,
+            i1,
+            _$bs1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31743,11 +31143,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JBooleanArray? zs,
     jni$_.JBooleanArray? zs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
     final _$zs1 = zs1?.reference ?? jni$_.jNullReference;
-    return _equals$10(_$$classRef.pointer, _id_equals$10 as jni$_.JMethodIDPtr,
-            _$zs.pointer, _$zs1.pointer)
+    return _equals$10(_class.reference.pointer,
+            _id_equals$10 as jni$_.JMethodIDPtr, _$zs.pointer, _$zs1.pointer)
         .boolean;
   }
 
@@ -31790,11 +31189,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
     final _$zs1 = zs1?.reference ?? jni$_.jNullReference;
-    return _equals$11(_$$classRef.pointer, _id_equals$11 as jni$_.JMethodIDPtr,
-            _$zs.pointer, i, i1, _$zs1.pointer, i2, i3)
+    return _equals$11(
+            _class.reference.pointer,
+            _id_equals$11 as jni$_.JMethodIDPtr,
+            _$zs.pointer,
+            i,
+            i1,
+            _$zs1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31825,11 +31230,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     jni$_.JDoubleArray? ds1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$ds1 = ds1?.reference ?? jni$_.jNullReference;
-    return _equals$12(_$$classRef.pointer, _id_equals$12 as jni$_.JMethodIDPtr,
-            _$ds.pointer, _$ds1.pointer)
+    return _equals$12(_class.reference.pointer,
+            _id_equals$12 as jni$_.JMethodIDPtr, _$ds.pointer, _$ds1.pointer)
         .boolean;
   }
 
@@ -31872,11 +31276,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$ds1 = ds1?.reference ?? jni$_.jNullReference;
-    return _equals$13(_$$classRef.pointer, _id_equals$13 as jni$_.JMethodIDPtr,
-            _$ds.pointer, i, i1, _$ds1.pointer, i2, i3)
+    return _equals$13(
+            _class.reference.pointer,
+            _id_equals$13 as jni$_.JMethodIDPtr,
+            _$ds.pointer,
+            i,
+            i1,
+            _$ds1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31907,11 +31317,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JFloatArray? fs,
     jni$_.JFloatArray? fs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
     final _$fs1 = fs1?.reference ?? jni$_.jNullReference;
-    return _equals$14(_$$classRef.pointer, _id_equals$14 as jni$_.JMethodIDPtr,
-            _$fs.pointer, _$fs1.pointer)
+    return _equals$14(_class.reference.pointer,
+            _id_equals$14 as jni$_.JMethodIDPtr, _$fs.pointer, _$fs1.pointer)
         .boolean;
   }
 
@@ -31954,11 +31363,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
     final _$fs1 = fs1?.reference ?? jni$_.jNullReference;
-    return _equals$15(_$$classRef.pointer, _id_equals$15 as jni$_.JMethodIDPtr,
-            _$fs.pointer, i, i1, _$fs1.pointer, i2, i3)
+    return _equals$15(
+            _class.reference.pointer,
+            _id_equals$15 as jni$_.JMethodIDPtr,
+            _$fs.pointer,
+            i,
+            i1,
+            _$fs1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -31989,11 +31404,13 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? objects,
     jni$_.JArray<jni$_.JObject?>? objects1,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
-    return _equals$16(_$$classRef.pointer, _id_equals$16 as jni$_.JMethodIDPtr,
-            _$objects.pointer, _$objects1.pointer)
+    return _equals$16(
+            _class.reference.pointer,
+            _id_equals$16 as jni$_.JMethodIDPtr,
+            _$objects.pointer,
+            _$objects1.pointer)
         .boolean;
   }
 
@@ -32036,11 +31453,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
-    return _equals$17(_$$classRef.pointer, _id_equals$17 as jni$_.JMethodIDPtr,
-            _$objects.pointer, i, i1, _$objects1.pointer, i2, i3)
+    return _equals$17(
+            _class.reference.pointer,
+            _id_equals$17 as jni$_.JMethodIDPtr,
+            _$objects.pointer,
+            i,
+            i1,
+            _$objects1.pointer,
+            i2,
+            i3)
         .boolean;
   }
 
@@ -32075,12 +31498,15 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
-    return _equals$18(_$$classRef.pointer, _id_equals$18 as jni$_.JMethodIDPtr,
-            _$objects.pointer, _$objects1.pointer, _$comparator.pointer)
+    return _equals$18(
+            _class.reference.pointer,
+            _id_equals$18 as jni$_.JMethodIDPtr,
+            _$objects.pointer,
+            _$objects1.pointer,
+            _$comparator.pointer)
         .boolean;
   }
 
@@ -32127,12 +31553,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     return _equals$19(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_equals$19 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -32166,9 +31591,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     int j,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    _fill(_$$classRef.pointer, _id_fill as jni$_.JMethodIDPtr, _$js.pointer, j)
+    _fill(_class.reference.pointer, _id_fill as jni$_.JMethodIDPtr,
+            _$js.pointer, j)
         .check();
   }
 
@@ -32200,10 +31625,9 @@ class Arrays extends jni$_.JObject {
     int i1,
     int j,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    _fill$1(_$$classRef.pointer, _id_fill$1 as jni$_.JMethodIDPtr, _$js.pointer,
-            i, i1, j)
+    _fill$1(_class.reference.pointer, _id_fill$1 as jni$_.JMethodIDPtr,
+            _$js.pointer, i, i1, j)
         .check();
   }
 
@@ -32229,9 +31653,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    _fill$2(_$$classRef.pointer, _id_fill$2 as jni$_.JMethodIDPtr,
+    _fill$2(_class.reference.pointer, _id_fill$2 as jni$_.JMethodIDPtr,
             _$is$.pointer, i)
         .check();
   }
@@ -32264,9 +31687,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     int i2,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    _fill$3(_$$classRef.pointer, _id_fill$3 as jni$_.JMethodIDPtr,
+    _fill$3(_class.reference.pointer, _id_fill$3 as jni$_.JMethodIDPtr,
             _$is$.pointer, i, i1, i2)
         .check();
   }
@@ -32293,10 +31715,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JShortArray? ss,
     int s,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    _fill$4(_$$classRef.pointer, _id_fill$4 as jni$_.JMethodIDPtr, _$ss.pointer,
-            s)
+    _fill$4(_class.reference.pointer, _id_fill$4 as jni$_.JMethodIDPtr,
+            _$ss.pointer, s)
         .check();
   }
 
@@ -32328,10 +31749,9 @@ class Arrays extends jni$_.JObject {
     int i1,
     int s,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    _fill$5(_$$classRef.pointer, _id_fill$5 as jni$_.JMethodIDPtr, _$ss.pointer,
-            i, i1, s)
+    _fill$5(_class.reference.pointer, _id_fill$5 as jni$_.JMethodIDPtr,
+            _$ss.pointer, i, i1, s)
         .check();
   }
 
@@ -32357,10 +31777,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JCharArray? cs,
     int c,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _fill$6(_$$classRef.pointer, _id_fill$6 as jni$_.JMethodIDPtr, _$cs.pointer,
-            c)
+    _fill$6(_class.reference.pointer, _id_fill$6 as jni$_.JMethodIDPtr,
+            _$cs.pointer, c)
         .check();
   }
 
@@ -32392,10 +31811,9 @@ class Arrays extends jni$_.JObject {
     int i1,
     int c,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    _fill$7(_$$classRef.pointer, _id_fill$7 as jni$_.JMethodIDPtr, _$cs.pointer,
-            i, i1, c)
+    _fill$7(_class.reference.pointer, _id_fill$7 as jni$_.JMethodIDPtr,
+            _$cs.pointer, i, i1, c)
         .check();
   }
 
@@ -32421,10 +31839,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JByteArray? bs,
     int b,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _fill$8(_$$classRef.pointer, _id_fill$8 as jni$_.JMethodIDPtr, _$bs.pointer,
-            b)
+    _fill$8(_class.reference.pointer, _id_fill$8 as jni$_.JMethodIDPtr,
+            _$bs.pointer, b)
         .check();
   }
 
@@ -32456,10 +31873,9 @@ class Arrays extends jni$_.JObject {
     int i1,
     int b,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    _fill$9(_$$classRef.pointer, _id_fill$9 as jni$_.JMethodIDPtr, _$bs.pointer,
-            i, i1, b)
+    _fill$9(_class.reference.pointer, _id_fill$9 as jni$_.JMethodIDPtr,
+            _$bs.pointer, i, i1, b)
         .check();
   }
 
@@ -32485,9 +31901,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JBooleanArray? zs,
     bool z,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
-    _fill$10(_$$classRef.pointer, _id_fill$10 as jni$_.JMethodIDPtr,
+    _fill$10(_class.reference.pointer, _id_fill$10 as jni$_.JMethodIDPtr,
             _$zs.pointer, z ? 1 : 0)
         .check();
   }
@@ -32520,9 +31935,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     bool z,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
-    _fill$11(_$$classRef.pointer, _id_fill$11 as jni$_.JMethodIDPtr,
+    _fill$11(_class.reference.pointer, _id_fill$11 as jni$_.JMethodIDPtr,
             _$zs.pointer, i, i1, z ? 1 : 0)
         .check();
   }
@@ -32551,9 +31965,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     double d,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    _fill$12(_$$classRef.pointer, _id_fill$12 as jni$_.JMethodIDPtr,
+    _fill$12(_class.reference.pointer, _id_fill$12 as jni$_.JMethodIDPtr,
             _$ds.pointer, d)
         .check();
   }
@@ -32591,9 +32004,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     double d,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    _fill$13(_$$classRef.pointer, _id_fill$13 as jni$_.JMethodIDPtr,
+    _fill$13(_class.reference.pointer, _id_fill$13 as jni$_.JMethodIDPtr,
             _$ds.pointer, i, i1, d)
         .check();
   }
@@ -32622,9 +32034,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JFloatArray? fs,
     double f,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    _fill$14(_$$classRef.pointer, _id_fill$14 as jni$_.JMethodIDPtr,
+    _fill$14(_class.reference.pointer, _id_fill$14 as jni$_.JMethodIDPtr,
             _$fs.pointer, f)
         .check();
   }
@@ -32662,9 +32073,8 @@ class Arrays extends jni$_.JObject {
     int i1,
     double f,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    _fill$15(_$$classRef.pointer, _id_fill$15 as jni$_.JMethodIDPtr,
+    _fill$15(_class.reference.pointer, _id_fill$15 as jni$_.JMethodIDPtr,
             _$fs.pointer, i, i1, f)
         .check();
   }
@@ -32696,10 +32106,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? objects,
     jni$_.JObject? object,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    _fill$16(_$$classRef.pointer, _id_fill$16 as jni$_.JMethodIDPtr,
+    _fill$16(_class.reference.pointer, _id_fill$16 as jni$_.JMethodIDPtr,
             _$objects.pointer, _$object.pointer)
         .check();
   }
@@ -32737,10 +32146,9 @@ class Arrays extends jni$_.JObject {
     int i1,
     jni$_.JObject? object,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    _fill$17(_$$classRef.pointer, _id_fill$17 as jni$_.JMethodIDPtr,
+    _fill$17(_class.reference.pointer, _id_fill$17 as jni$_.JMethodIDPtr,
             _$objects.pointer, i, i1, _$object.pointer)
         .check();
   }
@@ -32769,9 +32177,8 @@ class Arrays extends jni$_.JObject {
     int i, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _copyOf(_$$classRef.pointer, _id_copyOf as jni$_.JMethodIDPtr,
+    return _copyOf(_class.reference.pointer, _id_copyOf as jni$_.JMethodIDPtr,
             _$objects.pointer, i)
         .object<jni$_.JArray<$T?>?>(
             jni$_.JArrayNullableType<$T?>(T.nullableType));
@@ -32811,11 +32218,14 @@ class Arrays extends jni$_.JObject {
     required jni$_.JObjType<$T> T,
     required jni$_.JObjType<$U> U,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$class$ = class$?.reference ?? jni$_.jNullReference;
-    return _copyOf$1(_$$classRef.pointer, _id_copyOf$1 as jni$_.JMethodIDPtr,
-            _$objects.pointer, i, _$class$.pointer)
+    return _copyOf$1(
+            _class.reference.pointer,
+            _id_copyOf$1 as jni$_.JMethodIDPtr,
+            _$objects.pointer,
+            i,
+            _$class$.pointer)
         .object<jni$_.JArray<$T?>?>(
             jni$_.JArrayNullableType<$T?>(T.nullableType));
   }
@@ -32843,10 +32253,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JByteArray? bs,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _copyOf$2(_$$classRef.pointer, _id_copyOf$2 as jni$_.JMethodIDPtr,
-            _$bs.pointer, i)
+    return _copyOf$2(_class.reference.pointer,
+            _id_copyOf$2 as jni$_.JMethodIDPtr, _$bs.pointer, i)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -32873,10 +32282,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JShortArray? ss,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    return _copyOf$3(_$$classRef.pointer, _id_copyOf$3 as jni$_.JMethodIDPtr,
-            _$ss.pointer, i)
+    return _copyOf$3(_class.reference.pointer,
+            _id_copyOf$3 as jni$_.JMethodIDPtr, _$ss.pointer, i)
         .object<jni$_.JShortArray?>(const jni$_.JShortArrayNullableType());
   }
 
@@ -32903,10 +32311,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _copyOf$4(_$$classRef.pointer, _id_copyOf$4 as jni$_.JMethodIDPtr,
-            _$is$.pointer, i)
+    return _copyOf$4(_class.reference.pointer,
+            _id_copyOf$4 as jni$_.JMethodIDPtr, _$is$.pointer, i)
         .object<jni$_.JIntArray?>(const jni$_.JIntArrayNullableType());
   }
 
@@ -32933,10 +32340,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _copyOf$5(_$$classRef.pointer, _id_copyOf$5 as jni$_.JMethodIDPtr,
-            _$js.pointer, i)
+    return _copyOf$5(_class.reference.pointer,
+            _id_copyOf$5 as jni$_.JMethodIDPtr, _$js.pointer, i)
         .object<jni$_.JLongArray?>(const jni$_.JLongArrayNullableType());
   }
 
@@ -32963,10 +32369,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JCharArray? cs,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return _copyOf$6(_$$classRef.pointer, _id_copyOf$6 as jni$_.JMethodIDPtr,
-            _$cs.pointer, i)
+    return _copyOf$6(_class.reference.pointer,
+            _id_copyOf$6 as jni$_.JMethodIDPtr, _$cs.pointer, i)
         .object<jni$_.JCharArray?>(const jni$_.JCharArrayNullableType());
   }
 
@@ -32993,10 +32398,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JFloatArray? fs,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    return _copyOf$7(_$$classRef.pointer, _id_copyOf$7 as jni$_.JMethodIDPtr,
-            _$fs.pointer, i)
+    return _copyOf$7(_class.reference.pointer,
+            _id_copyOf$7 as jni$_.JMethodIDPtr, _$fs.pointer, i)
         .object<jni$_.JFloatArray?>(const jni$_.JFloatArrayNullableType());
   }
 
@@ -33023,10 +32427,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _copyOf$8(_$$classRef.pointer, _id_copyOf$8 as jni$_.JMethodIDPtr,
-            _$ds.pointer, i)
+    return _copyOf$8(_class.reference.pointer,
+            _id_copyOf$8 as jni$_.JMethodIDPtr, _$ds.pointer, i)
         .object<jni$_.JDoubleArray?>(const jni$_.JDoubleArrayNullableType());
   }
 
@@ -33053,10 +32456,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JBooleanArray? zs,
     int i,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
-    return _copyOf$9(_$$classRef.pointer, _id_copyOf$9 as jni$_.JMethodIDPtr,
-            _$zs.pointer, i)
+    return _copyOf$9(_class.reference.pointer,
+            _id_copyOf$9 as jni$_.JMethodIDPtr, _$zs.pointer, i)
         .object<jni$_.JBooleanArray?>(const jni$_.JBooleanArrayNullableType());
   }
 
@@ -33088,9 +32490,8 @@ class Arrays extends jni$_.JObject {
     int i1, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _copyOfRange(_$$classRef.pointer,
+    return _copyOfRange(_class.reference.pointer,
             _id_copyOfRange as jni$_.JMethodIDPtr, _$objects.pointer, i, i1)
         .object<jni$_.JArray<$T?>?>(
             jni$_.JArrayNullableType<$T?>(T.nullableType));
@@ -33133,11 +32534,10 @@ class Arrays extends jni$_.JObject {
     required jni$_.JObjType<$T> T,
     required jni$_.JObjType<$U> U,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$class$ = class$?.reference ?? jni$_.jNullReference;
     return _copyOfRange$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_copyOfRange$1 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -33174,9 +32574,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$2(_$$classRef.pointer,
+    return _copyOfRange$2(_class.reference.pointer,
             _id_copyOfRange$2 as jni$_.JMethodIDPtr, _$bs.pointer, i, i1)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
@@ -33208,9 +32607,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$3(_$$classRef.pointer,
+    return _copyOfRange$3(_class.reference.pointer,
             _id_copyOfRange$3 as jni$_.JMethodIDPtr, _$ss.pointer, i, i1)
         .object<jni$_.JShortArray?>(const jni$_.JShortArrayNullableType());
   }
@@ -33242,9 +32640,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$4(_$$classRef.pointer,
+    return _copyOfRange$4(_class.reference.pointer,
             _id_copyOfRange$4 as jni$_.JMethodIDPtr, _$is$.pointer, i, i1)
         .object<jni$_.JIntArray?>(const jni$_.JIntArrayNullableType());
   }
@@ -33276,9 +32673,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$5(_$$classRef.pointer,
+    return _copyOfRange$5(_class.reference.pointer,
             _id_copyOfRange$5 as jni$_.JMethodIDPtr, _$js.pointer, i, i1)
         .object<jni$_.JLongArray?>(const jni$_.JLongArrayNullableType());
   }
@@ -33310,9 +32706,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$6(_$$classRef.pointer,
+    return _copyOfRange$6(_class.reference.pointer,
             _id_copyOfRange$6 as jni$_.JMethodIDPtr, _$cs.pointer, i, i1)
         .object<jni$_.JCharArray?>(const jni$_.JCharArrayNullableType());
   }
@@ -33344,9 +32739,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$7(_$$classRef.pointer,
+    return _copyOfRange$7(_class.reference.pointer,
             _id_copyOfRange$7 as jni$_.JMethodIDPtr, _$fs.pointer, i, i1)
         .object<jni$_.JFloatArray?>(const jni$_.JFloatArrayNullableType());
   }
@@ -33378,9 +32772,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$8(_$$classRef.pointer,
+    return _copyOfRange$8(_class.reference.pointer,
             _id_copyOfRange$8 as jni$_.JMethodIDPtr, _$ds.pointer, i, i1)
         .object<jni$_.JDoubleArray?>(const jni$_.JDoubleArrayNullableType());
   }
@@ -33412,9 +32805,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
-    return _copyOfRange$9(_$$classRef.pointer,
+    return _copyOfRange$9(_class.reference.pointer,
             _id_copyOfRange$9 as jni$_.JMethodIDPtr, _$zs.pointer, i, i1)
         .object<jni$_.JBooleanArray?>(const jni$_.JBooleanArrayNullableType());
   }
@@ -33441,9 +32833,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<$T?>? objects, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _asList(_$$classRef.pointer, _id_asList as jni$_.JMethodIDPtr,
+    return _asList(_class.reference.pointer, _id_asList as jni$_.JMethodIDPtr,
             _$objects.pointer)
         .object<jni$_.JList<$T?>?>(
             jni$_.JListNullableType<$T?>(T.nullableType));
@@ -33469,9 +32860,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$1(
     jni$_.JLongArray? js,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _hashCode$1(_$$classRef.pointer,
+    return _hashCode$1(_class.reference.pointer,
             _id_hashCode$1 as jni$_.JMethodIDPtr, _$js.pointer)
         .integer;
   }
@@ -33496,9 +32886,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$2(
     jni$_.JIntArray? is$,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _hashCode$2(_$$classRef.pointer,
+    return _hashCode$2(_class.reference.pointer,
             _id_hashCode$2 as jni$_.JMethodIDPtr, _$is$.pointer)
         .integer;
   }
@@ -33523,9 +32912,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$3(
     jni$_.JShortArray? ss,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    return _hashCode$3(_$$classRef.pointer,
+    return _hashCode$3(_class.reference.pointer,
             _id_hashCode$3 as jni$_.JMethodIDPtr, _$ss.pointer)
         .integer;
   }
@@ -33550,9 +32938,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$4(
     jni$_.JCharArray? cs,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return _hashCode$4(_$$classRef.pointer,
+    return _hashCode$4(_class.reference.pointer,
             _id_hashCode$4 as jni$_.JMethodIDPtr, _$cs.pointer)
         .integer;
   }
@@ -33577,9 +32964,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$5(
     jni$_.JByteArray? bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _hashCode$5(_$$classRef.pointer,
+    return _hashCode$5(_class.reference.pointer,
             _id_hashCode$5 as jni$_.JMethodIDPtr, _$bs.pointer)
         .integer;
   }
@@ -33604,9 +32990,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$6(
     jni$_.JBooleanArray? zs,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
-    return _hashCode$6(_$$classRef.pointer,
+    return _hashCode$6(_class.reference.pointer,
             _id_hashCode$6 as jni$_.JMethodIDPtr, _$zs.pointer)
         .integer;
   }
@@ -33631,9 +33016,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$7(
     jni$_.JFloatArray? fs,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    return _hashCode$7(_$$classRef.pointer,
+    return _hashCode$7(_class.reference.pointer,
             _id_hashCode$7 as jni$_.JMethodIDPtr, _$fs.pointer)
         .integer;
   }
@@ -33658,9 +33042,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$8(
     jni$_.JDoubleArray? ds,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _hashCode$8(_$$classRef.pointer,
+    return _hashCode$8(_class.reference.pointer,
             _id_hashCode$8 as jni$_.JMethodIDPtr, _$ds.pointer)
         .integer;
   }
@@ -33685,9 +33068,8 @@ class Arrays extends jni$_.JObject {
   static int hashCode$9(
     jni$_.JArray<jni$_.JObject?>? objects,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _hashCode$9(_$$classRef.pointer,
+    return _hashCode$9(_class.reference.pointer,
             _id_hashCode$9 as jni$_.JMethodIDPtr, _$objects.pointer)
         .integer;
   }
@@ -33712,9 +33094,8 @@ class Arrays extends jni$_.JObject {
   static int deepHashCode(
     jni$_.JArray<jni$_.JObject?>? objects,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _deepHashCode(_$$classRef.pointer,
+    return _deepHashCode(_class.reference.pointer,
             _id_deepHashCode as jni$_.JMethodIDPtr, _$objects.pointer)
         .integer;
   }
@@ -33746,11 +33127,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? objects,
     jni$_.JArray<jni$_.JObject?>? objects1,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     return _deepEquals(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_deepEquals as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$objects1.pointer)
@@ -33778,9 +33158,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$1(
     jni$_.JLongArray? js,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _toString$1(_$$classRef.pointer,
+    return _toString$1(_class.reference.pointer,
             _id_toString$1 as jni$_.JMethodIDPtr, _$js.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -33806,9 +33185,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$2(
     jni$_.JIntArray? is$,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _toString$2(_$$classRef.pointer,
+    return _toString$2(_class.reference.pointer,
             _id_toString$2 as jni$_.JMethodIDPtr, _$is$.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -33834,9 +33212,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$3(
     jni$_.JShortArray? ss,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
-    return _toString$3(_$$classRef.pointer,
+    return _toString$3(_class.reference.pointer,
             _id_toString$3 as jni$_.JMethodIDPtr, _$ss.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -33862,9 +33239,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$4(
     jni$_.JCharArray? cs,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
-    return _toString$4(_$$classRef.pointer,
+    return _toString$4(_class.reference.pointer,
             _id_toString$4 as jni$_.JMethodIDPtr, _$cs.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -33890,9 +33266,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$5(
     jni$_.JByteArray? bs,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
-    return _toString$5(_$$classRef.pointer,
+    return _toString$5(_class.reference.pointer,
             _id_toString$5 as jni$_.JMethodIDPtr, _$bs.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -33918,9 +33293,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$6(
     jni$_.JBooleanArray? zs,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
-    return _toString$6(_$$classRef.pointer,
+    return _toString$6(_class.reference.pointer,
             _id_toString$6 as jni$_.JMethodIDPtr, _$zs.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -33946,9 +33320,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$7(
     jni$_.JFloatArray? fs,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
-    return _toString$7(_$$classRef.pointer,
+    return _toString$7(_class.reference.pointer,
             _id_toString$7 as jni$_.JMethodIDPtr, _$fs.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -33974,9 +33347,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$8(
     jni$_.JDoubleArray? ds,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _toString$8(_$$classRef.pointer,
+    return _toString$8(_class.reference.pointer,
             _id_toString$8 as jni$_.JMethodIDPtr, _$ds.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -34002,9 +33374,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? toString$9(
     jni$_.JArray<jni$_.JObject?>? objects,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _toString$9(_$$classRef.pointer,
+    return _toString$9(_class.reference.pointer,
             _id_toString$9 as jni$_.JMethodIDPtr, _$objects.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -34030,9 +33401,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JString? deepToString(
     jni$_.JArray<jni$_.JObject?>? objects,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _deepToString(_$$classRef.pointer,
+    return _deepToString(_class.reference.pointer,
             _id_deepToString as jni$_.JMethodIDPtr, _$objects.pointer)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
@@ -34065,10 +33435,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? intFunction, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$intFunction = intFunction?.reference ?? jni$_.jNullReference;
-    _setAll(_$$classRef.pointer, _id_setAll as jni$_.JMethodIDPtr,
+    _setAll(_class.reference.pointer, _id_setAll as jni$_.JMethodIDPtr,
             _$objects.pointer, _$intFunction.pointer)
         .check();
   }
@@ -34101,11 +33470,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? intFunction, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$intFunction = intFunction?.reference ?? jni$_.jNullReference;
     _parallelSetAll(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelSetAll as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$intFunction.pointer)
@@ -34139,11 +33507,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     jni$_.JObject? intUnaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$intUnaryOperator =
         intUnaryOperator?.reference ?? jni$_.jNullReference;
-    _setAll$1(_$$classRef.pointer, _id_setAll$1 as jni$_.JMethodIDPtr,
+    _setAll$1(_class.reference.pointer, _id_setAll$1 as jni$_.JMethodIDPtr,
             _$is$.pointer, _$intUnaryOperator.pointer)
         .check();
   }
@@ -34175,12 +33542,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     jni$_.JObject? intUnaryOperator,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$intUnaryOperator =
         intUnaryOperator?.reference ?? jni$_.jNullReference;
     _parallelSetAll$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelSetAll$1 as jni$_.JMethodIDPtr,
             _$is$.pointer,
             _$intUnaryOperator.pointer)
@@ -34214,11 +33580,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     jni$_.JObject? intToLongFunction,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$intToLongFunction =
         intToLongFunction?.reference ?? jni$_.jNullReference;
-    _setAll$2(_$$classRef.pointer, _id_setAll$2 as jni$_.JMethodIDPtr,
+    _setAll$2(_class.reference.pointer, _id_setAll$2 as jni$_.JMethodIDPtr,
             _$js.pointer, _$intToLongFunction.pointer)
         .check();
   }
@@ -34250,12 +33615,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     jni$_.JObject? intToLongFunction,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$intToLongFunction =
         intToLongFunction?.reference ?? jni$_.jNullReference;
     _parallelSetAll$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelSetAll$2 as jni$_.JMethodIDPtr,
             _$js.pointer,
             _$intToLongFunction.pointer)
@@ -34289,11 +33653,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     jni$_.JObject? intToDoubleFunction,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$intToDoubleFunction =
         intToDoubleFunction?.reference ?? jni$_.jNullReference;
-    _setAll$3(_$$classRef.pointer, _id_setAll$3 as jni$_.JMethodIDPtr,
+    _setAll$3(_class.reference.pointer, _id_setAll$3 as jni$_.JMethodIDPtr,
             _$ds.pointer, _$intToDoubleFunction.pointer)
         .check();
   }
@@ -34325,12 +33688,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     jni$_.JObject? intToDoubleFunction,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$intToDoubleFunction =
         intToDoubleFunction?.reference ?? jni$_.jNullReference;
     _parallelSetAll$3(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_parallelSetAll$3 as jni$_.JMethodIDPtr,
             _$ds.pointer,
             _$intToDoubleFunction.pointer)
@@ -34359,9 +33721,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<$T?>? objects, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _spliterator(_$$classRef.pointer,
+    return _spliterator(_class.reference.pointer,
             _id_spliterator as jni$_.JMethodIDPtr, _$objects.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34394,9 +33755,8 @@ class Arrays extends jni$_.JObject {
     int i1, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _spliterator$1(_$$classRef.pointer,
+    return _spliterator$1(_class.reference.pointer,
             _id_spliterator$1 as jni$_.JMethodIDPtr, _$objects.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34422,9 +33782,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JObject? spliterator$2(
     jni$_.JIntArray? is$,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _spliterator$2(_$$classRef.pointer,
+    return _spliterator$2(_class.reference.pointer,
             _id_spliterator$2 as jni$_.JMethodIDPtr, _$is$.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34456,9 +33815,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _spliterator$3(_$$classRef.pointer,
+    return _spliterator$3(_class.reference.pointer,
             _id_spliterator$3 as jni$_.JMethodIDPtr, _$is$.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34484,9 +33842,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JObject? spliterator$4(
     jni$_.JLongArray? js,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _spliterator$4(_$$classRef.pointer,
+    return _spliterator$4(_class.reference.pointer,
             _id_spliterator$4 as jni$_.JMethodIDPtr, _$js.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34518,9 +33875,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _spliterator$5(_$$classRef.pointer,
+    return _spliterator$5(_class.reference.pointer,
             _id_spliterator$5 as jni$_.JMethodIDPtr, _$js.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34546,9 +33902,8 @@ class Arrays extends jni$_.JObject {
   static jni$_.JObject? spliterator$6(
     jni$_.JDoubleArray? ds,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _spliterator$6(_$$classRef.pointer,
+    return _spliterator$6(_class.reference.pointer,
             _id_spliterator$6 as jni$_.JMethodIDPtr, _$ds.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34580,9 +33935,8 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _spliterator$7(_$$classRef.pointer,
+    return _spliterator$7(_class.reference.pointer,
             _id_spliterator$7 as jni$_.JMethodIDPtr, _$ds.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34609,9 +33963,8 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<$T?>? objects, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _stream(_$$classRef.pointer, _id_stream as jni$_.JMethodIDPtr,
+    return _stream(_class.reference.pointer, _id_stream as jni$_.JMethodIDPtr,
             _$objects.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
@@ -34644,10 +33997,9 @@ class Arrays extends jni$_.JObject {
     int i1, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
-    return _stream$1(_$$classRef.pointer, _id_stream$1 as jni$_.JMethodIDPtr,
-            _$objects.pointer, i, i1)
+    return _stream$1(_class.reference.pointer,
+            _id_stream$1 as jni$_.JMethodIDPtr, _$objects.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -34672,10 +34024,9 @@ class Arrays extends jni$_.JObject {
   static jni$_.JObject? stream$2(
     jni$_.JIntArray? is$,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _stream$2(_$$classRef.pointer, _id_stream$2 as jni$_.JMethodIDPtr,
-            _$is$.pointer)
+    return _stream$2(_class.reference.pointer,
+            _id_stream$2 as jni$_.JMethodIDPtr, _$is$.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -34706,10 +34057,9 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
-    return _stream$3(_$$classRef.pointer, _id_stream$3 as jni$_.JMethodIDPtr,
-            _$is$.pointer, i, i1)
+    return _stream$3(_class.reference.pointer,
+            _id_stream$3 as jni$_.JMethodIDPtr, _$is$.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -34734,10 +34084,9 @@ class Arrays extends jni$_.JObject {
   static jni$_.JObject? stream$4(
     jni$_.JLongArray? js,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _stream$4(_$$classRef.pointer, _id_stream$4 as jni$_.JMethodIDPtr,
-            _$js.pointer)
+    return _stream$4(_class.reference.pointer,
+            _id_stream$4 as jni$_.JMethodIDPtr, _$js.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -34768,10 +34117,9 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
-    return _stream$5(_$$classRef.pointer, _id_stream$5 as jni$_.JMethodIDPtr,
-            _$js.pointer, i, i1)
+    return _stream$5(_class.reference.pointer,
+            _id_stream$5 as jni$_.JMethodIDPtr, _$js.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -34796,10 +34144,9 @@ class Arrays extends jni$_.JObject {
   static jni$_.JObject? stream$6(
     jni$_.JDoubleArray? ds,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _stream$6(_$$classRef.pointer, _id_stream$6 as jni$_.JMethodIDPtr,
-            _$ds.pointer)
+    return _stream$6(_class.reference.pointer,
+            _id_stream$6 as jni$_.JMethodIDPtr, _$ds.pointer)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -34830,10 +34177,9 @@ class Arrays extends jni$_.JObject {
     int i,
     int i1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
-    return _stream$7(_$$classRef.pointer, _id_stream$7 as jni$_.JMethodIDPtr,
-            _$ds.pointer, i, i1)
+    return _stream$7(_class.reference.pointer,
+            _id_stream$7 as jni$_.JMethodIDPtr, _$ds.pointer, i, i1)
         .object<jni$_.JObject?>(const jni$_.JObjectNullableType());
   }
 
@@ -34864,10 +34210,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JBooleanArray? zs,
     jni$_.JBooleanArray? zs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
     final _$zs1 = zs1?.reference ?? jni$_.jNullReference;
-    return _compare(_$$classRef.pointer, _id_compare as jni$_.JMethodIDPtr,
+    return _compare(_class.reference.pointer, _id_compare as jni$_.JMethodIDPtr,
             _$zs.pointer, _$zs1.pointer)
         .integer;
   }
@@ -34911,11 +34256,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
     final _$zs1 = zs1?.reference ?? jni$_.jNullReference;
-    return _compare$1(_$$classRef.pointer, _id_compare$1 as jni$_.JMethodIDPtr,
-            _$zs.pointer, i, i1, _$zs1.pointer, i2, i3)
+    return _compare$1(
+            _class.reference.pointer,
+            _id_compare$1 as jni$_.JMethodIDPtr,
+            _$zs.pointer,
+            i,
+            i1,
+            _$zs1.pointer,
+            i2,
+            i3)
         .integer;
   }
 
@@ -34946,11 +34297,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JByteArray? bs,
     jni$_.JByteArray? bs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
-    return _compare$2(_$$classRef.pointer, _id_compare$2 as jni$_.JMethodIDPtr,
-            _$bs.pointer, _$bs1.pointer)
+    return _compare$2(_class.reference.pointer,
+            _id_compare$2 as jni$_.JMethodIDPtr, _$bs.pointer, _$bs1.pointer)
         .integer;
   }
 
@@ -34993,11 +34343,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
-    return _compare$3(_$$classRef.pointer, _id_compare$3 as jni$_.JMethodIDPtr,
-            _$bs.pointer, i, i1, _$bs1.pointer, i2, i3)
+    return _compare$3(
+            _class.reference.pointer,
+            _id_compare$3 as jni$_.JMethodIDPtr,
+            _$bs.pointer,
+            i,
+            i1,
+            _$bs1.pointer,
+            i2,
+            i3)
         .integer;
   }
 
@@ -35028,11 +34384,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JByteArray? bs,
     jni$_.JByteArray? bs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned as jni$_.JMethodIDPtr,
             _$bs.pointer,
             _$bs1.pointer)
@@ -35078,11 +34433,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned$1 as jni$_.JMethodIDPtr,
             _$bs.pointer,
             i,
@@ -35120,11 +34474,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JShortArray? ss,
     jni$_.JShortArray? ss1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
-    return _compare$4(_$$classRef.pointer, _id_compare$4 as jni$_.JMethodIDPtr,
-            _$ss.pointer, _$ss1.pointer)
+    return _compare$4(_class.reference.pointer,
+            _id_compare$4 as jni$_.JMethodIDPtr, _$ss.pointer, _$ss1.pointer)
         .integer;
   }
 
@@ -35167,11 +34520,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
-    return _compare$5(_$$classRef.pointer, _id_compare$5 as jni$_.JMethodIDPtr,
-            _$ss.pointer, i, i1, _$ss1.pointer, i2, i3)
+    return _compare$5(
+            _class.reference.pointer,
+            _id_compare$5 as jni$_.JMethodIDPtr,
+            _$ss.pointer,
+            i,
+            i1,
+            _$ss1.pointer,
+            i2,
+            i3)
         .integer;
   }
 
@@ -35202,11 +34561,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JShortArray? ss,
     jni$_.JShortArray? ss1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned$2(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned$2 as jni$_.JMethodIDPtr,
             _$ss.pointer,
             _$ss1.pointer)
@@ -35252,11 +34610,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned$3(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned$3 as jni$_.JMethodIDPtr,
             _$ss.pointer,
             i,
@@ -35294,11 +34651,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JCharArray? cs,
     jni$_.JCharArray? cs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$cs1 = cs1?.reference ?? jni$_.jNullReference;
-    return _compare$6(_$$classRef.pointer, _id_compare$6 as jni$_.JMethodIDPtr,
-            _$cs.pointer, _$cs1.pointer)
+    return _compare$6(_class.reference.pointer,
+            _id_compare$6 as jni$_.JMethodIDPtr, _$cs.pointer, _$cs1.pointer)
         .integer;
   }
 
@@ -35341,11 +34697,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$cs1 = cs1?.reference ?? jni$_.jNullReference;
-    return _compare$7(_$$classRef.pointer, _id_compare$7 as jni$_.JMethodIDPtr,
-            _$cs.pointer, i, i1, _$cs1.pointer, i2, i3)
+    return _compare$7(
+            _class.reference.pointer,
+            _id_compare$7 as jni$_.JMethodIDPtr,
+            _$cs.pointer,
+            i,
+            i1,
+            _$cs1.pointer,
+            i2,
+            i3)
         .integer;
   }
 
@@ -35376,11 +34738,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     jni$_.JIntArray? is1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
-    return _compare$8(_$$classRef.pointer, _id_compare$8 as jni$_.JMethodIDPtr,
-            _$is$.pointer, _$is1.pointer)
+    return _compare$8(_class.reference.pointer,
+            _id_compare$8 as jni$_.JMethodIDPtr, _$is$.pointer, _$is1.pointer)
         .integer;
   }
 
@@ -35423,11 +34784,17 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
-    return _compare$9(_$$classRef.pointer, _id_compare$9 as jni$_.JMethodIDPtr,
-            _$is$.pointer, i, i1, _$is1.pointer, i2, i3)
+    return _compare$9(
+            _class.reference.pointer,
+            _id_compare$9 as jni$_.JMethodIDPtr,
+            _$is$.pointer,
+            i,
+            i1,
+            _$is1.pointer,
+            i2,
+            i3)
         .integer;
   }
 
@@ -35458,11 +34825,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     jni$_.JIntArray? is1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned$4(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned$4 as jni$_.JMethodIDPtr,
             _$is$.pointer,
             _$is1.pointer)
@@ -35508,11 +34874,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned$5(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned$5 as jni$_.JMethodIDPtr,
             _$is$.pointer,
             i,
@@ -35550,10 +34915,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     jni$_.JLongArray? js1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
-    return _compare$10(_$$classRef.pointer,
+    return _compare$10(_class.reference.pointer,
             _id_compare$10 as jni$_.JMethodIDPtr, _$js.pointer, _$js1.pointer)
         .integer;
   }
@@ -35597,11 +34961,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
     return _compare$11(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compare$11 as jni$_.JMethodIDPtr,
             _$js.pointer,
             i,
@@ -35639,11 +35002,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     jni$_.JLongArray? js1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned$6(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned$6 as jni$_.JMethodIDPtr,
             _$js.pointer,
             _$js1.pointer)
@@ -35689,11 +35051,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
     return _compareUnsigned$7(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compareUnsigned$7 as jni$_.JMethodIDPtr,
             _$js.pointer,
             i,
@@ -35731,10 +35092,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JFloatArray? fs,
     jni$_.JFloatArray? fs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
     final _$fs1 = fs1?.reference ?? jni$_.jNullReference;
-    return _compare$12(_$$classRef.pointer,
+    return _compare$12(_class.reference.pointer,
             _id_compare$12 as jni$_.JMethodIDPtr, _$fs.pointer, _$fs1.pointer)
         .integer;
   }
@@ -35778,11 +35138,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
     final _$fs1 = fs1?.reference ?? jni$_.jNullReference;
     return _compare$13(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compare$13 as jni$_.JMethodIDPtr,
             _$fs.pointer,
             i,
@@ -35820,10 +35179,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     jni$_.JDoubleArray? ds1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$ds1 = ds1?.reference ?? jni$_.jNullReference;
-    return _compare$14(_$$classRef.pointer,
+    return _compare$14(_class.reference.pointer,
             _id_compare$14 as jni$_.JMethodIDPtr, _$ds.pointer, _$ds1.pointer)
         .integer;
   }
@@ -35867,11 +35225,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$ds1 = ds1?.reference ?? jni$_.jNullReference;
     return _compare$15(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compare$15 as jni$_.JMethodIDPtr,
             _$ds.pointer,
             i,
@@ -35910,11 +35267,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<$T?>? comparables1, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$comparables = comparables?.reference ?? jni$_.jNullReference;
     final _$comparables1 = comparables1?.reference ?? jni$_.jNullReference;
     return _compare$16(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compare$16 as jni$_.JMethodIDPtr,
             _$comparables.pointer,
             _$comparables1.pointer)
@@ -35961,11 +35317,10 @@ class Arrays extends jni$_.JObject {
     int i3, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$comparables = comparables?.reference ?? jni$_.jNullReference;
     final _$comparables1 = comparables1?.reference ?? jni$_.jNullReference;
     return _compare$17(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compare$17 as jni$_.JMethodIDPtr,
             _$comparables.pointer,
             i,
@@ -36007,12 +35362,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     return _compare$18(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compare$18 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$objects1.pointer,
@@ -36063,12 +35417,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     return _compare$19(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_compare$19 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -36107,11 +35460,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JBooleanArray? zs,
     jni$_.JBooleanArray? zs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
     final _$zs1 = zs1?.reference ?? jni$_.jNullReference;
-    return _mismatch(_$$classRef.pointer, _id_mismatch as jni$_.JMethodIDPtr,
-            _$zs.pointer, _$zs1.pointer)
+    return _mismatch(_class.reference.pointer,
+            _id_mismatch as jni$_.JMethodIDPtr, _$zs.pointer, _$zs1.pointer)
         .integer;
   }
 
@@ -36154,11 +35506,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$zs = zs?.reference ?? jni$_.jNullReference;
     final _$zs1 = zs1?.reference ?? jni$_.jNullReference;
     return _mismatch$1(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$1 as jni$_.JMethodIDPtr,
             _$zs.pointer,
             i,
@@ -36196,10 +35547,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JByteArray? bs,
     jni$_.JByteArray? bs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
-    return _mismatch$2(_$$classRef.pointer,
+    return _mismatch$2(_class.reference.pointer,
             _id_mismatch$2 as jni$_.JMethodIDPtr, _$bs.pointer, _$bs1.pointer)
         .integer;
   }
@@ -36243,11 +35593,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$bs = bs?.reference ?? jni$_.jNullReference;
     final _$bs1 = bs1?.reference ?? jni$_.jNullReference;
     return _mismatch$3(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$3 as jni$_.JMethodIDPtr,
             _$bs.pointer,
             i,
@@ -36285,10 +35634,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JCharArray? cs,
     jni$_.JCharArray? cs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$cs1 = cs1?.reference ?? jni$_.jNullReference;
-    return _mismatch$4(_$$classRef.pointer,
+    return _mismatch$4(_class.reference.pointer,
             _id_mismatch$4 as jni$_.JMethodIDPtr, _$cs.pointer, _$cs1.pointer)
         .integer;
   }
@@ -36332,11 +35680,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$cs = cs?.reference ?? jni$_.jNullReference;
     final _$cs1 = cs1?.reference ?? jni$_.jNullReference;
     return _mismatch$5(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$5 as jni$_.JMethodIDPtr,
             _$cs.pointer,
             i,
@@ -36374,10 +35721,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JShortArray? ss,
     jni$_.JShortArray? ss1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
-    return _mismatch$6(_$$classRef.pointer,
+    return _mismatch$6(_class.reference.pointer,
             _id_mismatch$6 as jni$_.JMethodIDPtr, _$ss.pointer, _$ss1.pointer)
         .integer;
   }
@@ -36421,11 +35767,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$ss = ss?.reference ?? jni$_.jNullReference;
     final _$ss1 = ss1?.reference ?? jni$_.jNullReference;
     return _mismatch$7(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$7 as jni$_.JMethodIDPtr,
             _$ss.pointer,
             i,
@@ -36463,10 +35808,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JIntArray? is$,
     jni$_.JIntArray? is1,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
-    return _mismatch$8(_$$classRef.pointer,
+    return _mismatch$8(_class.reference.pointer,
             _id_mismatch$8 as jni$_.JMethodIDPtr, _$is$.pointer, _$is1.pointer)
         .integer;
   }
@@ -36510,11 +35854,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$is$ = is$?.reference ?? jni$_.jNullReference;
     final _$is1 = is1?.reference ?? jni$_.jNullReference;
     return _mismatch$9(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$9 as jni$_.JMethodIDPtr,
             _$is$.pointer,
             i,
@@ -36552,10 +35895,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JLongArray? js,
     jni$_.JLongArray? js1,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
-    return _mismatch$10(_$$classRef.pointer,
+    return _mismatch$10(_class.reference.pointer,
             _id_mismatch$10 as jni$_.JMethodIDPtr, _$js.pointer, _$js1.pointer)
         .integer;
   }
@@ -36599,11 +35941,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$js = js?.reference ?? jni$_.jNullReference;
     final _$js1 = js1?.reference ?? jni$_.jNullReference;
     return _mismatch$11(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$11 as jni$_.JMethodIDPtr,
             _$js.pointer,
             i,
@@ -36641,10 +35982,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JFloatArray? fs,
     jni$_.JFloatArray? fs1,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
     final _$fs1 = fs1?.reference ?? jni$_.jNullReference;
-    return _mismatch$12(_$$classRef.pointer,
+    return _mismatch$12(_class.reference.pointer,
             _id_mismatch$12 as jni$_.JMethodIDPtr, _$fs.pointer, _$fs1.pointer)
         .integer;
   }
@@ -36688,11 +36028,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$fs = fs?.reference ?? jni$_.jNullReference;
     final _$fs1 = fs1?.reference ?? jni$_.jNullReference;
     return _mismatch$13(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$13 as jni$_.JMethodIDPtr,
             _$fs.pointer,
             i,
@@ -36730,10 +36069,9 @@ class Arrays extends jni$_.JObject {
     jni$_.JDoubleArray? ds,
     jni$_.JDoubleArray? ds1,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$ds1 = ds1?.reference ?? jni$_.jNullReference;
-    return _mismatch$14(_$$classRef.pointer,
+    return _mismatch$14(_class.reference.pointer,
             _id_mismatch$14 as jni$_.JMethodIDPtr, _$ds.pointer, _$ds1.pointer)
         .integer;
   }
@@ -36777,11 +36115,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$ds = ds?.reference ?? jni$_.jNullReference;
     final _$ds1 = ds1?.reference ?? jni$_.jNullReference;
     return _mismatch$15(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$15 as jni$_.JMethodIDPtr,
             _$ds.pointer,
             i,
@@ -36819,11 +36156,10 @@ class Arrays extends jni$_.JObject {
     jni$_.JArray<jni$_.JObject?>? objects,
     jni$_.JArray<jni$_.JObject?>? objects1,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     return _mismatch$16(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$16 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$objects1.pointer)
@@ -36869,11 +36205,10 @@ class Arrays extends jni$_.JObject {
     int i2,
     int i3,
   ) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     return _mismatch$17(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$17 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -36915,12 +36250,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     return _mismatch$18(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$18 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             _$objects1.pointer,
@@ -36971,12 +36305,11 @@ class Arrays extends jni$_.JObject {
     jni$_.JObject? comparator, {
     required jni$_.JObjType<$T> T,
   }) {
-    final _$$classRef = _class.reference;
     final _$objects = objects?.reference ?? jni$_.jNullReference;
     final _$objects1 = objects1?.reference ?? jni$_.jNullReference;
     final _$comparator = comparator?.reference ?? jni$_.jNullReference;
     return _mismatch$19(
-            _$$classRef.pointer,
+            _class.reference.pointer,
             _id_mismatch$19 as jni$_.JMethodIDPtr,
             _$objects.pointer,
             i,
@@ -37097,8 +36430,7 @@ class Certificate extends jni$_.JObject {
   /// from: `public final java.lang.String getType()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? getType() {
-    final _$$selfRef = reference;
-    return _getType(_$$selfRef.pointer, _id_getType as jni$_.JMethodIDPtr)
+    return _getType(reference.pointer, _id_getType as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -37122,9 +36454,8 @@ class Certificate extends jni$_.JObject {
   bool equals(
     jni$_.JObject? object,
   ) {
-    final _$$selfRef = reference;
     final _$object = object?.reference ?? jni$_.jNullReference;
-    return _equals(_$$selfRef.pointer, _id_equals as jni$_.JMethodIDPtr,
+    return _equals(reference.pointer, _id_equals as jni$_.JMethodIDPtr,
             _$object.pointer)
         .boolean;
   }
@@ -37148,8 +36479,7 @@ class Certificate extends jni$_.JObject {
 
   /// from: `public int hashCode()`
   int hashCode$1() {
-    final _$$selfRef = reference;
-    return _hashCode$1(_$$selfRef.pointer, _id_hashCode$1 as jni$_.JMethodIDPtr)
+    return _hashCode$1(reference.pointer, _id_hashCode$1 as jni$_.JMethodIDPtr)
         .integer;
   }
 
@@ -37173,8 +36503,7 @@ class Certificate extends jni$_.JObject {
   /// from: `public abstract byte[] getEncoded()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JByteArray? getEncoded() {
-    final _$$selfRef = reference;
-    return _getEncoded(_$$selfRef.pointer, _id_getEncoded as jni$_.JMethodIDPtr)
+    return _getEncoded(reference.pointer, _id_getEncoded as jni$_.JMethodIDPtr)
         .object<jni$_.JByteArray?>(const jni$_.JByteArrayNullableType());
   }
 
@@ -37198,9 +36527,8 @@ class Certificate extends jni$_.JObject {
   void verify(
     PublicKey? publicKey,
   ) {
-    final _$$selfRef = reference;
     final _$publicKey = publicKey?.reference ?? jni$_.jNullReference;
-    _verify(_$$selfRef.pointer, _id_verify as jni$_.JMethodIDPtr,
+    _verify(reference.pointer, _id_verify as jni$_.JMethodIDPtr,
             _$publicKey.pointer)
         .check();
   }
@@ -37232,10 +36560,9 @@ class Certificate extends jni$_.JObject {
     PublicKey? publicKey,
     jni$_.JString? string,
   ) {
-    final _$$selfRef = reference;
     final _$publicKey = publicKey?.reference ?? jni$_.jNullReference;
     final _$string = string?.reference ?? jni$_.jNullReference;
-    _verify$1(_$$selfRef.pointer, _id_verify$1 as jni$_.JMethodIDPtr,
+    _verify$1(reference.pointer, _id_verify$1 as jni$_.JMethodIDPtr,
             _$publicKey.pointer, _$string.pointer)
         .check();
   }
@@ -37267,10 +36594,9 @@ class Certificate extends jni$_.JObject {
     PublicKey? publicKey,
     jni$_.JObject? provider,
   ) {
-    final _$$selfRef = reference;
     final _$publicKey = publicKey?.reference ?? jni$_.jNullReference;
     final _$provider = provider?.reference ?? jni$_.jNullReference;
-    _verify$2(_$$selfRef.pointer, _id_verify$2 as jni$_.JMethodIDPtr,
+    _verify$2(reference.pointer, _id_verify$2 as jni$_.JMethodIDPtr,
             _$publicKey.pointer, _$provider.pointer)
         .check();
   }
@@ -37295,8 +36621,7 @@ class Certificate extends jni$_.JObject {
   /// from: `public abstract java.lang.String toString()`
   /// The returned object must be released after use, by calling the [release] method.
   jni$_.JString? toString$1() {
-    final _$$selfRef = reference;
-    return _toString$1(_$$selfRef.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
+    return _toString$1(reference.pointer, _id_toString$1 as jni$_.JMethodIDPtr)
         .object<jni$_.JString?>(const jni$_.JStringNullableType());
   }
 
@@ -37320,9 +36645,8 @@ class Certificate extends jni$_.JObject {
   /// from: `public abstract java.security.PublicKey getPublicKey()`
   /// The returned object must be released after use, by calling the [release] method.
   PublicKey? getPublicKey() {
-    final _$$selfRef = reference;
     return _getPublicKey(
-            _$$selfRef.pointer, _id_getPublicKey as jni$_.JMethodIDPtr)
+            reference.pointer, _id_getPublicKey as jni$_.JMethodIDPtr)
         .object<PublicKey?>(const $PublicKey$NullableType());
   }
 }
