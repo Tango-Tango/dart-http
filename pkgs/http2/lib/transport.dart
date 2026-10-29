@@ -13,22 +13,160 @@ export 'src/hpack/hpack.dart' show Header;
 
 typedef ActiveStateHandler = void Function(bool isActive);
 
+/// Default maximum number of peer-initiated streams per connection.
+///
+/// A limit of 100 follows the lower bound recommended by
+/// [RFC 9113 section 6.5.2](https://www.rfc-editor.org/rfc/rfc9113.html#section-6.5.2),
+/// avoiding an unnecessarily restrictive default while bounding per-stream
+/// state.
+const int defaultMaxConcurrentStreams = 100;
+
+/// Default maximum compressed size of one inbound HTTP/2 field block.
+///
+/// This matches [defaultMaxInboundHeaderListSize]. An HPACK-encoded field
+/// block is normally smaller than the decoded size of its field section,
+/// which counts 32 bytes of overhead per field, so a field section within
+/// [defaultMaxInboundHeaderListSize] also fits within this limit. This matters
+/// because exceeding this limit terminates the connection (the rest of the
+/// field block cannot be skipped without desynchronizing the HPACK state),
+/// whereas exceeding only [defaultMaxInboundHeaderListSize] resets just the
+/// affected stream.
+const int defaultMaxInboundHeaderBlockSize = defaultMaxInboundHeaderListSize;
+
+/// Default maximum decoded size of one inbound HTTP/2 field section.
+///
+/// 256 KiB matches the limit that Chromium/Cronet apply to field sections
+/// sent by servers, bounding HPACK amplification before headers reach
+/// application code. The field-size accounting follows
+/// [RFC 9113 section 6.5.2](https://www.rfc-editor.org/rfc/rfc9113.html#section-6.5.2).
+const int defaultMaxInboundHeaderListSize = 256 * 1024;
+
+/// Default absolute time allowed to finish an inbound HTTP/2 field block.
+///
+/// Ten seconds allows for ordinary network delay while bounding how long a
+/// slow peer can retain field-block and HPACK processing state.
+const Duration defaultInboundHeaderBlockTimeout = Duration(seconds: 10);
+
+/// Default maximum number of CONTINUATION frames in one field block.
+///
+/// The byte limit alone does not bound floods of empty or very small frames.
+/// A [defaultMaxInboundHeaderBlockSize] field block sent in frames of the
+/// protocol's initial maximum size (16 KiB, see
+/// [RFC 9113 section 4.1](https://www.rfc-editor.org/rfc/rfc9113.html#section-4.1))
+/// needs up to 16 CONTINUATION frames. 64 still permits such a block to be
+/// split into fragments averaging about 4 KiB while placing a finite bound on
+/// per-frame processing, addressing the class of issue described by
+/// [CERT VU#421644](https://kb.cert.org/vuls/id/421644).
+const int defaultMaxContinuationFramesPerBlock = 64;
+
+/// Default number of consecutive peer stream-limit violations before GOAWAY.
+///
+/// Once the peer has acknowledged the advertised stream limit, eight tolerates
+/// a short burst of racing streams while still terminating a peer that
+/// repeatedly ignores the limit. Accepting a peer stream resets the violation
+/// count.
+const int defaultMaxPeerStreamLimitViolations = 8;
+
 /// Settings for a [TransportConnection].
 abstract class Settings {
   /// The maximum number of concurrent streams the remote end can open
-  /// (defaults to being unlimited).
+  /// (defaults to [defaultMaxConcurrentStreams]).
+  ///
+  /// This limit is advertised and enforced locally. Set to `null` to make the
+  /// number of peer-initiated streams unlimited. Reserved peer streams are
+  /// included in the local allocation guard even though the HTTP/2 setting
+  /// counts only open and half-closed streams.
   final int? concurrentStreamLimit;
 
   /// The default stream window size the remote peer can use when creating new
   /// streams (defaults to 65535 bytes).
+  ///
+  /// It is sent in this end's initial SETTINGS. A value above 65535 applies
+  /// to this end's receive windows from then on, without waiting for the
+  /// peer's acknowledgement; a smaller one applies once acknowledged.
+  ///
+  /// From 2 * 65535 bytes on, received data is acknowledged once per half
+  /// window rather than once per DATA frame (also for
+  /// [connectionWindowSize]).
   final int? streamWindowSize;
 
-  const Settings({this.concurrentStreamLimit, this.streamWindowSize});
+  /// The connection-level window the remote peer can use (defaults to 65535
+  /// bytes; must be between 65535 and 2147483647).
+  ///
+  /// HTTP/2 has no setting for the connection window; a larger value is
+  /// granted by a WINDOW_UPDATE on stream 0 right after the initial SETTINGS.
+  /// With the default, one connection moves at most 64 KiB per round trip
+  /// however large [streamWindowSize] is.
+  final int? connectionWindowSize;
+
+  /// The largest frame payload this end accepts, sent as
+  /// SETTINGS_MAX_FRAME_SIZE (defaults to 16384 bytes; must be between 16384
+  /// and 16777215).
+  ///
+  /// Like [streamWindowSize], it applies from the initial SETTINGS on.
+  final int? maxFrameSize;
+
+  /// Maximum compressed bytes retained for one inbound field block.
+  ///
+  /// This is a local enforcement limit and is not advertised to the peer.
+  /// Set to `null` to disable the limit.
+  final int? maxInboundHeaderBlockSize;
+
+  /// Maximum decoded size of one inbound field section.
+  ///
+  /// The size is the sum of `name.length + value.length + 32` for every field.
+  /// This value is both advertised with SETTINGS_MAX_HEADER_LIST_SIZE and
+  /// enforced locally. Set to `null` to disable both behaviors.
+  final int? maxInboundHeaderListSize;
+
+  /// Absolute time allowed to receive a complete inbound field block.
+  ///
+  /// The timer starts as soon as the initial HEADERS or PUSH_PROMISE frame
+  /// header is parsed, before its payload is buffered. It is not extended by
+  /// CONTINUATION frames and ends only after the final frame is fully read.
+  /// Set to `null` to disable the timeout.
+  final Duration? inboundHeaderBlockTimeout;
+
+  /// Maximum number of CONTINUATION frames accepted for one field block.
+  ///
+  /// Set to `null` to disable the frame-count limit.
+  final int? maxContinuationFramesPerBlock;
+
+  /// Consecutive peer stream-limit violations allowed before terminating the
+  /// connection with ENHANCE_YOUR_CALM.
+  ///
+  /// Individual violations are rejected with REFUSED_STREAM. The counter is
+  /// incremented only after the peer acknowledges the advertised stream limit
+  /// and is reset after a peer-initiated stream is accepted. Set to `null` to
+  /// never terminate the connection based only on this violation count.
+  final int? maxPeerStreamLimitViolations;
+
+  const Settings({
+    this.concurrentStreamLimit,
+    this.streamWindowSize,
+    this.connectionWindowSize,
+    this.maxFrameSize,
+    this.maxInboundHeaderBlockSize,
+    this.maxInboundHeaderListSize,
+    this.inboundHeaderBlockTimeout,
+    this.maxContinuationFramesPerBlock,
+    this.maxPeerStreamLimitViolations,
+  });
 }
 
 /// Settings for a [TransportConnection] a server can make.
 class ServerSettings extends Settings {
-  const ServerSettings({super.concurrentStreamLimit, super.streamWindowSize});
+  const ServerSettings({
+    super.concurrentStreamLimit = defaultMaxConcurrentStreams,
+    super.streamWindowSize,
+    super.connectionWindowSize,
+    super.maxFrameSize,
+    super.maxInboundHeaderBlockSize = defaultMaxInboundHeaderBlockSize,
+    super.maxInboundHeaderListSize = defaultMaxInboundHeaderListSize,
+    super.inboundHeaderBlockTimeout = defaultInboundHeaderBlockTimeout,
+    super.maxContinuationFramesPerBlock = defaultMaxContinuationFramesPerBlock,
+    super.maxPeerStreamLimitViolations = defaultMaxPeerStreamLimitViolations,
+  });
 }
 
 /// Settings for a [TransportConnection] a client can make.
@@ -37,8 +175,15 @@ class ClientSettings extends Settings {
   final bool allowServerPushes;
 
   const ClientSettings({
-    super.concurrentStreamLimit,
+    super.concurrentStreamLimit = defaultMaxConcurrentStreams,
     super.streamWindowSize,
+    super.connectionWindowSize,
+    super.maxFrameSize,
+    super.maxInboundHeaderBlockSize = defaultMaxInboundHeaderBlockSize,
+    super.maxInboundHeaderListSize = defaultMaxInboundHeaderListSize,
+    super.inboundHeaderBlockTimeout = defaultInboundHeaderBlockTimeout,
+    super.maxContinuationFramesPerBlock = defaultMaxContinuationFramesPerBlock,
+    super.maxPeerStreamLimitViolations = defaultMaxPeerStreamLimitViolations,
     this.allowServerPushes = false,
   });
 }
@@ -127,9 +272,7 @@ abstract class ServerTransportConnection extends TransportConnection {
   factory ServerTransportConnection.viaStreams(
     Stream<List<int>> incoming,
     StreamSink<List<int>> outgoing, {
-    ServerSettings? settings = const ServerSettings(
-      concurrentStreamLimit: 1000,
-    ),
+    ServerSettings? settings = const ServerSettings(),
   }) {
     settings ??= const ServerSettings();
     return ServerConnection(incoming, outgoing, settings);

@@ -1,6 +1,16 @@
-## 1.10.0-wip
+## 1.10.1
 
-* Upgrade `package:jnigen` to 0.17.0.
+* Fix a build failure when using Google Play Services with Android Gradle
+  Plugin 9 (the default for new Flutter projects since Flutter 3.44):
+  "Namespace 'org.chromium.net' is used in multiple modules and/or libraries"
+  (https://github.com/dart-lang/http/issues/1932).
+* Upgrade `package:jni` to 1.1.0 and `package:jnigen` to 1.0.1.
+
+## 1.10.0
+
+* Update example to fetch and display scores of `package:cronet_http` from
+  pub.dev.
+* Upgrade `package:jnigen` to 1.0.0.
 * Add DNS configuration options to `CronetEngine.build`:
   `useBuiltInDnsResolver`, `enableStaleDns`, `persistHostCache` and
   `persistHostCachePeriod`. Setting `useBuiltInDnsResolver: false` forces the
@@ -13,6 +23,9 @@
   request fall back to an expired host cache entry instead of failing with
   `ERROR_HOSTNAME_NOT_RESOLVED` when a fresh lookup fails
   (https://github.com/dart-lang/http/issues/1217).
+* Fix a bug where each chunk of response data would create a new JNI global
+  reference that is only deleted when garbage collected, which could cause a
+  `JNI ERROR (app bug): global reference table overflow` crash.
 
 ## 1.9.0
 
